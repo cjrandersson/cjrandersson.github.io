@@ -1,1 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CJ Robin Andersson — graphics, worlds, photography, print and moving image." />
+  <meta property="og:title" content="CJ Robin Andersson — Selected Work" />
+  <meta property="og:description" content="An image-first archive of graphics, worlds, photography, print and moving image." />
+  <title>CJ Robin Andersson — Selected Work</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="font-overrides.css" />
+</head>
+<body>
+  <a class="skip" href="#work">Skip to work</a>
+  <header class="site-header">
+    <a class="identity" href="#work" aria-label="robin andersson, back to work">
+      <strong>robin andersson</strong>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
 
+  <main>
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="gallery-bar">
+        <h1 id="work-title"><span class="material-symbols-outlined work-title-icon" aria-hidden="true">subdirectory_arrow_right</span><span>selected visuals works / utvalda visuella verk</span><span class="material-symbols-outlined work-title-icon-end" aria-hidden="true">south_east</span></h1>
+        <div id="filters" class="filters" aria-label="Filter projects"></div>
+        <p id="count" aria-live="polite"></p>
+      </div>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <p class="eyebrow">About</p>
+      <h2 id="about-title">Visual work across graphic systems, images and imagined spaces. Visual work that refuses to stay in its lane.</h2>
+      <div class="about-grid">
+        <p>CJ Robin Andersson is a multidisciplinary creative mixing graphics, photography, print, moving image, light installations, and creative and generative programming—often in ways they weren’t designed for. The result sits somewhere between visual systems, strange fiction, and organized damage.</p>
+        <dl><div><dt>Based</dt><dd>Sweden</dd></div><div><dt>Disciplines</dt><dd>Art direction, environment art, graphic design, image making</dd></div><div><dt>Available for</dt><dd>Selected commissions and collaborations</dd></div></dl>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>robin andersson</p>
+    <div><a href="https://cara.app/cjrobin1" target="_blank" rel="noreferrer">Cara ↗</a><a href="https://www.artstation.com/cjrobinandersson" target="_blank" rel="noreferrer">ArtStation ↗</a><a href="mailto:hello@example.com">Email</a></div>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <dialog id="viewer" class="viewer" aria-labelledby="viewer-title">
+    <button class="viewer-close" aria-label="Close viewer">Close</button>
+    <button class="viewer-nav viewer-prev" aria-label="Previous project">←</button>
+    <figure><div id="viewer-art" class="viewer-art"></div><figcaption><span id="viewer-title"></span><span id="viewer-meta"></span><span id="viewer-description"></span></figcaption></figure>
+    <button class="viewer-nav viewer-next" aria-label="Next project">→</button>
+  </dialog>
+  <script src="projects.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
