@@ -6,6 +6,22 @@
 @font-face { font-family:'Boldonse'; src:url('fonts/boldonse.ttf') format('truetype'); font-display:swap; }
 @font-face { font-family:'DotGothic16'; src:url('fonts/dotgothic16.ttf') format('truetype'); font-display:swap; }
 
+html { background:var(--paper); }
+body { position:relative; min-height:100vh; isolation:isolate; background:var(--paper); }
+body::before {
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:url('media/paper-scan-texture.jpg') repeat;
+  background-size:640px 640px;
+  opacity:.34;
+  mix-blend-mode:multiply;
+  -webkit-mask-image:radial-gradient(circle at 18% 12%,rgba(0,0,0,.82),rgba(0,0,0,.25) 38%,rgba(0,0,0,.62) 72%,rgba(0,0,0,.32));
+  mask-image:radial-gradient(circle at 18% 12%,rgba(0,0,0,.82),rgba(0,0,0,.25) 38%,rgba(0,0,0,.62) 72%,rgba(0,0,0,.32));
+}
+
 .site-header {
   position:relative;
   display:block;
@@ -16,7 +32,7 @@
 .header-profile { min-width:0; }
 .identity { gap:2px; }
 .identity strong {
-  font-family:'Jersey 10',Arial,sans-serif;
+  font-family:'Jersey 10','Segoe UI Symbol','Arial Unicode MS',Arial,sans-serif;
   font-size:clamp(30px,3.1vw,50px);
   font-weight:400;
   line-height:.86;
@@ -36,15 +52,18 @@
   width:min(100%,1120px);
   margin-top:42px;
 }
-.header-about h2 {
-  max-width:980px;
+.header-about-copy {
+  max-width:1040px;
   margin:0;
-  font-family:'DotGothic16',Arial,sans-serif;
-  font-size:clamp(28px,2.8vw,43px);
+  font-family:'Inter',Arial,sans-serif;
+  font-size:clamp(14px,1.15vw,17px);
   font-weight:400;
-  line-height:1.06;
-  letter-spacing:-.018em;
+  line-height:1.5;
+  letter-spacing:-.012em;
 }
+.header-about-copy p { max-width:1000px; margin:0 0 18px; }
+.header-about-copy p:nth-child(2) { max-width:940px; color:#34332f; }
+.header-about-copy p:last-child { margin-bottom:0; color:#4f4d47; font-weight:500; }
 .header-about-quote {
   position:relative;
   max-width:1050px;
@@ -115,7 +134,7 @@ h1 {
   position:relative;
   display:flex;
   align-items:center;
-  gap:4px;
+  gap:1px;
   grid-column:1;
   grid-row:1;
   transform:none;
@@ -127,6 +146,8 @@ h1 {
 .selected-works-icon {
   color:currentColor;
   font-size:18px;
+  width:12px;
+  overflow:hidden;
   line-height:1;
   font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;
 }
@@ -300,7 +321,7 @@ footer div { justify-self:start; }
   .site-header { min-height:98px; height:auto; padding-bottom:28px; }
   .site-header nav { gap:15px; font-size:12px; }
   .header-about { margin-top:34px; }
-  .header-about h2 { font-size:clamp(27px,6vw,39px); }
+  .header-about-copy { font-size:15px; line-height:1.48; }
   .header-about-quote { font-size:clamp(23px,4vw,31px); }
   .header-about dl { grid-template-columns:1fr; gap:12px; }
   .gallery-bar { display:grid; grid-template-columns:1fr; min-height:66px; padding:20px 4px 14px; }
@@ -314,7 +335,7 @@ footer div { justify-self:start; }
   .identity strong { font-size:28px; }
   .site-header nav { top:14px; right:14px; gap:9px; padding-top:2px; font-size:9px; }
   .header-about { margin-top:30px; }
-  .header-about h2 { margin-bottom:20px; font-size:27px; }
+  .header-about-copy { font-size:14px; line-height:1.5; }
   .header-about-quote { margin-bottom:30px; padding:0 24px; font-size:22px; line-height:1.18; }
   .header-about dd { font-size:13px; }
   h1 { font-size:10px; white-space:nowrap; }
