@@ -143,14 +143,14 @@ h1 {
   position:relative;
   display:flex;
   align-items:center;
-  gap:1px;
+  gap:7px;
   grid-column:1;
   grid-row:1;
   transform:none;
   justify-self:start;
   text-align:left;
   white-space:nowrap;
-  color:#34332f;
+  color:#8a4632;
 }
 .selected-works-icon {
   color:currentColor;
