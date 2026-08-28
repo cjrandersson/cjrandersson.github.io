@@ -80,11 +80,16 @@ function renderGallery() {
     const groupProjects = group.slugs.map(slug => projects.find(project => project.slug === slug)).filter(Boolean);
     return `<section class="project-group" aria-labelledby="group-${group.id}">
       <header class="project-group-header">
-        <h2 id="group-${group.id}">${group.label}</h2>
-        ${group.note ? `<p>${group.note}</p>` : ''}
-        <span>${groupProjects.length.toString().padStart(2,'0')}</span>
+        <h2 id="group-${group.id}">
+          <button class="project-group-toggle" type="button" aria-expanded="true" aria-controls="group-panel-${group.id}">
+            <span class="project-group-title">${group.label}</span>
+            ${group.note ? `<span class="project-group-note">${group.note}</span>` : '<span class="project-group-spacer" aria-hidden="true"></span>'}
+            <span class="project-group-count">${groupProjects.length.toString().padStart(2,'0')}</span>
+            <span class="material-symbols-outlined project-group-chevron" aria-hidden="true">expand_more</span>
+          </button>
+        </h2>
       </header>
-      <div class="project-group-grid">
+      <div class="project-group-grid" id="group-panel-${group.id}">
         ${groupProjects.map(project => {
           const index = visibleProjects.indexOf(project);
           return `<article class="project size-${project.size}" style="--ratio:${project.aspectRatio}">
@@ -116,6 +121,15 @@ function showProject(index) {
 }
 
 gallery.addEventListener('click', event => {
+  const groupToggle = event.target.closest('.project-group-toggle');
+  if (groupToggle) {
+    const panel = document.getElementById(groupToggle.getAttribute('aria-controls'));
+    const willExpand = groupToggle.getAttribute('aria-expanded') !== 'true';
+    groupToggle.setAttribute('aria-expanded', String(willExpand));
+    panel.hidden = !willExpand;
+    groupToggle.closest('.project-group').classList.toggle('is-collapsed', !willExpand);
+    return;
+  }
   const button = event.target.closest('.project-open');
   if (button) showProject(Number(button.dataset.index));
 });
