@@ -5,6 +5,15 @@ const viewer = document.querySelector('#viewer');
 let visibleProjects = projects;
 let activeIndex = 0;
 
+const projectGroups = [
+  { id:'graphics', label:'Graphics', slugs:['m37-distorted-index','creature-study','chrome-distortion'] },
+  { id:'characters', label:'3D characters', slugs:['kronofogden','mechanical-figure','creature-turnaround'] },
+  { id:'scenography-light', label:'Scenography / Light', slugs:['neon-apparition','lost-and-found'] },
+  { id:'photo', label:'Photo', slugs:['magenta-field'] },
+  { id:'code', label:'Code', note:'Max/Msp · m4l · p5.js · JavaScript', slugs:['flode'] },
+  { id:'product-business', label:'Product & Business Design', slugs:['aao','papa-tom-yoga'] }
+];
+
 function introMarkup(project) {
   if (!project.intro) return '';
   const intro = project.intro;
@@ -67,13 +76,26 @@ function artMarkup(project, large = false) {
 
 function renderGallery() {
   visibleProjects = projects;
-  gallery.innerHTML = visibleProjects.map((project, index) => `
-    <article class="project size-${project.size}" style="--ratio:${project.aspectRatio}">
-      <button class="project-open" data-index="${index}" aria-label="Open ${project.title}">
-        <div class="media">${artMarkup(project)}${project.mediaType === 'video' ? '<span class="play" aria-hidden="true">Play</span>' : ''}</div>
-        <span class="project-meta"><strong>${project.title}</strong><span>${project.meta || `${project.category} · ${project.year}`}</span></span>
-      </button>
-    </article>`).join('');
+  gallery.innerHTML = projectGroups.map(group => {
+    const groupProjects = group.slugs.map(slug => projects.find(project => project.slug === slug)).filter(Boolean);
+    return `<section class="project-group" aria-labelledby="group-${group.id}">
+      <header class="project-group-header">
+        <h2 id="group-${group.id}">${group.label}</h2>
+        ${group.note ? `<p>${group.note}</p>` : ''}
+        <span>${groupProjects.length.toString().padStart(2,'0')}</span>
+      </header>
+      <div class="project-group-grid">
+        ${groupProjects.map(project => {
+          const index = visibleProjects.indexOf(project);
+          return `<article class="project size-${project.size}" style="--ratio:${project.aspectRatio}">
+            <button class="project-open" data-index="${index}" aria-label="Open ${project.title}">
+              <div class="media">${artMarkup(project)}${project.mediaType === 'video' ? '<span class="play" aria-hidden="true">Play</span>' : ''}</div>
+            </button>
+          </article>`;
+        }).join('')}
+      </div>
+    </section>`;
+  }).join('');
   count.textContent = `${visibleProjects.length} works`;
 }
 
@@ -85,7 +107,11 @@ function showProject(index) {
   document.querySelector('#viewer-art').style.aspectRatio = Array.isArray(project.media) ? 'auto' : project.aspectRatio;
   document.querySelector('#viewer-title').textContent = project.title;
   document.querySelector('#viewer-meta').textContent = project.meta || `${project.category} · ${project.year}`;
-  document.querySelector('#viewer-description').textContent = project.description || '';
+  const details = project.details || {};
+  document.querySelector('#viewer-what').textContent = details.what || project.description || '—';
+  document.querySelector('#viewer-why').textContent = details.why || '—';
+  document.querySelector('#viewer-thoughts').textContent = details.thoughts || '—';
+  document.querySelector('#viewer-software').textContent = Array.isArray(details.software) && details.software.length ? details.software.join(' · ') : '—';
   if (!viewer.open) viewer.showModal();
 }
 
