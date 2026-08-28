@@ -108,6 +108,10 @@ function showProject(index) {
   document.querySelector('#viewer-art').style.aspectRatio = Array.isArray(project.media) ? 'auto' : project.aspectRatio;
   document.querySelector('#viewer-title').textContent = project.title;
   document.querySelector('#viewer-meta').textContent = project.meta || `${project.category} · ${project.year}`;
+  const originalSource = Array.isArray(project.media) ? project.media[0] : (project.media || project.thumbnail);
+  const originalLink = document.querySelector('#viewer-original');
+  originalLink.hidden = !originalSource;
+  if (originalSource) originalLink.href = originalSource;
   const details = project.details || {};
   document.querySelector('#viewer-what').textContent = details.what || project.description || '—';
   document.querySelector('#viewer-why').textContent = details.why || '—';
