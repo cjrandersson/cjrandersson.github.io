@@ -55,15 +55,24 @@ body::before {
 .header-about-copy {
   max-width:1040px;
   margin:0;
-  font-family:'Inter',Arial,sans-serif;
-  font-size:clamp(14px,1.15vw,17px);
+  font-family:'Google Sans','Google Sans Text','Google Sans Flex','Inter',Arial,sans-serif;
+  font-size:clamp(13px,1vw,15px);
   font-weight:400;
-  line-height:1.5;
-  letter-spacing:-.012em;
+  line-height:1.52;
+  letter-spacing:-.01em;
 }
-.header-about-copy p { max-width:1000px; margin:0 0 18px; }
+.header-about-copy p { max-width:1050px; margin:0 0 20px; }
 .header-about-copy p:nth-child(2) { max-width:940px; color:#34332f; }
 .header-about-copy p:last-child { margin-bottom:0; color:#4f4d47; font-weight:500; }
+.header-about-copy strong {
+  display:inline;
+  color:var(--ink);
+  font-family:inherit;
+  font-size:clamp(19px,1.85vw,29px);
+  font-weight:500;
+  line-height:.92;
+  letter-spacing:-.035em;
+}
 .header-about-quote {
   position:relative;
   max-width:1050px;
@@ -199,12 +208,17 @@ h1 {
 .project-group-toggle[aria-expanded='false'] .project-group-chevron { transform:rotate(0); }
 .project-group-grid {
   display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-columns:repeat(var(--group-columns,3),minmax(0,1fr));
   grid-auto-flow:dense;
-  gap:var(--gap);
+  gap:var(--group-gap,var(--gap));
   align-items:start;
 }
 .project-group-grid[hidden] { display:none; }
+.project-group.layout-uniform .project,
+.project-group.layout-uniform .project.size-wide,
+.project-group.layout-uniform .project.size-tall { grid-column:span 1; }
+.project-group.layout-feature .project:first-child { grid-column:span 2; }
+.project-group.layout-feature .project:not(:first-child) { grid-column:span 1; }
 .project-meta {
   font-family:'Boldonse',Arial,sans-serif;
   align-items:flex-start;
@@ -321,7 +335,8 @@ footer div { justify-self:start; }
   .site-header { min-height:98px; height:auto; padding-bottom:28px; }
   .site-header nav { gap:15px; font-size:12px; }
   .header-about { margin-top:34px; }
-  .header-about-copy { font-size:15px; line-height:1.48; }
+  .header-about-copy { font-size:14px; line-height:1.5; }
+  .header-about-copy strong { font-size:clamp(18px,3.3vw,25px); }
   .header-about-quote { font-size:clamp(23px,4vw,31px); }
   .header-about dl { grid-template-columns:1fr; gap:12px; }
   .gallery-bar { display:grid; grid-template-columns:1fr; min-height:66px; padding:20px 4px 14px; }
@@ -336,6 +351,7 @@ footer div { justify-self:start; }
   .site-header nav { top:14px; right:14px; gap:9px; padding-top:2px; font-size:9px; }
   .header-about { margin-top:30px; }
   .header-about-copy { font-size:14px; line-height:1.5; }
+  .header-about-copy strong { font-size:21px; line-height:.95; }
   .header-about-quote { margin-bottom:30px; padding:0 24px; font-size:22px; line-height:1.18; }
   .header-about dd { font-size:13px; }
   h1 { font-size:10px; white-space:nowrap; }

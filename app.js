@@ -5,14 +5,7 @@ const viewer = document.querySelector('#viewer');
 let visibleProjects = projects;
 let activeIndex = 0;
 
-const projectGroups = [
-  { id:'graphics', label:'Graphics', slugs:['m37-distorted-index','creature-study','chrome-distortion'] },
-  { id:'characters', label:'3D characters', slugs:['kronofogden','mechanical-figure','creature-turnaround'] },
-  { id:'scenography-light', label:'Scenography / Light', slugs:['neon-apparition','lost-and-found'] },
-  { id:'photo', label:'Photo', slugs:['magenta-field'] },
-  { id:'code', label:'Software / Code', note:'Max/Msp · m4l · p5.js · JavaScript', slugs:['flode'] },
-  { id:'product-business', label:'Product Design', slugs:['aao','papa-tom-yoga'] }
-];
+const projectGroups = window.PROJECT_GROUPS || [];
 
 function introMarkup(project) {
   if (!project.intro) return '';
@@ -78,7 +71,10 @@ function renderGallery() {
   visibleProjects = projects;
   gallery.innerHTML = projectGroups.map(group => {
     const groupProjects = group.slugs.map(slug => projects.find(project => project.slug === slug)).filter(Boolean);
-    return `<section class="project-group" aria-labelledby="group-${group.id}">
+    const layout = group.layout || 'editorial';
+    const columns = Math.max(1, Number(group.columns) || 3);
+    const gap = group.gap || 'var(--gap)';
+    return `<section class="project-group layout-${layout}" aria-labelledby="group-${group.id}" style="--group-columns:${columns};--group-gap:${gap}">
       <header class="project-group-header">
         <h2 id="group-${group.id}">
           <button class="project-group-toggle" type="button" aria-expanded="true" aria-controls="group-panel-${group.id}">
