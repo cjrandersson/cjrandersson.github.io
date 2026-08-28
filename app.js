@@ -1,11 +1,7 @@
 const projects = window.PROJECTS;
-const categories = ['all', 'graphics', 'print', 'worlds', 'photo', 'motion', 'uxui'];
-const categoryLabels = { all:'▦', graphics:'graphics', print:'print', worlds:'worlds', photo:'photography', motion:'moving image', uxui:'ux/ui design' };
 const gallery = document.querySelector('#gallery');
-const filters = document.querySelector('#filters');
 const count = document.querySelector('#count');
 const viewer = document.querySelector('#viewer');
-let activeCategory = 'all';
 let visibleProjects = projects;
 let activeIndex = 0;
 
@@ -69,15 +65,8 @@ function artMarkup(project, large = false) {
   return `<div class="placeholder ${project.art}" role="img" aria-label="Replaceable placeholder study for ${project.title}"><span>PLACEHOLDER STUDY</span></div>`;
 }
 
-function renderFilters() {
-  filters.innerHTML = categories.map(category => {
-    const accessibleLabel = category === 'all' ? 'Show all art' : `Show ${categoryLabels[category]}`;
-    return `<button type="button" data-category="${category}" class="${activeCategory === category ? 'active' : ''}" aria-label="${accessibleLabel}" title="${accessibleLabel}" aria-pressed="${activeCategory === category}">${categoryLabels[category]}</button>`;
-  }).join('');
-}
-
 function renderGallery() {
-  visibleProjects = activeCategory === 'all' ? projects : projects.filter(p => p.category === activeCategory);
+  visibleProjects = projects;
   gallery.innerHTML = visibleProjects.map((project, index) => `
     <article class="project size-${project.size}" style="--ratio:${project.aspectRatio}">
       <button class="project-open" data-index="${index}" aria-label="Open ${project.title}">
@@ -100,13 +89,6 @@ function showProject(index) {
   if (!viewer.open) viewer.showModal();
 }
 
-filters.addEventListener('click', event => {
-  const button = event.target.closest('button');
-  if (!button) return;
-  activeCategory = button.dataset.category;
-  renderFilters();
-  renderGallery();
-});
 gallery.addEventListener('click', event => {
   const button = event.target.closest('.project-open');
   if (button) showProject(Number(button.dataset.index));
@@ -121,5 +103,5 @@ document.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight') showProject(activeIndex + 1);
 });
 document.querySelector('#year').textContent = new Date().getFullYear();
-renderFilters();
 renderGallery();
+
