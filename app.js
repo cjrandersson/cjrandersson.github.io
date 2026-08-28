@@ -10,8 +10,8 @@ const projectGroups = [
   { id:'characters', label:'3D characters', slugs:['kronofogden','mechanical-figure','creature-turnaround'] },
   { id:'scenography-light', label:'Scenography / Light', slugs:['neon-apparition','lost-and-found'] },
   { id:'photo', label:'Photo', slugs:['magenta-field'] },
-  { id:'code', label:'Code', note:'Max/Msp · m4l · p5.js · JavaScript', slugs:['flode'] },
-  { id:'product-business', label:'Product & Business Design', slugs:['aao','papa-tom-yoga'] }
+  { id:'code', label:'Software / Code', note:'Max/Msp · m4l · p5.js · JavaScript', slugs:['flode'] },
+  { id:'product-business', label:'Product Design', slugs:['aao','papa-tom-yoga'] }
 ];
 
 function introMarkup(project) {
