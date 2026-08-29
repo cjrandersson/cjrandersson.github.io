@@ -55,11 +55,11 @@ body::before {
 .header-about-copy {
   max-width:1040px;
   margin:0;
-  font-family:'Google Sans','Google Sans Text','Google Sans Flex','Inter',Arial,sans-serif;
-  font-size:clamp(13px,1vw,15px);
+  font-family:'VT323',monospace;
+  font-size:clamp(18px,1.4vw,22px);
   font-weight:400;
-  line-height:1.52;
-  letter-spacing:-.01em;
+  line-height:1.25;
+  letter-spacing:.005em;
 }
 .header-about-copy p { max-width:1050px; margin:0 0 20px; }
 .header-about-copy p:nth-child(2) { max-width:940px; color:#34332f; }
@@ -68,10 +68,15 @@ body::before {
   display:inline;
   color:var(--ink);
   font-family:inherit;
-  font-size:clamp(19px,1.85vw,29px);
-  font-weight:500;
-  line-height:.92;
-  letter-spacing:-.035em;
+  font-size:clamp(25px,2.1vw,34px);
+  font-weight:400;
+  line-height:.9;
+  letter-spacing:0;
+}
+.header-about-copy p:last-child {
+  color:var(--ink);
+  font-size:1.08em;
+  font-weight:400;
 }
 .header-about-quote {
   position:relative;
@@ -346,8 +351,8 @@ footer div { justify-self:start; }
   .site-header { min-height:98px; height:auto; padding-bottom:28px; }
   .site-header nav { gap:15px; font-size:12px; }
   .header-about { margin-top:34px; }
-  .header-about-copy { font-size:14px; line-height:1.5; }
-  .header-about-copy strong { font-size:clamp(18px,3.3vw,25px); }
+  .header-about-copy { font-size:19px; line-height:1.25; }
+  .header-about-copy strong { font-size:clamp(24px,4vw,30px); }
   .header-about-quote { font-size:clamp(23px,4vw,31px); }
   .header-about dl { grid-template-columns:1fr; gap:12px; }
   .gallery-bar { display:grid; grid-template-columns:1fr; min-height:66px; padding:20px 4px 14px; }
@@ -361,8 +366,8 @@ footer div { justify-self:start; }
   .identity strong { font-size:28px; }
   .site-header nav { top:14px; right:14px; gap:9px; padding-top:2px; font-size:9px; }
   .header-about { margin-top:30px; }
-  .header-about-copy { font-size:14px; line-height:1.5; }
-  .header-about-copy strong { font-size:21px; line-height:.95; }
+  .header-about-copy { font-size:18px; line-height:1.24; }
+  .header-about-copy strong { font-size:25px; line-height:.92; }
   .header-about-quote { margin-bottom:30px; padding:0 24px; font-size:22px; line-height:1.18; }
   .header-about dd { font-size:13px; }
   h1 { font-size:10px; white-space:nowrap; }
