@@ -1,11 +1,14 @@
 # CJ Robin Andersson Portfolio
 
-Static portfolio prepared for GitHub Pages.
+An image-first portfolio for graphics, character design, software/code, product design and experimental work.
 
-## Publish
+## Live portfolio
 
-Upload the contents of this folder to the root of the `main` branch in `cjrandersson/cjrandersson.github.io`. The published address will be:
+**[https://cjrandersson.github.io/](https://cjrandersson.github.io/)**
 
-https://cjrandersson.github.io/
+## Repository
 
-The site uses relative paths, so its HTML, stylesheets, JavaScript, fonts, and media remain portable as one package.
+[github.com/cjrandersson/cjrandersson.github.io](https://github.com/cjrandersson/cjrandersson.github.io)
+
+The website is a portable static package. Its HTML, CSS, JavaScript, fonts and media use relative paths and are served directly through GitHub Pages from the `main` branch.
+

@@ -1,14 +1,14 @@
 // GROUPS
 // Create a new group by adding an object below, then list the project `slug`s it should contain.
+// `intro` is the editable introduction shown directly below the open group heading.
 // Visual controls: `layout` can be "editorial", "uniform" or "feature"; `columns` controls
 // the desktop grid; `gap` accepts any CSS size such as "8px", "1.2vw" or "24px".
 window.PROJECT_GROUPS = [
-  { id:'graphics', label:'Graphics', layout:'editorial', columns:3, gap:'var(--gap)', slugs:['m37-distorted-index','creature-study','chrome-distortion'] },
-  { id:'characters', label:'3D characters', layout:'editorial', columns:2, gap:'var(--gap)', slugs:['kronofogden','mechanical-figure','creature-turnaround'] },
-  { id:'scenography-light', label:'Scenography / Light', layout:'uniform', columns:2, gap:'var(--gap)', slugs:['neon-apparition','lost-and-found'] },
-  { id:'photo', label:'Photo', layout:'uniform', columns:2, gap:'var(--gap)', slugs:['magenta-field'] },
-  { id:'code', label:'Software / Code', note:'Max/Msp · m4l · p5.js · JavaScript', layout:'feature', columns:2, gap:'var(--gap)', slugs:['flode'] },
-  { id:'product-design', label:'Product Design', layout:'uniform', columns:2, gap:'var(--gap)', slugs:['aao','papa-tom-yoga'] }
+  { id:'graphics', label:'Graphics', intro:'Graphic systems, typography, scanning, collage and constructed images.', layout:'editorial', columns:3, gap:'var(--gap)', slugs:['m37-distorted-index','creature-study','chrome-distortion'] },
+  { id:'characters', label:'Character Design', intro:'Characters, creatures and objects developed through visual worldbuilding.', layout:'editorial', columns:2, gap:'var(--gap)', slugs:['kronofogden','mechanical-figure','creature-turnaround'] },
+  { id:'code', label:'Software / Code', intro:'Creative coding, sound tools, interfaces and generative systems.', note:'Max/Msp · m4l · p5.js · JavaScript', layout:'feature', columns:2, gap:'var(--gap)', slugs:['flode'] },
+  { id:'product-design', label:'Product Design', intro:'Products and interfaces shaped through concept, structure and visual systems.', layout:'uniform', columns:2, gap:'var(--gap)', slugs:['aao','papa-tom-yoga'] },
+  { id:'other', label:'Other', intro:'Photography, image experiments and work that sits between categories.', layout:'uniform', columns:2, gap:'var(--gap)', slugs:['magenta-field'] }
 ];
 
 // PROJECTS

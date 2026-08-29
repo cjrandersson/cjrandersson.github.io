@@ -3,45 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CJ Robin Andersson — graphics, worlds, photography, print and moving image." />
-  <meta property="og:title" content="CJ Robin Andersson — Selected Work" />
-  <meta property="og:description" content="An image-first archive of graphics, worlds, photography, print and moving image." />
-  <title>CJ Robin Andersson — Selected Work</title>
+  <meta name="description" content="Robin Andersson — graphics, character design, software, product design and image making." />
+  <meta property="og:title" content="Robin Andersson — Selected Work" />
+  <meta property="og:description" content="An image-first archive of visual systems, characters, software and designed objects." />
+  <title>Robin Andersson — Selected Work</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=VT323&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="font-overrides.css?v=20260829b" />
+  <link rel="stylesheet" href="styles.css?v=20260829l" />
+  <link rel="stylesheet" href="font-overrides.css?v=20260829k" />
 </head>
 <body>
   <a class="skip" href="#work">Skip to work</a>
   <header class="site-header">
-    <div class="header-profile">
-      <a class="identity" href="#work" aria-label="Robin, back to work">
-        <strong>ᚱᚩᛒᛁᚾ&nbsp; / ЯОьΙŊ</strong>
-      </a>
-      <section id="about" class="header-about" aria-labelledby="header-about-title">
-        <div id="header-about-title" class="header-about-copy">
-          <p>Working across different <strong>graphic systems</strong>, <strong>typography</strong> and <strong>constructed images</strong>; <strong>photography</strong>, <strong>scanning</strong>, <strong>collage</strong> and <strong>digital manipulation</strong>; <strong>print</strong> and <strong>physical materials</strong>; <strong>film</strong>, <strong>animation</strong> and <strong>looping moving image</strong>; <strong>projection</strong> and <strong>light-based installations</strong>; <strong>experimental sound</strong>, <strong>sampling</strong> and <strong>instrument design</strong>; and <strong>creative or generative programming</strong>.</p>
-          <p>These approaches often overlap—<strong>code becomes image</strong>, <strong>sound becomes structure</strong>, <strong>photography becomes raw material</strong>, and a visual experiment may develop into a <strong>print, film, interface, installation, imagined world or playable instrument</strong>.</p>
-          <p>Most things begin as experiments. Some eventually become work.</p>
-        </div>
-      </section>
-    </div>
+    <a class="identity" href="#work" aria-label="CJ Robin Andersson, back to work">
+      <strong>CJ Robin Andersson</strong>
+    </a>
     <nav aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a href="#work" data-route="work">Work</a><a href="#about" data-route="about">About</a><a href="#contact" data-route="contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="work" class="work" aria-labelledby="work-title">
-      <div class="gallery-bar">
-        <h1 id="work-title"><span class="material-symbols-outlined selected-works-icon" aria-hidden="true">arrow_forward</span><span>selected works</span></h1>
-        <p id="count" aria-live="polite"></p>
+    <div id="home-page" class="page-view">
+      <section id="intro" class="intro" aria-labelledby="intro-title">
+        <p class="intro-kicker">Independent multidisciplinary practice</p>
+        <h1 id="intro-title">I make and experiment with images, systems and strange worlds by mixing graphics, photography, print, moving image, light, sound and creative code—often through unconventional methods, sideways thinking and tools pushed beyond their intended use.</h1>
+        <div class="intro-copy">
+          <p>Most things begin as experiments. Some become work. Others keep <span class="mutating-word">mutating</span>.</p>
+        </div>
+      </section>
+      <section id="work" class="work" aria-label="Portfolio groups">
+        <p id="count" class="sr-only" aria-live="polite"></p>
+        <div id="gallery" class="gallery"></div>
+      </section>
+    </div>
+
+    <section id="about-page" class="about-page page-view" aria-labelledby="about-title" hidden>
+      <div class="about-hero">
+        <figure class="about-portrait">
+          <img src="media/portfolio-pic.jpg" alt="Portrait of CJ Robin Andersson" loading="eager" decoding="async" />
+        </figure>
+        <div class="about-introduction">
+          <p class="intro-kicker">About</p>
+          <h1 id="about-title">CJ Robin Andersson</h1>
+          <p class="about-lead">I work across visual systems, character design, photography, print, moving image, light, sound and creative code.</p>
+          <p>My process combines conventional craft with experiments, sideways thinking and tools pushed beyond their intended use. The work can become an image, an identity, a strange world, an interface or a playable instrument.</p>
+          <p>Most things begin as experiments. Some become work. Others keep mutating.</p>
+        </div>
       </div>
-      <div id="gallery" class="gallery"></div>
+
+      <section class="about-directory" aria-label="Social media and skills">
+        <div class="about-directory-column">
+          <p class="intro-kicker">Find me online</p>
+          <h2>Social Media</h2>
+          <div class="directory-table">
+            <a class="directory-row" href="https://cara.app/cjrobin1" target="_blank" rel="noreferrer"><span>Cara</span><span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+            <a class="directory-row" href="https://www.artstation.com/cjrobinandersson" target="_blank" rel="noreferrer"><span>ArtStation</span><span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+            <a class="directory-row" href="mailto:hello@example.com"><span>Email</span><span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>
+          </div>
+        </div>
+        <div class="about-directory-column">
+          <p class="intro-kicker">Areas of practice</p>
+          <h2>Skills</h2>
+          <div class="directory-table">
+            <div class="directory-row"><span>Graphic systems &amp; typography</span></div>
+            <div class="directory-row"><span>Character design &amp; worldbuilding</span></div>
+            <div class="directory-row"><span>Creative coding</span></div>
+            <div class="directory-row"><span>Sound &amp; instrument design</span></div>
+            <div class="directory-row"><span>Photography, print &amp; moving image</span></div>
+            <div class="directory-row"><span>Product design</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-tools" aria-labelledby="tools-title">
+        <div class="about-section-heading">
+          <p class="intro-kicker">Applications &amp; systems</p>
+          <h2 id="tools-title">Tools I work with</h2>
+        </div>
+        <div class="tools-table" role="table" aria-label="Applications and areas of experience">
+          <div class="tools-row tools-row-head" role="row">
+            <span role="columnheader">Tool</span><span role="columnheader">Role in the process</span>
+          </div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">hub</span>Max/MSP</span><span role="cell">Building modular sound systems, generative processes and custom instruments</span></div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">graphic_eq</span>Max for Live</span><span role="cell">Creating playable Ableton devices, sequencers and real-time audio processing</span></div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">music_note</span>Ableton Live</span><span role="cell">Composing, sampling, sequencing, sound design and live performance</span></div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">gesture</span>p5.js</span><span role="cell">Creating generative visuals, audio-reactive sketches and browser-based experiments</span></div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">code</span>JavaScript</span><span role="cell">Developing interactive web experiences, creative systems and custom tools</span></div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">design_services</span>Figma</span><span role="cell">Interface design, prototyping and visual system development</span></div>
+          <div class="tools-row" role="row"><span class="tool-name" role="cell"><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>ChatGPT / Codex &amp; Claude</span><span role="cell">Ideation, coding support, research and generative workflows</span></div>
+        </div>
+      </section>
     </section>
 
   </main>
@@ -52,27 +107,39 @@
   </footer>
 
   <dialog id="viewer" class="viewer" aria-labelledby="viewer-title">
-    <button class="viewer-close" aria-label="Close viewer">Close</button>
-    <button class="viewer-nav viewer-prev" aria-label="Previous project">←</button>
-    <figure>
-      <div id="viewer-art" class="viewer-art"></div>
-      <figcaption class="project-info-box">
-        <div class="project-info-head">
-          <strong id="viewer-title"></strong>
-          <div class="project-info-actions"><small id="viewer-meta"></small><a id="viewer-original" target="_blank" rel="noreferrer">Open original ↗</a></div>
+    <div class="viewer-topbar">
+      <button class="viewer-close" aria-label="Back to selected work">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+        <span>All work</span>
+      </button>
+      <div class="viewer-progress"><span id="viewer-position"></span><span aria-hidden="true">/</span><span id="viewer-total"></span></div>
+    </div>
+    <article id="viewer-page" class="viewer-page">
+      <div id="viewer-marquee" class="project-marquee" aria-hidden="true"></div>
+      <header class="project-hero">
+        <div class="project-hero-copy">
+          <p id="viewer-category" class="project-eyebrow"></p>
+          <h2 id="viewer-title"></h2>
+          <p id="viewer-summary" class="project-summary"></p>
+          <dl class="project-facts">
+            <div><dt>Made</dt><dd id="viewer-what"></dd></div>
+            <div><dt>Why</dt><dd id="viewer-why"></dd></div>
+            <div><dt>Notes</dt><dd id="viewer-thoughts"></dd></div>
+            <div><dt>Tools</dt><dd id="viewer-software"></dd></div>
+          </dl>
+          <a id="viewer-original" class="viewer-original" target="_blank" rel="noreferrer">View original resolution</a>
         </div>
-        <dl class="project-info-grid">
-          <div><dt>Made</dt><dd id="viewer-what"></dd></div>
-          <div><dt>Why</dt><dd id="viewer-why"></dd></div>
-          <div><dt>Notes</dt><dd id="viewer-thoughts"></dd></div>
-          <div><dt>Applications / software</dt><dd id="viewer-software"></dd></div>
-        </dl>
-      </figcaption>
-    </figure>
-    <button class="viewer-nav viewer-next" aria-label="Next project">→</button>
+        <div id="viewer-hero-media" class="project-hero-media"></div>
+      </header>
+      <div id="viewer-story" class="project-story"></div>
+      <nav class="project-pagination" aria-label="Project navigation">
+        <button class="viewer-prev" type="button"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span><span>Previous project</span></button>
+        <button class="viewer-next" type="button"><span>Next project</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></button>
+      </nav>
+    </article>
   </dialog>
-  <script src="projects.js?v=20260828o"></script>
-  <script src="app.js?v=20260828o"></script>
+  <script src="projects.js?v=20260829e"></script>
+  <script src="app.js?v=20260829j"></script>
 </body>
 </html>
 
