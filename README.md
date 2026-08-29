@@ -6,6 +6,9 @@ An image-first portfolio for graphics, character design, software/code, product 
 
 **[https://cjrandersson.github.io/](https://cjrandersson.github.io/)**
 
+- [Latest verified deployment](https://cjrandersson.github.io/?v=a179ae2e-2)
+- [About page](https://cjrandersson.github.io/?v=a179ae2e-2#about)
+
 ## Repository
 
 [github.com/cjrandersson/cjrandersson.github.io](https://github.com/cjrandersson/cjrandersson.github.io)
