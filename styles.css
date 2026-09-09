@@ -505,6 +505,22 @@ footer p { margin: 0; }
   line-height: .9;
   letter-spacing: -.065em;
 }
+.project-hero h2.has-project-icon {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.6vw, 24px);
+  overflow-wrap: normal;
+}
+.project-hero h2.has-project-icon span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.project-title-icon {
+  width: 46px;
+  height: 50px;
+  flex: 0 0 46px;
+  object-fit: contain;
+}
 .project-summary {
   max-width: 460px;
   margin: 0 0 46px;
