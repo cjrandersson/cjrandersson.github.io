@@ -125,7 +125,11 @@ function renderProject(project) {
   document.querySelector('#viewer-page').classList.toggle('long-title', project.title.length > 17);
 
   document.querySelector('#viewer-category').textContent = `${group?.label || project.category || 'Work'} · ${project.year || ''}`;
-  document.querySelector('#viewer-title').textContent = project.title;
+  const viewerTitle = document.querySelector('#viewer-title');
+  viewerTitle.classList.toggle('has-project-icon', Boolean(project.titleIcon));
+  viewerTitle.innerHTML = project.titleIcon
+    ? `<img class="project-title-icon" src="${escapeHtml(project.titleIcon)}" alt="" aria-hidden="true"><span>${escapeHtml(project.title)}</span>`
+    : escapeHtml(project.title);
   document.querySelector('#viewer-marquee').textContent = `${project.title}  ${project.title}  ${project.title}`;
   document.querySelector('#viewer-summary').textContent = project.description || details.what || '';
   document.querySelector('#viewer-what').textContent = details.what || project.description || '—';
