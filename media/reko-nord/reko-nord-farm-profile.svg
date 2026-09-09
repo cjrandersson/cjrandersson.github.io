@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="REKO Nord farm profile and producer card">
+  <style>
+    .logo{font:700 26px Arimo,Arial,sans-serif;letter-spacing:2px;fill:#1D251F}
+    .display{font:500 70px Newsreader,Georgia,serif;fill:#1D251F}
+    .h1{font:500 46px Newsreader,Georgia,serif;fill:#1D251F}
+    .h2{font:500 30px Newsreader,Georgia,serif;fill:#1D251F}
+    .body{font:400 20px Arimo,Arial,sans-serif;fill:#1D251F}
+    .small{font:600 16px Arimo,Arial,sans-serif;fill:#1D251F}
+    .micro{font:500 13px Arimo,Arial,sans-serif;fill:#6F766F;letter-spacing:.4px}
+    .nav{font:600 17px Arimo,Arial,sans-serif;fill:#BFD0C4}
+    .nav.active{fill:#FFF}
+    .light{fill:#FFF}
+    .muted{fill:#6F766F}
+    .price{font:700 21px Arimo,Arial,sans-serif;fill:#183E32}
+    .status{font:700 13px Arimo,Arial,sans-serif;letter-spacing:.4px}
+  </style>
+  <rect width="1600" height="1000" fill="#DAD2C4"/>
+  <rect x="35" y="35" width="1530" height="930" rx="34" fill="#F4EFE5"/>
+  <circle cx="82" cy="72" r="7" fill="#B6AA9B"/><circle cx="106" cy="72" r="7" fill="#B6AA9B"/><circle cx="130" cy="72" r="7" fill="#B6AA9B"/>
+  <rect x="70" y="110" width="1460" height="90" rx="22" fill="#183E32"/>
+       <text x="110" y="166" class="logo light">REKO.NORD</text>
+       <text x="1060" y="162" class="nav light">Producenter</text>
+       <text x="1195" y="162" class="nav light">Så fungerar det</text>
+       <rect x="1370" y="130" width="120" height="50" rx="25" fill="#FFFCF6"/>
+       <text x="1430" y="162" text-anchor="middle" class="small">Varukorg</text>
+  <rect x="90" y="245" width="650" height="650" rx="28" fill="#B8C2A3"/>
+  <path d="M90 660 Q250 470 410 625 T740 545 V895 H90Z" fill="#6F8469"/>
+  <path d="M90 760 Q270 600 430 735 T740 655 V895 H90Z" fill="#D5B57E"/>
+  <rect x="315" y="505" width="190" height="130" fill="#F0E5CF"/><path d="M285 515 L410 425 L535 515Z" fill="#934F3D"/>
+  <rect x="388" y="565" width="45" height="70" fill="#183E32"/>
+  <circle cx="190" cy="380" r="45" fill="#F4D07B"/>
+  <g transform="translate(790 250)">
+    <text x="0" y="25" class="micro">GÅRDSPROFIL · UPPSALA</text>
+    <text x="0" y="85" class="h1">Ekbolanda Gård</text>
+    <text x="0" y="125" class="body muted">Grönsaker, ägg och honung · 12 km bort</text>
+    <text x="0" y="185" class="body">Vi odlar nära jorden och säljer nära människorna.</text>
+    <text x="0" y="218" class="body">Småskaligt, säsongsstyrt och utan onödiga led.</text>
+    <line x1="0" y1="260" x2="700" y2="260" stroke="#D9D2C5"/>
+    <text x="0" y="300" class="micro">PRODUKTIONSMETODER</text>
+    <rect x="0" y="325" width="155" height="42" rx="21" fill="#DDE5D8"/><text x="77" y="352" text-anchor="middle" class="small">Småskaligt</text>
+    <rect x="170" y="325" width="170" height="42" rx="21" fill="#DDE5D8"/><text x="255" y="352" text-anchor="middle" class="small">Säsongsodlat</text>
+    <rect x="355" y="325" width="175" height="42" rx="21" fill="#DDE5D8"/><text x="442" y="352" text-anchor="middle" class="small">Direkthandel</text>
+    <text x="0" y="430" class="micro">VI ANVÄNDER INTE</text>
+    <text x="0" y="468" class="small">Onödiga mellanhänder  ·  långa lagerkedjor</text>
+    <line x1="0" y1="505" x2="700" y2="505" stroke="#D9D2C5"/>
+    <text x="0" y="552" class="h2">Våra produkter</text>
+    <rect x="0" y="585" width="215" height="125" rx="18" fill="#FFFCF6" stroke="#D9D2C5"/>
+    <circle cx="42" cy="628" r="22" fill="#D46A3C"/><text x="78" y="625" class="small">Morötter</text><text x="78" y="651" class="price">45 kr</text>
+    <rect x="235" y="585" width="215" height="125" rx="18" fill="#FFFCF6" stroke="#D9D2C5"/>
+    <ellipse cx="277" cy="628" rx="18" ry="24" fill="#D8C28C"/><text x="313" y="625" class="small">Gårdsägg</text><text x="313" y="651" class="price">68 kr</text>
+    <rect x="470" y="585" width="215" height="125" rx="18" fill="#FFFCF6" stroke="#D9D2C5"/>
+    <rect x="494" y="606" width="36" height="45" rx="8" fill="#DBA93B"/><text x="548" y="625" class="small">Honung</text><text x="548" y="651" class="price">95 kr</text>
+  </g>
+  </svg>
