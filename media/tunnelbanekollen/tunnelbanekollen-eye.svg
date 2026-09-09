@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tunnelbanekollen eye identity</title>
+  <desc id="desc">Tunnelbanekollen eye icon presented with the blue, red and green metro line colours.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="44%" r="55%">
+      <stop offset="0" stop-color="#1d2947"/>
+      <stop offset="1" stop-color="#0b0f1f"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <circle cx="800" cy="410" r="255" fill="none" stroke="#f5f7ff" stroke-opacity=".08" stroke-width="2"/>
+  <image x="545" y="155" width="510" height="510" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjAvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQiPg0KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4NCjxzdmcgdmVyc2lvbj0iMS4wIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgDQoJIHdpZHRoPSI4MDBweCIgaGVpZ2h0PSI4MDBweCIgdmlld0JveD0iMCAwIDY0IDY0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NCA2NCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRjlFQkIyIiBkPSJNMzIsNTQuMDA0Yy0xOS42ODYsMC0yOC42NzctMTkuMTIzLTI5LjkxNy0yMi4wMDFDMy4zMjEsMjkuMTIxLDEyLjI4OCwxMC4wMDQsMzIsMTAuMDA0DQoJCWMxOS42ODYsMCwyOC42NzcsMTkuMTIzLDI5LjkxNywyMi4wMDFDNjAuNjc5LDM0Ljg4Nyw1MS43MTIsNTQuMDA0LDMyLDU0LjAwNHoiLz4NCgk8Y2lyY2xlIGZpbGw9IiM0NUFBQjgiIGN4PSIzMiIgY3k9IjMyLjAwNCIgcj0iMTQiLz4NCgk8Y2lyY2xlIGZpbGw9IiM1MDZDN0YiIGN4PSIzMiIgY3k9IjMyLjAwOCIgcj0iNiIvPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjMzk0MjQwIiBkPSJNNjMuOTM0LDMxLjY0NWMtMC4wMTUtMC4wMzctMC4yNTYtMC42NDYtMC43NC0xLjY0OEM2MC41OTcsMjQuNjI3LDUxLjAyLDguMDA0LDMyLDguMDA0DQoJCQljLTIyLjU2OCwwLTMxLjg0MiwyMy40MDQtMzEuOTM0LDIzLjY0MWMtMC4wODksMC4yMzEtMC4wODksMC40ODcsMCwwLjcxOUMwLjE1OCwzMi42LDkuNDMyLDU2LjAwNCwzMiw1Ni4wMDQNCgkJCWMxOS4wMSwwLDI4LjU4Ny0xNi42MDUsMzEuMTg5LTIxLjk4M2MwLjQ4Ni0xLjAwNywwLjcyOS0xLjYyLDAuNzQ0LTEuNjU3QzY0LjAyMiwzMi4xMzIsNjQuMDIyLDMxLjg3Niw2My45MzQsMzEuNjQ1eiBNMzIsNTQuMDA0DQoJCQljLTE5LjY4NiwwLTI4LjY3Ny0xOS4xMjMtMjkuOTE3LTIyLjAwMUMzLjMyMSwyOS4xMjEsMTIuMjg4LDEwLjAwNCwzMiwxMC4wMDRjMTkuNjg2LDAsMjguNjc3LDE5LjEyMywyOS45MTcsMjIuMDAxDQoJCQlDNjAuNjc5LDM0Ljg4Nyw1MS43MTIsNTQuMDA0LDMyLDU0LjAwNHoiLz4NCgkJPHBhdGggZmlsbD0iIzM5NDI0MCIgZD0iTTMyLDE2LjAwOGMtOC44MzcsMC0xNiw3LjE2My0xNiwxNnM3LjE2MywxNiwxNiwxNnMxNi03LjE2MywxNi0xNlM0MC44MzcsMTYuMDA4LDMyLDE2LjAwOHogTTMyLDQ2LjAwOA0KCQkJYy03LjczMiwwLTE0LTYuMjY4LTE0LTE0czYuMjY4LTE0LDE0LTE0czE0LDYuMjY4LDE0LDE0UzM5LjczMiw0Ni4wMDgsMzIsNDYuMDA4eiIvPg0KCQk8cGF0aCBmaWxsPSIjMzk0MjQwIiBkPSJNMzIsMjQuMDA4Yy00LjQxOCwwLTgsMy41ODItOCw4czMuNTgyLDgsOCw4czgtMy41ODIsOC04UzM2LjQxOCwyNC4wMDgsMzIsMjQuMDA4eiBNMzIsMzguMDA4DQoJCQljLTMuMzEzLDAtNi0yLjY4Ny02LTZzMi42ODctNiw2LTZzNiwyLjY4Nyw2LDZTMzUuMzEzLDM4LjAwOCwzMiwzOC4wMDh6Ii8+DQoJCTxwYXRoIGZpbGw9IiMzOTQyNDAiIGQ9Ik0zMiwyOC4wMDRjLTAuNTUzLDAtMSwwLjQ0Ny0xLDFzMC40NDcsMSwxLDFjMS4xMDQsMCwyLDAuODk2LDIsMmMwLDAuNTUzLDAuNDQ3LDEsMSwxczEtMC40NDcsMS0xDQoJCQlDMzYsMjkuNzk1LDM0LjIwOSwyOC4wMDQsMzIsMjguMDA0eiIvPg0KCTwvZz4NCjwvZz4NCjwvc3ZnPg==" />
+  <g fill="none" stroke-linecap="round" stroke-width="14">
+    <path d="M590 755h135" stroke="#299bd8"/>
+    <path d="M733 755h134" stroke="#f70a67"/>
+    <path d="M875 755h135" stroke="#38b98a"/>
+  </g>
+</svg>
