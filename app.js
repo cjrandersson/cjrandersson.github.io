@@ -106,15 +106,21 @@ function introStoryMarkup(project, media) {
 }
 
 function structuredStoryMarkup(project) {
-  return project.storySections.map(section => `<section class="project-story-section">
-    <div class="project-story-copy">
-      <p class="project-eyebrow">${escapeHtml(section.eyebrow || '')}</p>
-      <h3>${escapeHtml(section.title || '')}</h3>
-      <p>${escapeHtml(section.body || '')}</p>
-      ${Array.isArray(section.bullets) && section.bullets.length ? `<ul>${section.bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
-    </div>
-    ${section.media ? `<div class="project-story-media"><a href="${escapeHtml(section.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, section.media)}</a></div>` : ''}
-  </section>`).join('');
+  return project.storySections.map(section => {
+    const cropClass = section.mediaCrop
+      ? ` project-story-media--crop crop-${escapeHtml(section.mediaCrop)}`
+      : '';
+
+    return `<section class="project-story-section">
+      <div class="project-story-copy">
+        <p class="project-eyebrow">${escapeHtml(section.eyebrow || '')}</p>
+        <h3>${escapeHtml(section.title || '')}</h3>
+        <p>${escapeHtml(section.body || '')}</p>
+        ${Array.isArray(section.bullets) && section.bullets.length ? `<ul>${section.bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+      </div>
+      ${section.media ? `<div class="project-story-media${cropClass}"><a href="${escapeHtml(section.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, section.media)}</a></div>` : ''}
+    </section>`;
+  }).join('');
 }
 
 function seriesStoryMarkup(project, media) {
