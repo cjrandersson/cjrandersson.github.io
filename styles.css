@@ -694,3 +694,7 @@ footer p { margin: 0; }
   .project-group-chevron { transition: none; }
 }
 
+/* Single project title */
+.project-marquee {
+  display: none;
+}
