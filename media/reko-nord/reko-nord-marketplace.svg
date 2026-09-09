@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="REKO Nord consumer marketplace">
+  <style>
+    .logo{font:700 26px Arimo,Arial,sans-serif;letter-spacing:2px;fill:#1D251F}
+    .display{font:500 70px Newsreader,Georgia,serif;fill:#1D251F}
+    .h1{font:500 46px Newsreader,Georgia,serif;fill:#1D251F}
+    .h2{font:500 30px Newsreader,Georgia,serif;fill:#1D251F}
+    .body{font:400 20px Arimo,Arial,sans-serif;fill:#1D251F}
+    .small{font:600 16px Arimo,Arial,sans-serif;fill:#1D251F}
+    .micro{font:500 13px Arimo,Arial,sans-serif;fill:#6F766F;letter-spacing:.4px}
+    .nav{font:600 17px Arimo,Arial,sans-serif;fill:#BFD0C4}
+    .nav.active{fill:#FFF}
+    .light{fill:#FFF}
+    .muted{fill:#6F766F}
+    .price{font:700 21px Arimo,Arial,sans-serif;fill:#183E32}
+    .status{font:700 13px Arimo,Arial,sans-serif;letter-spacing:.4px}
+  </style>
+  <rect width="1600" height="1000" fill="#DAD2C4"/>
+  <rect x="35" y="35" width="1530" height="930" rx="34" fill="#F4EFE5"/>
+  <circle cx="82" cy="72" r="7" fill="#B6AA9B"/><circle cx="106" cy="72" r="7" fill="#B6AA9B"/><circle cx="130" cy="72" r="7" fill="#B6AA9B"/>
+  <rect x="70" y="110" width="1460" height="90" rx="22" fill="#183E32"/>
+       <text x="110" y="166" class="logo light">REKO.NORD</text>
+       <text x="1060" y="162" class="nav light">Producenter</text>
+       <text x="1195" y="162" class="nav light">Så fungerar det</text>
+       <rect x="1370" y="130" width="120" height="50" rx="25" fill="#FFFCF6"/>
+       <text x="1430" y="162" text-anchor="middle" class="small">Varukorg</text>
+  <text x="90" y="300" class="display">Bra mat. Närmare.</text>
+  <text x="94" y="342" class="body muted">Beställ direkt från gårdarna omkring dig.</text>
+  <rect x="1050" y="245" width="450" height="120" rx="24" fill="#9FB09A"/>
+  <text x="1085" y="282" class="micro">NÄSTA UTLÄMNING</text>
+  <text x="1085" y="320" class="h2">Vaksala torg</text>
+  <text x="1085" y="348" class="small">Torsdag · 17:30–19:00</text>
+  <rect x="90" y="395" width="1420" height="64" rx="32" fill="#FFFCF6" stroke="#D9D2C5"/>
+  <text x="126" y="435" class="body muted">Sök bland gårdar, grönsaker, ägg, kött och honung</text>
+  <g transform="translate(90 500)">
+    <rect width="440" height="360" rx="24" fill="#FFFCF6"/>
+    <rect width="440" height="190" rx="24" fill="#C8A06A"/>
+    <path d="M0 160 Q110 90 220 155 T440 125 V190 H0Z" fill="#71866B"/>
+    <circle cx="330" cy="70" r="35" fill="#F5D780"/>
+    <text x="28" y="232" class="micro">EKOLANDA GÅRD · 12 KM</text>
+    <text x="28" y="274" class="h2">Veckans grönsakslåda</text>
+    <text x="28" y="310" class="small muted">Skördat för torsdagens utlämning</text>
+    <text x="28" y="344" class="price">165 kr</text>
+    <circle cx="395" cy="330" r="25" fill="#183E32"/><text x="395" y="338" text-anchor="middle" class="h2 light">+</text>
+  </g>
+  <g transform="translate(550 500)">
+    <rect width="440" height="360" rx="24" fill="#FFFCF6"/>
+    <rect width="440" height="190" rx="24" fill="#E3D2A1"/>
+    <ellipse cx="165" cy="102" rx="54" ry="70" fill="#F6F0DA"/><ellipse cx="260" cy="92" rx="50" ry="64" fill="#EEE5C8"/>
+    <text x="28" y="232" class="micro">ÖSTERBY GÅRDSBUTIK · 18 KM</text>
+    <text x="28" y="274" class="h2">Ägg från frigående höns</text>
+    <text x="28" y="310" class="small muted">12-pack · insamlat denna vecka</text>
+    <text x="28" y="344" class="price">68 kr</text>
+    <circle cx="395" cy="330" r="25" fill="#183E32"/><text x="395" y="338" text-anchor="middle" class="h2 light">+</text>
+  </g>
+  <g transform="translate(1010 500)">
+    <rect width="500" height="360" rx="24" fill="#FFFCF6"/>
+    <rect width="500" height="190" rx="24" fill="#8E5E45"/>
+    <path d="M40 140 C130 60 250 60 360 140" fill="none" stroke="#DEC8A6" stroke-width="18"/>
+    <text x="28" y="232" class="micro">LÖVSTA KÖTT AB · 24 KM</text>
+    <text x="28" y="274" class="h2">Gårdens köttlåda</text>
+    <text x="28" y="310" class="small muted">Gräsbetat · fryst · cirka 5 kg</text>
+    <text x="28" y="344" class="price">795 kr</text>
+    <circle cx="455" cy="330" r="25" fill="#183E32"/><text x="455" y="338" text-anchor="middle" class="h2 light">+</text>
+  </g>
+  </svg>
