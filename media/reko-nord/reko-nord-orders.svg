@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="REKO Nord order and pickup management">
+  <style>
+    .logo{font:700 26px Arimo,Arial,sans-serif;letter-spacing:2px;fill:#1D251F}
+    .display{font:500 70px Newsreader,Georgia,serif;fill:#1D251F}
+    .h1{font:500 46px Newsreader,Georgia,serif;fill:#1D251F}
+    .h2{font:500 30px Newsreader,Georgia,serif;fill:#1D251F}
+    .body{font:400 20px Arimo,Arial,sans-serif;fill:#1D251F}
+    .small{font:600 16px Arimo,Arial,sans-serif;fill:#1D251F}
+    .micro{font:500 13px Arimo,Arial,sans-serif;fill:#6F766F;letter-spacing:.4px}
+    .nav{font:600 17px Arimo,Arial,sans-serif;fill:#BFD0C4}
+    .nav.active{fill:#FFF}
+    .light{fill:#FFF}
+    .muted{fill:#6F766F}
+    .price{font:700 21px Arimo,Arial,sans-serif;fill:#183E32}
+    .status{font:700 13px Arimo,Arial,sans-serif;letter-spacing:.4px}
+  </style>
+  <rect width="1600" height="1000" fill="#DAD2C4"/>
+  <rect x="35" y="35" width="1530" height="930" rx="34" fill="#F4EFE5"/>
+  <circle cx="82" cy="72" r="7" fill="#B6AA9B"/><circle cx="106" cy="72" r="7" fill="#B6AA9B"/><circle cx="130" cy="72" r="7" fill="#B6AA9B"/>
+  <rect x="70" y="110" width="250" height="820" rx="22" fill="#183E32"/>
+       <text x="110" y="170" class="logo light">REKO.NORD</text>
+       <text x="110" y="245" class="nav active">Översikt</text>
+       <text x="110" y="300" class="nav">Beställningar</text>
+       <text x="110" y="355" class="nav">Veckans utbud</text>
+       <text x="110" y="410" class="nav">Utlämning</text>
+       <text x="110" y="465" class="nav">Gårdsprofil</text>
+       <circle cx="120" cy="855" r="24" fill="#9FB09A"/>
+       <text x="158" y="862" class="small light">Ekbolanda Gård</text>
+  <g transform="translate(370 145)">
+    <text x="0" y="35" class="micro">BESTÄLLNINGAR</text>
+    <text x="0" y="95" class="h1">Alla ordrar. Rätt läge.</text>
+    <text x="0" y="135" class="body muted">Betalning, plockning och utlämning i ett sammanhang.</text>
+    <rect x="0" y="180" width="170" height="48" rx="24" fill="#183E32"/><text x="85" y="210" text-anchor="middle" class="small light">Alla · 24</text>
+    <rect x="185" y="180" width="170" height="48" rx="24" fill="#FFFCF6" stroke="#D9D2C5"/><text x="270" y="210" text-anchor="middle" class="small">Betalda · 20</text>
+    <rect x="370" y="180" width="210" height="48" rx="24" fill="#FFFCF6" stroke="#D9D2C5"/><text x="475" y="210" text-anchor="middle" class="small">Väntar · 2</text>
+    <rect x="595" y="180" width="210" height="48" rx="24" fill="#FFFCF6" stroke="#D9D2C5"/><text x="700" y="210" text-anchor="middle" class="small">Åtgärd · 2</text>
+    <rect x="0" y="260" width="1175" height="525" rx="26" fill="#FFFCF6" stroke="#D9D2C5"/>
+    <text x="35" y="310" class="micro">KUND / ORDER</text><text x="570" y="310" class="micro">VAROR</text><text x="760" y="310" class="micro">VÄRDE</text><text x="930" y="310" class="micro">STATUS</text>
+    <line x1="35" y1="335" x2="1140" y2="335" stroke="#D9D2C5"/>
+    <g transform="translate(35 365)"><text x="0" y="25" class="h2">Anna Lind</text><text x="0" y="55" class="small muted">#RK-2048 · 17:42</text><text x="535" y="35" class="small">4 varor</text><text x="725" y="35" class="price">423 kr</text><rect x="895" y="5" width="145" height="44" rx="22" fill="#DCEBDD"/><text x="968" y="33" text-anchor="middle" class="status" fill="#183E32">BETALD</text><text x="1090" y="35" class="h2">›</text></g>
+    <line x1="35" y1="455" x2="1140" y2="455" stroke="#D9D2C5"/>
+    <g transform="translate(35 485)"><text x="0" y="25" class="h2">Johan Berg</text><text x="0" y="55" class="small muted">#RK-2047 · 17:31</text><text x="535" y="35" class="small">2 varor</text><text x="725" y="35" class="price">230 kr</text><rect x="895" y="5" width="175" height="44" rx="22" fill="#F4E5C4"/><text x="982" y="33" text-anchor="middle" class="status" fill="#8A651C">VÄNTAR BETALNING</text><text x="1090" y="35" class="h2">›</text></g>
+    <line x1="35" y1="575" x2="1140" y2="575" stroke="#D9D2C5"/>
+    <g transform="translate(35 605)"><text x="0" y="25" class="h2">Sara Holm</text><text x="0" y="55" class="small muted">#RK-2046 · 17:18</text><text x="535" y="35" class="small">6 varor</text><text x="725" y="35" class="price">685 kr</text><rect x="895" y="5" width="155" height="44" rx="22" fill="#F2D3C7"/><text x="973" y="33" text-anchor="middle" class="status" fill="#A24227">ÅTGÄRD KRÄVS</text><text x="1090" y="35" class="h2">›</text></g>
+    <rect x="875" y="710" width="265" height="50" rx="25" fill="#183E32"/><text x="1008" y="741" text-anchor="middle" class="small light">Öppna plocklista</text>
+  </g>
+  </svg>
