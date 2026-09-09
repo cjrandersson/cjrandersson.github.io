@@ -105,7 +105,23 @@ function introStoryMarkup(project, media) {
   </section>` : ''}`;
 }
 
+function structuredStoryMarkup(project) {
+  return project.storySections.map(section => `<section class="project-story-section">
+    <div class="project-story-copy">
+      <p class="project-eyebrow">${escapeHtml(section.eyebrow || '')}</p>
+      <h3>${escapeHtml(section.title || '')}</h3>
+      <p>${escapeHtml(section.body || '')}</p>
+      ${Array.isArray(section.bullets) && section.bullets.length ? `<ul>${section.bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+    </div>
+    ${section.media ? `<div class="project-story-media"><a href="${escapeHtml(section.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, section.media)}</a></div>` : ''}
+  </section>`).join('');
+}
+
 function seriesStoryMarkup(project, media) {
+  if (Array.isArray(project.storySections) && project.storySections.length) {
+    return structuredStoryMarkup(project);
+  }
+
   if (project.intro) {
     const remaining = media.slice(3);
     return `${introStoryMarkup(project, media)}${remaining.length ? `<div class="project-media-wall">${remaining.map((src, index) => `<a href="${escapeHtml(src)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, src, index + 3)}</a>`).join('')}</div>` : ''}`;
