@@ -6,8 +6,9 @@ An image-first portfolio for graphics, character design, software/code, product 
 
 **[https://cjrandersson.github.io/](https://cjrandersson.github.io/)**
 
-- [Latest verified deployment](https://cjrandersson.github.io/?v=ee0d72dd)
-- [About page](https://cjrandersson.github.io/?v=ee0d72dd#about)
+- [REKO Nord — original MVP V1 views](https://cjrandersson.github.io/?v=20260910-reko-v1#project/reko-nord)
+- [Latest verified deployment](https://cjrandersson.github.io/?v=20260910-reko-v1)
+- [About page](https://cjrandersson.github.io/?v=20260910-reko-v1#about)
 
 ## Repository
 
