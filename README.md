@@ -6,11 +6,11 @@ Three selected projects in sound, software and product design: flöde~, Tunnelba
 
 **[https://cjrandersson.github.io/](https://cjrandersson.github.io/)**
 
-- [flöde~](https://cjrandersson.github.io/?v=20260910-technical-tools#project/flode)
-- [Tunnelbanekollen](https://cjrandersson.github.io/?v=20260910-technical-tools#project/tunnelbanekollen)
-- [REKO Nord — original MVP V1 views](https://cjrandersson.github.io/?v=20260910-technical-tools#project/reko-nord)
-- [Latest verified deployment](https://cjrandersson.github.io/?v=20260910-technical-tools)
-- [About page](https://cjrandersson.github.io/?v=20260910-technical-tools#about)
+- [flöde~](https://cjrandersson.github.io/?v=20260910-contact#project/flode)
+- [Tunnelbanekollen](https://cjrandersson.github.io/?v=20260910-contact#project/tunnelbanekollen)
+- [REKO Nord — original MVP V1 views](https://cjrandersson.github.io/?v=20260910-contact#project/reko-nord)
+- [Latest verified deployment](https://cjrandersson.github.io/?v=20260910-contact)
+- [About page](https://cjrandersson.github.io/?v=20260910-contact#about)
 
 ## Repository
 
