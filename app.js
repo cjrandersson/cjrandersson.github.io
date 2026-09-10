@@ -1,5 +1,4 @@
 const projects = window.PROJECTS || [];
-const projectGroups = window.PROJECT_GROUPS || [];
 const gallery = document.querySelector('#gallery');
 const count = document.querySelector('#count');
 const viewer = document.querySelector('#viewer');
@@ -7,10 +6,7 @@ const homePage = document.querySelector('#home-page');
 const aboutPage = document.querySelector('#about-page');
 const routeLinks = [...document.querySelectorAll('[data-route]')];
 
-const visibleProjects = projectGroups
-  .flatMap(group => group.slugs)
-  .map(slug => projects.find(project => project.slug === slug))
-  .filter(Boolean);
+const visibleProjects = projects;
 
 let activeIndex = 0;
 
@@ -28,52 +24,32 @@ function mediaFor(project) {
   return (Array.isArray(source) ? source : [source]).filter(Boolean);
 }
 
-function groupFor(project) {
-  return projectGroups.find(group => group.slugs.includes(project.slug));
-}
-
 function imageMarkup(project, src, index = 0, eager = false) {
   const suffix = mediaFor(project).length > 1 ? ` — view ${index + 1}` : '';
   return `<img src="${escapeHtml(src)}" alt="${escapeHtml(project.alt || project.title)}${suffix}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
 }
 
 function renderGallery() {
-  gallery.innerHTML = projectGroups.map(group => {
-    const groupProjects = group.slugs
-      .map(slug => projects.find(project => project.slug === slug))
-      .filter(Boolean);
+  gallery.innerHTML = visibleProjects.map((project, index) => {
+    const cover = project.cover || {};
+    const src = cover.src || project.thumbnail || mediaFor(project)[0];
 
-    return `<section class="project-group" aria-labelledby="group-${escapeHtml(group.id)}">
-      <header class="project-group-header">
-        <h2 id="group-${escapeHtml(group.id)}">
-          <button class="project-group-toggle" type="button" aria-expanded="false" aria-controls="group-panel-${escapeHtml(group.id)}">
-            <span class="project-group-title">${escapeHtml(group.label)}</span>
-            <span class="project-group-count">${groupProjects.length.toString().padStart(2, '0')}</span>
-            <span class="material-symbols-outlined project-group-chevron" aria-hidden="true">expand_more</span>
-          </button>
-        </h2>
-      </header>
-      <div class="project-group-panel" id="group-panel-${escapeHtml(group.id)}" hidden>
-        <p class="project-group-intro">${escapeHtml(group.intro || '')}</p>
-        <div class="project-group-grid">
-          ${groupProjects.map(project => {
-            const src = mediaFor(project)[0];
-            return `<article class="project">
-              <button class="project-open" type="button" data-slug="${escapeHtml(project.slug)}" aria-label="Open ${escapeHtml(project.title)}">
-                <span class="media">
-                  ${src ? imageMarkup(project, src) : ''}
-                  ${project.mediaType === 'video' ? '<span class="play" aria-hidden="true">Play</span>' : ''}
-                  <span class="project-card-cue material-symbols-outlined" aria-hidden="true">arrow_outward</span>
-                </span>
-              </button>
-            </article>`;
-          }).join('')}
+    return `<article class="project project--${escapeHtml(project.slug)}">
+      <a class="project-open" href="#project/${encodeURIComponent(project.slug)}" aria-labelledby="title-${escapeHtml(project.slug)}">
+        <div class="project-cover">
+          <img src="${escapeHtml(src)}" alt="${escapeHtml(cover.alt || project.alt || project.title)}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async"${index === 0 ? ' fetchpriority="high"' : ''}>
         </div>
-      </div>
-    </section>`;
+        <div class="project-card-copy">
+          <p class="project-card-meta"><span>${String(index + 1).padStart(2, '0')}</span><span>${escapeHtml(cover.label || 'Software / Code')}</span></p>
+          <h2 id="title-${escapeHtml(project.slug)}">${project.titleIcon ? `<img class="project-card-icon" src="${escapeHtml(project.titleIcon)}" alt="" aria-hidden="true">` : ''}<span>${escapeHtml(project.title)}</span></h2>
+          <p class="project-card-summary">${escapeHtml(cover.summary || project.description || '')}</p>
+          <span class="project-card-link">View project<span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></span>
+        </div>
+      </a>
+    </article>`;
   }).join('');
 
-  count.textContent = `${visibleProjects.length} works`;
+  count.textContent = `${visibleProjects.length} projects`;
 }
 
 function introStoryMarkup(project, media) {
@@ -141,12 +117,11 @@ function seriesStoryMarkup(project, media) {
 function renderProject(project) {
   const details = project.details || {};
   const media = mediaFor(project);
-  const group = groupFor(project);
   const original = media[0];
 
   document.querySelector('#viewer-page').classList.toggle('long-title', project.title.length > 17);
 
-  document.querySelector('#viewer-category').textContent = `${group?.label || project.category || 'Work'} · ${project.year || ''}`;
+  document.querySelector('#viewer-category').textContent = `${project.cover?.label || 'Software / Code'} · ${project.year || ''}`;
   const viewerTitle = document.querySelector('#viewer-title');
   viewerTitle.classList.toggle('has-project-icon', Boolean(project.titleIcon));
   viewerTitle.innerHTML = project.titleIcon
@@ -179,7 +154,12 @@ function renderProject(project) {
 
 function openProject(slug) {
   const index = visibleProjects.findIndex(project => project.slug === slug);
-  if (index < 0) return;
+  if (index < 0) {
+    closeProject();
+    window.history.replaceState(null, '', '#work');
+    scrollToRoute('#work');
+    return;
+  }
   activeIndex = index;
   renderProject(visibleProjects[activeIndex]);
 }
@@ -233,22 +213,6 @@ function navigateProject(offset) {
   const nextIndex = (activeIndex + offset + visibleProjects.length) % visibleProjects.length;
   window.location.hash = `project/${encodeURIComponent(visibleProjects[nextIndex].slug)}`;
 }
-
-gallery.addEventListener('click', event => {
-  const groupToggle = event.target.closest('.project-group-toggle');
-  if (groupToggle) {
-    const panel = document.getElementById(groupToggle.getAttribute('aria-controls'));
-    const willExpand = groupToggle.getAttribute('aria-expanded') !== 'true';
-    groupToggle.setAttribute('aria-expanded', String(willExpand));
-    panel.hidden = !willExpand;
-    return;
-  }
-
-  const projectButton = event.target.closest('.project-open');
-  if (projectButton) {
-    window.location.hash = `project/${encodeURIComponent(projectButton.dataset.slug)}`;
-  }
-});
 
 document.querySelector('.viewer-close').addEventListener('click', () => {
   window.location.hash = 'work';

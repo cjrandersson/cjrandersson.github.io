@@ -1,14 +1,16 @@
 # CJ Robin Andersson Portfolio
 
-An image-first portfolio for graphics, character design, software/code, product design and experimental work.
+Three selected projects in sound, software and product design: flöde~, Tunnelbanekollen and REKO Nord.
 
 ## Live portfolio
 
 **[https://cjrandersson.github.io/](https://cjrandersson.github.io/)**
 
-- [REKO Nord — original MVP V1 views](https://cjrandersson.github.io/?v=20260910-reko-v1#project/reko-nord)
-- [Latest verified deployment](https://cjrandersson.github.io/?v=20260910-reko-v1)
-- [About page](https://cjrandersson.github.io/?v=20260910-reko-v1#about)
+- [flöde~](https://cjrandersson.github.io/?v=20260910-selected-work#project/flode)
+- [Tunnelbanekollen](https://cjrandersson.github.io/?v=20260910-selected-work#project/tunnelbanekollen)
+- [REKO Nord — original MVP V1 views](https://cjrandersson.github.io/?v=20260910-selected-work#project/reko-nord)
+- [Latest verified deployment](https://cjrandersson.github.io/?v=20260910-selected-work)
+- [About page](https://cjrandersson.github.io/?v=20260910-selected-work#about)
 
 ## Repository
 
