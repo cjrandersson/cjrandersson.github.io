@@ -2,6 +2,117 @@
 // Cover controls the Work preview; media and storySections belong to the project page.
 window.PROJECTS = [
   {
+    "slug": "ghee-packaging",
+    "title": "Ghee / Packaging System",
+    "category": "product",
+    "year": "2026",
+    "meta": "(Product design, branding, packaging)",
+    "thumbnail": "media/ghee/ghee-packaging-board-16x9.webp",
+    "media": [
+      "media/ghee/ghee-packaging-board-16x9.webp",
+      "media/ghee/ghee-carton-duo.webp",
+      "media/ghee/ghee-carton-tub.webp",
+      "media/ghee/ghee-glass-jar.webp",
+      "media/ghee/ghee-packaging-board.webp",
+      "media/ghee/unpasteurised-milk-concept.webp"
+    ],
+    "alt": "Ghee packaging concepts combining Japanese restraint, Scandinavian clarity and retro food graphics",
+    "aspectRatio": "16 / 9",
+    "size": "wide",
+    "featured": true,
+    "description": "A packaging and brand study for clarified butter, designed to make a traditional one-ingredient food feel immediate, useful and contemporary without losing its material honesty.",
+    "details": {
+      "what": "Product branding, packaging architecture and visual direction for ghee, with a companion raw-milk carton study.",
+      "why": "To make a traditional cooking fat easier to understand, easier to trust and more inviting to choose, while reducing visual and material excess.",
+      "thoughts": "A dialogue between Japanese packaging restraint and Scandinavian functional modernism, warmed by mid-century grocery graphics, tactile paper and direct pictograms.",
+      "software": [
+        "Adobe Illustrator",
+        "Adobe Photoshop",
+        "AI-assisted visualisation"
+      ]
+    },
+    "storySections": [
+      {
+        "eyebrow": "Packaging philosophy",
+        "title": "Less packaging noise. More food.",
+        "body": "The system is built around one simple idea: the pack should explain the food before it tries to advertise it. Large type, compact hierarchy, warm paper and a small family of symbols carry the message without turning the shelf into visual static.",
+        "bullets": [
+          "One ingredient, stated plainly",
+          "Bold hierarchy readable at a distance",
+          "Symbols for use rather than decoration",
+          "A restrained palette with a warm food-first character"
+        ],
+        "media": "media/ghee/ghee-carton-duo.webp"
+      },
+      {
+        "eyebrow": "Visual language",
+        "title": "Japan meets the Nordic grocery shelf.",
+        "body": "The visual direction sits between Japanese packaging discipline and Scandinavian functional clarity. Information is compact and deliberate, while the colours, pictograms and tactile surfaces borrow warmth from 1960s and 70s food packaging. The result is minimal without becoming sterile.",
+        "bullets": [
+          "Japanese restraint and information density",
+          "Scandinavian functionalism and material honesty",
+          "Mid-century colour and simple geometric illustration",
+          "Typography used as the main graphic object"
+        ],
+        "media": "media/ghee/ghee-carton-tub.webp"
+      },
+      {
+        "eyebrow": "Format system",
+        "title": "One identity, several containers.",
+        "body": "The identity is designed to survive a change of format. Carton, paper tub and glass jar use the same hierarchy, colour logic and graphic grammar, so the product can move between retail contexts without becoming a different brand each time.",
+        "bullets": [
+          "Carton concept for paper-forward packaging",
+          "Tub format for a softer domestic presence",
+          "Glass jar alternative that keeps the product visible",
+          "Consistent shelf recognition across formats"
+        ],
+        "media": "media/ghee/ghee-glass-jar.webp"
+      },
+      {
+        "eyebrow": "Material direction",
+        "title": "A pack that feels as honest as the ingredient.",
+        "body": "The environmental direction is intentionally material-conscious rather than decorative: uncoated paper, reduced ink coverage, simple folds and clear recycling cues. These are concept decisions, not lifecycle claims, but they establish a lower-complexity path for further production development.",
+        "bullets": [
+          "Uncoated and recycled-paper direction",
+          "Reduced material and ink palette",
+          "Simple construction with minimal plastic intent",
+          "Designed for clear recycling communication"
+        ],
+        "media": "media/ghee/ghee-packaging-board.webp"
+      },
+      {
+        "eyebrow": "Process",
+        "title": "Structure before decoration.",
+        "body": "The work starts with hierarchy and the physical object: what must be understood first, what belongs on the side, what can become a symbol, and how the pack opens. Vector layout, image editing and AI-assisted visualisation were then used to test materials, proportions, folds, labels and shelf presence before committing to a production-ready direction.",
+        "bullets": [
+          "Information architecture and grid",
+          "Custom pictogram and illustration language",
+          "Material and structural mock-ups",
+          "Rapid visual iteration across packaging formats"
+        ],
+        "media": "media/ghee/ghee-packaging-board-16x9.webp"
+      },
+      {
+        "eyebrow": "Side study / Raw milk",
+        "title": "The same logic, turned up louder.",
+        "body": "The unpasteurised-milk carton is a companion study in how the same principles can become more playful. Fire, trees, water, sun and leaves are reduced to blunt geometric signs, creating a colourful retro object that feels closer to a small farm, a poster and a grocery package at the same time.",
+        "bullets": [
+          "Playful retro colour blocking",
+          "Simple folk-like symbols for origin and nature",
+          "Large, direct product naming",
+          "A deliberately more expressive sibling to the Ghee system"
+        ],
+        "media": "media/ghee/unpasteurised-milk-concept.webp"
+      }
+    ],
+    "cover": {
+      "src": "media/ghee/ghee-packaging-board-16x9.webp",
+      "alt": "Ghee packaging system board showing carton views, opening sequence and material details",
+      "label": "Product branding / Packaging",
+      "summary": "One ingredient. A clearer shelf language."
+    }
+  },
+  {
     "slug": "flode",
     "title": "flöde~",
     "category": "uxui",
@@ -46,11 +157,7 @@ window.PROJECTS = [
       "what": "A six-channel sampler, generative sequencer, sound mangler and looper.",
       "why": "To make controlled randomness playable as one synchronized instrument.",
       "thoughts": "Six autonomous pods behave independently while sharing one clock.",
-      "software": [
-        "Max/MSP",
-        "Max for Live",
-        "Ableton Live"
-      ]
+      "software": ["Max/MSP", "Max for Live", "Ableton Live"]
     },
     "cover": {
       "src": "media/flode/flode-hardware-render.png",
@@ -80,11 +187,7 @@ window.PROJECTS = [
       "name": "Tunnelbanekollen",
       "lead": "A community-built layer for the gap between the timetable and the lived journey.",
       "question": "What does the map know?",
-      "between": [
-        "anonymous station reports",
-        "public transit movement",
-        "confidence over certainty"
-      ],
+      "between": ["anonymous station reports", "public transit movement", "confidence over certainty"],
       "body": "Short, time-sensitive reports become a shared picture of conditions across the network — without tracking individuals."
     },
     "definitions": [
@@ -98,14 +201,7 @@ window.PROJECTS = [
       "what": "Concept, product framing, UX/UI, visual identity and a working React/TypeScript frontend prototype.",
       "why": "Timetables show when the train moves. Tunnelbanekollen reveals what is happening around it.",
       "thoughts": "Anonymous station-level signals become a graphic language of lines, alerts and probability — information without surveillance.",
-      "software": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "Tailwind CSS",
-        "SVG",
-        "GTFS"
-      ]
+      "software": ["React", "TypeScript", "Vite", "Tailwind CSS", "SVG", "GTFS"]
     },
     "cover": {
       "src": "media/tunnelbanekollen/tunnelbanekollen-ui.svg",
@@ -138,75 +234,42 @@ window.PROJECTS = [
       "what": "Product strategy, UX/UI and a responsive consumer marketplace and producer portal built as one React and TypeScript MVP.",
       "why": "Good food should not need a bad interface. REKO Nord removes the administrative friction around local trade while keeping the direct relationship intact.",
       "thoughts": "Not another delivery app — shared infrastructure for weekly trade, where origin stays visible and producers stay in control.",
-      "software": [
-        "React 19",
-        "TypeScript",
-        "Tailwind CSS 4",
-        "Vite",
-        "Node.js",
-        "Shadcn",
-        "Lucide"
-      ]
+      "software": ["React 19", "TypeScript", "Tailwind CSS 4", "Vite", "Node.js", "Shadcn", "Lucide"]
     },
     "storySections": [
       {
         "eyebrow": "Origin before algorithm",
         "title": "The farm is not a seller ID.",
         "body": "Every producer gets a real front door: place, people, methods, values and weekly assortment. The interface keeps origin visible before price turns food into another anonymous product.",
-        "bullets": [
-          "Farm story and location",
-          "Production methods and principles",
-          "Pickup details and direct contact",
-          "A reusable, shoppable assortment"
-        ],
+        "bullets": ["Farm story and location", "Production methods and principles", "Pickup details and direct contact", "A reusable, shoppable assortment"],
         "media": "media/reko-nord/v1-farm-profile.jpg"
       },
       {
         "eyebrow": "Consumer flow",
         "title": "Less checkout. More certainty.",
         "body": "Products from nearby farms move into one calm overview with quantities, pickup time, producer and total always visible. Convenience without hiding where the food came from.",
-        "bullets": [
-          "Search, filters and quick add",
-          "One readable basket",
-          "Clear pickup context",
-          "Simple Swish-ready order flow"
-        ],
+        "bullets": ["Search, filters and quick add", "One readable basket", "Clear pickup context", "Simple Swish-ready order flow"],
         "media": "media/reko-nord/v1-cart.jpg"
       },
       {
         "eyebrow": "Producer flow",
         "title": "The week, reduced to what matters.",
         "body": "The producer portal opens on the next real task — not a dashboard full of software. Orders, value, payment exceptions and pickup preparation are readable in seconds.",
-        "bullets": [
-          "Next pickup first",
-          "Sales and order status",
-          "Only actionable alerts",
-          "Responsive in the barn, kitchen or office"
-        ],
+        "bullets": ["Next pickup first", "Sales and order status", "Only actionable alerts", "Responsive in the barn, kitchen or office"],
         "media": "media/reko-nord/v1-producer-dashboard.jpg"
       },
       {
         "eyebrow": "Reusable supply",
         "title": "Create once. Sell with the season.",
         "body": "A product should not be rebuilt every Thursday. Producers reuse their catalogue, adjust stock for the current harvest and publish the week in one deliberate action.",
-        "bullets": [
-          "Reusable product catalogue",
-          "Inventory per pickup",
-          "Fast price and quantity edits",
-          "One-click weekly publishing"
-        ],
+        "bullets": ["Reusable product catalogue", "Inventory per pickup", "Fast price and quantity edits", "One-click weekly publishing"],
         "media": "media/reko-nord/v1-product-management.jpg"
       },
       {
         "eyebrow": "Paid to picked up",
         "title": "Every order knows its next step.",
         "body": "Payment, customer, order value, products and handover status live in the same view. The system turns scattered messages and handwritten lists into a practical pickup flow.",
-        "bullets": [
-          "Betald, Väntar betalning, Åtgärd krävs",
-          "Order number and value together",
-          "Customer contact and pick list",
-          "Pickup handling and history"
-        ],
+        "bullets": ["Betald, Väntar betalning, Åtgärd krävs", "Order number and value together", "Customer contact and pick list", "Pickup handling and history"],
         "media": "media/reko-nord/v1-orders.jpg"
       }
     ],
