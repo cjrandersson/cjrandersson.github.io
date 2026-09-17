@@ -101,6 +101,29 @@ body::before {
   width: 100%;
 }
 
+/* Solsmör glass study: crop away the compressed lower row and let the three hero jars fill the frame. */
+.project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media {
+  width: 106%;
+  margin-left: -3%;
+  aspect-ratio: 2.9 / 1;
+  overflow: hidden;
+  background: transparent;
+}
+.project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.035);
+  transform-origin: center top;
+}
+
 /* Wide design boards should breathe across the page. */
 .project-story-section:has(img[src*="ghee-packaging-board"]) {
   grid-template-columns: 1fr;
@@ -132,6 +155,13 @@ body::before {
   }
   .project-story:has(img[src*="solsmor-jar-2-variants"]) {
     width: min(calc(100% - (2 * var(--page))), 1440px);
+  }
+  .project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media {
+    width: 100%;
+    margin-left: 0;
+  }
+  .project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media img {
+    transform: none;
   }
   .project-hero:has(.project-hero-media img[src*="media/ghee/"]) .viewer-original {
     grid-column: 1;
