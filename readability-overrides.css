@@ -1,9 +1,23 @@
-/* Portfolio readability: slightly larger feature/key-highlight lists across all project stories. */
-.project-story-copy ul {
-  font-size: clamp(15px, 1.15vw, 17px);
+/* Portfolio readability: 12% larger project story copy across all case studies. */
+.project-story-copy h3 {
+  font-size: clamp(38px, 5.04vw, 76px);
+}
+
+.project-story-copy > p:not(.project-eyebrow) {
+  font-size: 16.8px;
+}
+
+.project-story-copy li {
+  font-size: clamp(16.8px, 1.29vw, 19px);
   line-height: 1.58;
 }
 
 .project-story-copy li + li {
   margin-top: .42em;
+}
+
+@media (max-width: 600px) {
+  .project-story-copy h3 {
+    font-size: 44.8px;
+  }
 }
