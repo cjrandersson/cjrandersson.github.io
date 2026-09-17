@@ -63,7 +63,7 @@ window.PROJECTS = [
         "title": "A pack that feels as honest as the ingredient.",
         "body": "The environmental direction is intentionally material-conscious rather than decorative: uncoated paper, reduced ink coverage, simple folds and clear recycling cues. These are concept decisions, not lifecycle claims, but they establish a lower-complexity path for further production development.",
         "bullets": ["Uncoated and recycled-paper direction", "Reduced material and ink palette", "Simple construction with minimal plastic intent", "Designed for clear recycling communication"],
-        "media": "media/ghee/ghee-packaging-board.png"
+        "media": "media/ghee/three-kimchi-jar-styles.png"
       },
       {
         "eyebrow": "Side study / Raw milk",
