@@ -68,18 +68,18 @@ window.PROJECTS = [
         "media": "media/ghee/solsmor-glass-variants-top3.png"
       },
       {
-        "eyebrow": "Product study / Kefir",
-        "title": "Same dairy family. A cooler signal.",
-        "body": "The kefir concept keeps the same graphic grammar as the other dairy studies — large uncomplicated type, simple organic forms, open areas and a deliberately reduced amount of information — but shifts the field to blue. That single colour change gives the cultured product its own category and shelf presence without breaking the family resemblance. The blue reads cooler, fresher and more fermented than Solsmör's warm yellow and amber palette, while the recurring shapes and typographic hierarchy make it unmistakably part of the same system.",
-        "bullets": ["Blue background creates an immediate category shift", "Shared geometric and organic forms maintain family recognition", "Front and back behave as one continuous graphic object", "Minimal information hierarchy keeps the dairy product direct and approachable"],
-        "media": "media/ghee/naturlig-kefir-front-back-blue.png"
-      },
-      {
         "eyebrow": "Product study / Fermenterat Té",
         "title": "Four bottles. Four personalities.",
         "body": "The fermented-tea study treats the bottle as a small playground for the same identity system. The numbered variants explore how far the packaging can move from quiet utility toward something more expressive while keeping the liquid visible and the product name readable. Rather than four unrelated labels, they are four levels of personality built from the same ingredients: typography, exposed glass, irregular geometry and a slightly offbeat Japanese 1970s sensibility.",
         "bullets": ["01 — Direct / reduced: the quietest expression, with minimal marking and the largest uninterrupted view of the tea; clean, functional and almost apothecary-like.", "02 — Editorial / asymmetric: a more typographic composition with an offset hierarchy; contemporary, crafted and intentionally imperfect.", "03 — Organic / wave: the label boundary becomes fluid and irregular, wrapping around the bottle with a softer, playful rhythm while leaving generous windows into the drink.", "04 — Graphic / expressive: the strongest poster-like variant, using larger forms and higher contrast for shelf presence without sacrificing product visibility."],
         "media": "media/ghee/fermenterat-te-4-styles.png"
+      },
+      {
+        "eyebrow": "Product study / Kefir",
+        "title": "Same dairy family. A cooler signal.",
+        "body": "The kefir concept keeps the same graphic grammar as the other dairy studies — large uncomplicated type, simple organic forms, open areas and a deliberately reduced amount of information — but shifts the field to blue. That single colour change gives the cultured product its own category and shelf presence without breaking the family resemblance. The blue reads cooler, fresher and more fermented than Solsmör's warm yellow and amber palette, while the recurring shapes and typographic hierarchy make it unmistakably part of the same system.",
+        "bullets": ["Blue background creates an immediate category shift", "Shared geometric and organic forms maintain family recognition", "Front and back behave as one continuous graphic object", "Minimal information hierarchy keeps the dairy product direct and approachable"],
+        "media": "media/ghee/naturlig-kefir-front-back-blue.png"
       },
       {
         "eyebrow": "Side study / Raw milk",
