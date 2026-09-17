@@ -101,11 +101,11 @@ body::before {
   width: 100%;
 }
 
-/* Solsmör glass study: crop away the compressed lower row and let the three hero jars fill the frame. */
+/* Solsmör glass study: keep only the three hero jars, with a little breathing room below the glass bases. */
 .project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media {
   width: 106%;
   margin-left: -3%;
-  aspect-ratio: 2.9 / 1;
+  aspect-ratio: 2.65 / 1;
   overflow: hidden;
   background: transparent;
 }
@@ -120,7 +120,7 @@ body::before {
   max-height: none;
   object-fit: cover;
   object-position: center top;
-  transform: scale(1.035);
+  transform: scale(1.015);
   transform-origin: center top;
 }
 
