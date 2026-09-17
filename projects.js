@@ -3,7 +3,7 @@
 window.PROJECTS = [
   {
     "slug": "ghee-packaging",
-    "title": "Ghee / Guldsmör",
+    "title": "Tactile food packaging design and branding mixing Japanese aesthetic and minimalism - and Swedish pictograms and functionalism",
     "category": "product",
     "year": "2026",
     "meta": "(Product design, branding, packaging)",
@@ -164,7 +164,8 @@ window.PROJECTS = [
     "storySections": [
       {"eyebrow": "Origin before algorithm", "title": "The farm is not a seller ID.", "body": "Every producer gets a real front door: place, people, methods, values and weekly assortment. The interface keeps origin visible before price turns food into another anonymous product.", "bullets": ["Farm story and location", "Production methods and principles", "Pickup details and direct contact", "A reusable, shoppable assortment"], "media": "media/reko-nord/v1-farm-profile.jpg"},
       {"eyebrow": "Consumer flow", "title": "Less checkout. More certainty.", "body": "Products from nearby farms move into one calm overview with quantities, pickup time, producer and total always visible. Convenience without hiding where the food came from.", "bullets": ["Search, filters and quick add", "One readable basket", "Clear pickup context", "Simple Swish-ready order flow"], "media": "media/reko-nord/v1-cart.jpg"},
-      {"eyebrow": "Producer flow", "title": "The week, reduced to what matters.", "body": "The producer portal opens on the next real task — not a dashboard full of software. Orders, value, payment exceptions and pickup preparation are readable in seconds.", "bullets": ["Next pickup first", "Sales and order status", "Only actionable alerts", "Responsive in the barn, kitchen or office"], "media": "media/reko-nord/v1-producer-dashboard.jpg"},
+      {"eyebrow": "Producer flow", "title": "The week, reduced to what matters.", "body": "The producer portal opens on the next real task — not a dashboard full of software. Orders, value, payment exceptions and pickup preparation are readable in seconds.",
+        "bullets": ["Next pickup first", "Sales and order status", "Only actionable alerts", "Responsive in the barn, kitchen or office"], "media": "media/reko-nord/v1-producer-dashboard.jpg"},
       {"eyebrow": "Reusable supply", "title": "Create once. Sell with the season.", "body": "A product should not be rebuilt every Thursday. Producers reuse their catalogue, adjust stock for the current harvest and publish the week in one deliberate action.", "bullets": ["Reusable product catalogue", "Inventory per pickup", "Fast price and quantity edits", "One-click weekly publishing"], "media": "media/reko-nord/v1-product-management.jpg"},
       {"eyebrow": "Paid to picked up", "title": "Every order knows its next step.", "body": "Payment, customer, order value, products and handover status live in the same view. The system turns scattered messages and handwritten lists into a practical pickup flow.", "bullets": ["Betald, Väntar betalning, Åtgärd krävs", "Order number and value together", "Customer contact and pick list", "Pickup handling and history"], "media": "media/reko-nord/v1-orders.jpg"}
     ],
