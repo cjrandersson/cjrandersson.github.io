@@ -15,8 +15,10 @@ window.PROJECTS = [
       "media/ghee/ghee-glass-study-front-back.png",
       "media/ghee/ghee-glass-jar-tall.png",
       "media/ghee/solsmor-glass-variants-top3.png",
-      "media/ghee/naturlig-kefir-front-back-blue.png",
       "media/ghee/fermenterat-te-4-styles.png",
+      "media/ghee/fermenterat-te-1-bottle-design-1.png",
+      "media/ghee/fermenterat-te-1-bottle-design-2.png",
+      "media/ghee/naturlig-kefir-front-back-blue.png",
       "media/ghee/unpasteurised-milk-concept-front.png",
       "media/ghee/unpasteurised-milk-concept-back.png"
     ],
@@ -73,6 +75,20 @@ window.PROJECTS = [
         "body": "The fermented-tea study treats the bottle as a small playground for the same identity system. The numbered variants explore how far the packaging can move from quiet utility toward something more expressive while keeping the liquid visible and the product name readable. Rather than four unrelated labels, they are four levels of personality built from the same ingredients: typography, exposed glass, irregular geometry and a slightly offbeat Japanese 1970s sensibility.",
         "bullets": ["01 — Direct / reduced: the quietest expression, with minimal marking and the largest uninterrupted view of the tea; clean, functional and almost apothecary-like.", "02 — Editorial / asymmetric: a more typographic composition with an offset hierarchy; contemporary, crafted and intentionally imperfect.", "03 — Organic / wave: the label boundary becomes fluid and irregular, wrapping around the bottle with a softer, playful rhythm while leaving generous windows into the drink.", "04 — Graphic / expressive: the strongest poster-like variant, using larger forms and higher contrast for shelf presence without sacrificing product visibility."],
         "media": "media/ghee/fermenterat-te-4-styles.png"
+      },
+      {
+        "eyebrow": "Fermenterat Té / Bottle study 01",
+        "title": "Quiet glass, graphic interruption.",
+        "body": "A restrained kombucha bottle where the liquid remains the main visual material. The identity sits lightly on the glass, using asymmetric typography and controlled negative space to make the bottle feel crafted, modern and slightly unexpected.",
+        "bullets": ["Large areas of exposed glass", "Asymmetric, low-noise typography", "The tea colour becomes part of the identity"],
+        "media": "media/ghee/fermenterat-te-1-bottle-design-1.png"
+      },
+      {
+        "eyebrow": "Fermenterat Té / Bottle study 02",
+        "title": "A louder fermented object.",
+        "body": "This variation pushes the same system toward a more expressive shelf presence. Graphic forms and typography move more freely across the bottle while the transparent gaps keep the kombucha visible, balancing personality with a clear sense of the product inside.",
+        "bullets": ["More expressive graphic rhythm", "Transparent gaps keep the product visible", "Playful without losing legibility"],
+        "media": "media/ghee/fermenterat-te-1-bottle-design-2.png"
       },
       {
         "eyebrow": "Product study / Kefir",
