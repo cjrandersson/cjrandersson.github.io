@@ -10,9 +10,9 @@ window.PROJECTS = [
     "thumbnail": "media/ghee/ghee-packaging-board-16x9.png",
     "media": [
       "media/ghee/ghee-packaging-board-16x9.png",
-      "media/ghee/ghee-carton-duo.png",
+      "media/ghee/solsmor-glass-variants.png",
       "media/ghee/ghee-carton-tub.png",
-      "media/ghee/ghee-glass-jar-square.png",
+      "media/ghee/ghee-glass-study-front-back.png",
       "media/ghee/ghee-glass-jar-tall.png",
       "media/ghee/ghee-packaging-board.png",
       "media/ghee/unpasteurised-milk-concept-front.png",
@@ -31,11 +31,11 @@ window.PROJECTS = [
     },
     "storySections": [
       {
-        "eyebrow": "Packaging philosophy",
-        "title": "Less packaging noise. More food.",
-        "body": "The system is built around one simple idea: the pack should explain the food before it tries to advertise it. Large type, compact hierarchy, warm paper and a small family of symbols carry the message without turning the shelf into visual static.",
-        "bullets": ["One ingredient, stated plainly", "Bold hierarchy readable at a distance", "Symbols for use rather than decoration", "A restrained palette with a warm food-first character"],
-        "media": "media/ghee/ghee-carton-duo.png"
+        "eyebrow": "Glass jar exploration",
+        "title": "Let the product speak first.",
+        "body": "These jar studies explore a packaging direction where the label becomes quieter and the contents take centre stage. By reducing printed surface, minimising copy and allowing the clarified butter itself to carry more of the shelf presence, the system feels lighter, cleaner and more confident. Embossed glass, asymmetric labels, transparent patterning and darker glass variants all test how far the identity can be simplified without losing recognition.",
+        "bullets": ["Less label, more visible product", "Minimal text with only essential information", "Embossed, asymmetric and pattern-based label approaches", "Clear, amber and brown glass as part of the visual system"],
+        "media": "media/ghee/solsmor-glass-variants.png"
       },
       {
         "eyebrow": "Visual language",
@@ -47,9 +47,9 @@ window.PROJECTS = [
       {
         "eyebrow": "Glass study / I",
         "title": "The identity holds when the material changes.",
-        "body": "The first glass-jar study strips the system back to a broad paper label, a clear product window and the same oversized typographic hierarchy. The food itself becomes part of the colour palette.",
-        "bullets": ["Product remains visible", "Large shelf-first typography", "Minimal label architecture", "Same identity in a reusable container"],
-        "media": "media/ghee/ghee-glass-jar-square.png"
+        "body": "The first glass-jar study strips the system back to a broad paper label, a clear product window and the same oversized typographic hierarchy. The front and reverse are treated as one continuous information system, while the food itself becomes part of the colour palette.",
+        "bullets": ["Product remains visible", "Front and back designed as one system", "Minimal label architecture", "Same identity in a reusable container"],
+        "media": "media/ghee/ghee-glass-study-front-back.png"
       },
       {
         "eyebrow": "Glass study / II",
