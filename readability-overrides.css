@@ -1,0 +1,9 @@
+/* Portfolio readability: slightly larger feature/key-highlight lists across all project stories. */
+.project-story-copy ul {
+  font-size: clamp(15px, 1.15vw, 17px);
+  line-height: 1.58;
+}
+
+.project-story-copy li + li {
+  margin-top: .42em;
+}
