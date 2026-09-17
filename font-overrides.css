@@ -86,6 +86,45 @@ body::before {
   background: transparent;
 }
 
+/* Product-coded eyebrow palette. Each study gets its own quiet signal so the
+   long case study breaks into clearly recognisable families without adding UI chrome. */
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-eyebrow {
+  color: #d7bd72;
+}
+.project-story-section:has(img[src*="three-kimchi-jar-styles"]) .project-eyebrow {
+  color: #e27d5b;
+}
+.project-story-section:has(img[src*="solsmor-jar-2-variants"]) .project-eyebrow {
+  color: #d9a63a;
+}
+.project-story-section:has(img[src*="ghee-glass-study-front-back"]) .project-eyebrow {
+  color: #c8b792;
+}
+.project-story-section:has(img[src*="ghee-glass-jar-tall"]) .project-eyebrow {
+  color: #a6b89b;
+}
+.project-story-section:has(img[src*="solsmor-glass-variants-top3"]) .project-eyebrow {
+  color: #d48c48;
+}
+.project-story-section:has(img[src*="fermenterat-te-4-styles"]) .project-eyebrow {
+  color: #93b888;
+}
+.project-story-section:has(img[src*="fermenterat-te-1-bottle-design-1"]) .project-eyebrow {
+  color: #b79ac8;
+}
+.project-story-section:has(img[src*="fermenterat-te-1-bottle-design-2"]) .project-eyebrow {
+  color: #d78373;
+}
+.project-story-section:has(img[src*="naturlig-kefir-front-back-blue"]) .project-eyebrow {
+  color: #76a7d8;
+}
+.project-story-section:has(img[src*="unpasteurised-milk-concept-front"]) .project-eyebrow {
+  color: #dfb84d;
+}
+.project-story-section:has(img[src*="unpasteurised-milk-concept-back"]) .project-eyebrow {
+  color: #7cb9af;
+}
+
 /* Hero product studies: let the jars dominate the page and reveal label detail. */
 .project-story:has(img[src*="solsmor-jar-2-variants"]) {
   width: min(calc(100% - 32px), 1680px);
