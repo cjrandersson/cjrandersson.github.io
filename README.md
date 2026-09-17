@@ -1,6 +1,10 @@
 # CJ Robin Andersson Portfolio
 
-Three selected projects in sound, software and product design: flöde~, Tunnelbanekollen and REKO Nord.
+Three selected projects in sound, software and product design: 
+Tactile package design
+flöde~
+Tunnelbanekollen 
+and REKO Nord
 
 ## Live portfolio
 
