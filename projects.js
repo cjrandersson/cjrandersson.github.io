@@ -14,7 +14,7 @@ window.PROJECTS = [
       "media/ghee/solsmor-jar-2-variants.png",
       "media/ghee/ghee-glass-study-front-back.png",
       "media/ghee/ghee-glass-jar-tall.png",
-      "media/ghee/solsmor-glass-variants.png",
+      "media/ghee/solsmor-glass-variants-top3.png",
       "media/ghee/naturlig-kefir-front-back-blue.png",
       "media/ghee/fermenterat-te-4-styles.png",
       "media/ghee/unpasteurised-milk-concept-front.png",
@@ -65,7 +65,7 @@ window.PROJECTS = [
         "title": "Let the product speak first.",
         "body": "These Solsmör jar studies explore a packaging direction where the label becomes quieter and the contents take centre stage. By reducing printed surface, minimising copy and allowing the clarified butter itself to carry more of the shelf presence, the system feels lighter, cleaner and more confident. Embossed glass, asymmetric labels, transparent patterning and darker glass variants all test how far the identity can be simplified without losing recognition.",
         "bullets": ["Less label, more visible product", "Minimal text with only essential information", "Embossed, asymmetric and pattern-based label approaches", "Clear, amber and brown glass as part of the visual system"],
-        "media": "media/ghee/solsmor-glass-variants.png"
+        "media": "media/ghee/solsmor-glass-variants-top3.png"
       },
       {
         "eyebrow": "Product study / Kefir",
