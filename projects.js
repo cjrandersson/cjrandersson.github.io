@@ -10,32 +10,34 @@ window.PROJECTS = [
     "thumbnail": "media/ghee/ghee-packaging-board-16x9.png",
     "media": [
       "media/ghee/ghee-packaging-board-16x9.png",
-      "media/ghee/solsmor-glass-variants.png",
+      "media/ghee/three-kimchi-jar-styles.png",
       "media/ghee/solsmor-jar-2-variants.png",
       "media/ghee/ghee-glass-study-front-back.png",
       "media/ghee/ghee-glass-jar-tall.png",
-      "media/ghee/ghee-packaging-board.png",
+      "media/ghee/solsmor-glass-variants.png",
+      "media/ghee/naturlig-kefir-front-back-blue.png",
+      "media/ghee/fermenterat-te-4-styles.png",
       "media/ghee/unpasteurised-milk-concept-front.png",
       "media/ghee/unpasteurised-milk-concept-back.png"
     ],
-    "alt": "Ghee packaging concepts combining Japanese restraint, Scandinavian clarity and retro food graphics",
+    "alt": "Food packaging concepts combining Japanese restraint, Scandinavian clarity and retro grocery graphics",
     "aspectRatio": "16 / 9",
     "size": "wide",
     "featured": true,
     "description": "Packaging and brand design",
     "details": {
-      "what": "Product branding, packaging architecture and visual direction for ghee, with a companion raw-milk carton study.",
-      "why": "To make a traditional cooking fat easier to understand, easier to trust and more inviting to choose, while reducing visual and material excess.",
-      "thoughts": "A dialogue between Japanese packaging restraint and Scandinavian functional modernism, warmed by mid-century grocery graphics, tactile paper and direct pictograms.",
+      "what": "Product branding, packaging architecture and visual direction for Guldsmör, expanded through companion studies for kimchi, kefir, fermented tea and raw milk.",
+      "why": "To make honest, minimally processed food easier to understand, easier to trust and more inviting to choose, while reducing visual and material excess.",
+      "thoughts": "A dialogue between Japanese packaging restraint and Scandinavian functional modernism, warmed by mid-century grocery graphics, tactile materials and direct pictograms.",
       "software": ["Adobe Illustrator", "Adobe Photoshop", "AI-assisted visualisation"]
     },
     "storySections": [
       {
-        "eyebrow": "Glass jar exploration",
-        "title": "Let the product speak first.",
-        "body": "These jar studies explore a packaging direction where the label becomes quieter and the contents take centre stage. By reducing printed surface, minimising copy and allowing the clarified butter itself to carry more of the shelf presence, the system feels lighter, cleaner and more confident. Embossed glass, asymmetric labels, transparent patterning and darker glass variants all test how far the identity can be simplified without losing recognition.",
-        "bullets": ["Less label, more visible product", "Minimal text with only essential information", "Embossed, asymmetric and pattern-based label approaches", "Clear, amber and brown glass as part of the visual system"],
-        "media": "media/ghee/solsmor-glass-variants.png"
+        "eyebrow": "Material direction",
+        "title": "One visual language, different kinds of fermentation.",
+        "body": "The kimchi studies push the system into a more expressive glass-jar format. The food remains visible and becomes part of the palette, while irregular labels, direct typography and asymmetrical graphic forms create movement around the container instead of covering it. The aim is to let a fermented product feel lively and contemporary without losing the directness, material honesty and reduced visual vocabulary used throughout the wider food identity.",
+        "bullets": ["Visible product as part of the graphic composition", "Irregular and wave-cut label geometries", "Reduced typography with strong shelf recognition", "Reusable glass and a deliberately low-complexity material direction"],
+        "media": "media/ghee/three-kimchi-jar-styles.png"
       },
       {
         "eyebrow": "Why Ghee / Ghi?",
@@ -59,11 +61,25 @@ window.PROJECTS = [
         "media": "media/ghee/ghee-glass-jar-tall.png"
       },
       {
-        "eyebrow": "Material direction",
-        "title": "A pack that feels as honest as the ingredient.",
-        "body": "The environmental direction is intentionally material-conscious rather than decorative: uncoated paper, reduced ink coverage, simple folds and clear recycling cues. These are concept decisions, not lifecycle claims, but they establish a lower-complexity path for further production development.",
-        "bullets": ["Uncoated and recycled-paper direction", "Reduced material and ink palette", "Simple construction with minimal plastic intent", "Designed for clear recycling communication"],
-        "media": "media/ghee/three-kimchi-jar-styles.png"
+        "eyebrow": "Glass jar exploration",
+        "title": "Let the product speak first.",
+        "body": "These Solsmör jar studies explore a packaging direction where the label becomes quieter and the contents take centre stage. By reducing printed surface, minimising copy and allowing the clarified butter itself to carry more of the shelf presence, the system feels lighter, cleaner and more confident. Embossed glass, asymmetric labels, transparent patterning and darker glass variants all test how far the identity can be simplified without losing recognition.",
+        "bullets": ["Less label, more visible product", "Minimal text with only essential information", "Embossed, asymmetric and pattern-based label approaches", "Clear, amber and brown glass as part of the visual system"],
+        "media": "media/ghee/solsmor-glass-variants.png"
+      },
+      {
+        "eyebrow": "Product study / Kefir",
+        "title": "Same dairy family. A cooler signal.",
+        "body": "The kefir concept keeps the same graphic grammar as the other dairy studies — large uncomplicated type, simple organic forms, open areas and a deliberately reduced amount of information — but shifts the field to blue. That single colour change gives the cultured product its own category and shelf presence without breaking the family resemblance. The blue reads cooler, fresher and more fermented than Solsmör's warm yellow and amber palette, while the recurring shapes and typographic hierarchy make it unmistakably part of the same system.",
+        "bullets": ["Blue background creates an immediate category shift", "Shared geometric and organic forms maintain family recognition", "Front and back behave as one continuous graphic object", "Minimal information hierarchy keeps the dairy product direct and approachable"],
+        "media": "media/ghee/naturlig-kefir-front-back-blue.png"
+      },
+      {
+        "eyebrow": "Product study / Fermenterat Té",
+        "title": "Four bottles. Four personalities.",
+        "body": "The fermented-tea study treats the bottle as a small playground for the same identity system. The numbered variants explore how far the packaging can move from quiet utility toward something more expressive while keeping the liquid visible and the product name readable. Rather than four unrelated labels, they are four levels of personality built from the same ingredients: typography, exposed glass, irregular geometry and a slightly offbeat Japanese 1970s sensibility.",
+        "bullets": ["01 — Direct / reduced: the quietest expression, with minimal marking and the largest uninterrupted view of the tea; clean, functional and almost apothecary-like.", "02 — Editorial / asymmetric: a more typographic composition with an offset hierarchy; contemporary, crafted and intentionally imperfect.", "03 — Organic / wave: the label boundary becomes fluid and irregular, wrapping around the bottle with a softer, playful rhythm while leaving generous windows into the drink.", "04 — Graphic / expressive: the strongest poster-like variant, using larger forms and higher contrast for shelf presence without sacrificing product visibility."],
+        "media": "media/ghee/fermenterat-te-4-styles.png"
       },
       {
         "eyebrow": "Side study / Raw milk",
