@@ -16,3 +16,105 @@ body::before {
   mix-blend-mode: screen;
 }
 
+/* Ghee / Packaging System: image-first editorial case study */
+.project--ghee-packaging .project-open {
+  grid-template-columns: minmax(0, 1.8fr) minmax(280px, .72fr);
+}
+.project--ghee-packaging .project-cover img {
+  aspect-ratio: 1672 / 941;
+  object-fit: contain;
+}
+
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) {
+  width: min(calc(100% - (2 * var(--page))), 1440px);
+  grid-template-columns: 1fr;
+  gap: clamp(44px, 6vw, 86px);
+  padding-bottom: clamp(110px, 12vw, 180px);
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-media {
+  order: -1;
+  width: 100%;
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-media img {
+  width: 100%;
+  max-height: none;
+  background: transparent;
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-copy {
+  width: min(100%, 980px);
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(0, 1.2fr);
+  gap: clamp(38px, 6vw, 90px);
+  align-items: start;
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-copy > .project-eyebrow,
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-copy > h2 {
+  grid-column: 1 / -1;
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-summary {
+  max-width: 34ch;
+  margin: 0;
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-facts {
+  margin: 0;
+}
+.project-hero:has(.project-hero-media img[src*="media/ghee/"]) .viewer-original {
+  grid-column: 2;
+  margin-top: 0;
+}
+
+.project-story:has(img[src*="media/ghee/"]) {
+  width: min(calc(100% - (2 * var(--page))), 1440px);
+}
+.project-story-section:has(img[src*="media/ghee/"]) {
+  grid-template-columns: minmax(260px, .7fr) minmax(0, 1.55fr);
+  gap: clamp(52px, 7vw, 120px);
+  min-height: min(82vh, 920px);
+  padding: clamp(96px, 11vw, 170px) 0;
+}
+.project-story-section:has(img[src*="media/ghee/"]):nth-child(even) {
+  grid-template-columns: minmax(0, 1.55fr) minmax(260px, .7fr);
+}
+.project-story-section:has(img[src*="media/ghee/"]) .project-story-media img {
+  width: 100%;
+  max-height: 88vh;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Wide design boards should breathe across the page. */
+.project-story-section:has(img[src*="ghee-packaging-board"]) {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  gap: clamp(44px, 6vw, 80px);
+}
+.project-story-section:has(img[src*="ghee-packaging-board"]) .project-story-copy {
+  order: 2;
+  width: min(100%, 720px);
+}
+.project-story-section:has(img[src*="ghee-packaging-board"]) .project-story-media {
+  order: 1;
+  width: 100%;
+}
+.project-story-section:has(img[src*="ghee-packaging-board"]) .project-story-media img {
+  max-height: none;
+}
+
+@media (max-width: 820px) {
+  .project--ghee-packaging .project-open,
+  .project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-copy,
+  .project-story-section:has(img[src*="media/ghee/"]),
+  .project-story-section:has(img[src*="media/ghee/"]):nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .project-hero:has(.project-hero-media img[src*="media/ghee/"]) .viewer-original {
+    grid-column: 1;
+  }
+  .project-story-section:has(img[src*="media/ghee/"]) .project-story-copy,
+  .project-story-section:has(img[src*="media/ghee/"]):nth-child(even) .project-story-copy {
+    order: 2;
+  }
+  .project-story-section:has(img[src*="media/ghee/"]) .project-story-media {
+    order: 1;
+  }
+}
