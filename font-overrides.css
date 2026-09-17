@@ -82,6 +82,25 @@ body::before {
   background: transparent;
 }
 
+/* Hero product studies: let the jars dominate the page and reveal label detail. */
+.project-story:has(img[src*="solsmor-jar-2-variants"]) {
+  width: min(calc(100% - 32px), 1680px);
+}
+.project-story-section:has(img[src*="solsmor-glass-variants"]),
+.project-story-section:has(img[src*="solsmor-jar-2-variants"]) {
+  grid-template-columns: minmax(235px, .5fr) minmax(0, 2fr);
+  gap: clamp(32px, 4vw, 64px);
+}
+.project-story-section:has(img[src*="solsmor-glass-variants"]):nth-child(even),
+.project-story-section:has(img[src*="solsmor-jar-2-variants"]):nth-child(even) {
+  grid-template-columns: minmax(0, 2fr) minmax(235px, .5fr);
+}
+.project-story-section:has(img[src*="solsmor-glass-variants"]) .project-story-media img,
+.project-story-section:has(img[src*="solsmor-jar-2-variants"]) .project-story-media img {
+  max-height: none;
+  width: 100%;
+}
+
 /* Wide design boards should breathe across the page. */
 .project-story-section:has(img[src*="ghee-packaging-board"]) {
   grid-template-columns: 1fr;
@@ -104,8 +123,15 @@ body::before {
   .project--ghee-packaging .project-open,
   .project-hero:has(.project-hero-media img[src*="media/ghee/"]) .project-hero-copy,
   .project-story-section:has(img[src*="media/ghee/"]),
-  .project-story-section:has(img[src*="media/ghee/"]):nth-child(even) {
+  .project-story-section:has(img[src*="media/ghee/"]):nth-child(even),
+  .project-story-section:has(img[src*="solsmor-glass-variants"]),
+  .project-story-section:has(img[src*="solsmor-glass-variants"]):nth-child(even),
+  .project-story-section:has(img[src*="solsmor-jar-2-variants"]),
+  .project-story-section:has(img[src*="solsmor-jar-2-variants"]):nth-child(even) {
     grid-template-columns: 1fr;
+  }
+  .project-story:has(img[src*="solsmor-jar-2-variants"]) {
+    width: min(calc(100% - (2 * var(--page))), 1440px);
   }
   .project-hero:has(.project-hero-media img[src*="media/ghee/"]) .viewer-original {
     grid-column: 1;
