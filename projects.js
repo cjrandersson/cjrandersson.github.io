@@ -3,7 +3,7 @@
 window.PROJECTS = [
   {
     "slug": "ghee-packaging",
-    "title": "Ghee / Packaging System",
+    "title": "Ghee / Guldsmör",
     "category": "product",
     "year": "2026",
     "meta": "(Product design, branding, packaging)",
@@ -22,7 +22,7 @@ window.PROJECTS = [
     "aspectRatio": "16 / 9",
     "size": "wide",
     "featured": true,
-    "description": "A packaging and brand study for clarified butter, designed to make a traditional one-ingredient food feel immediate, useful and contemporary without losing its material honesty.",
+    "description": "Packaging and brand design",
     "details": {
       "what": "Product branding, packaging architecture and visual direction for ghee, with a companion raw-milk carton study.",
       "why": "To make a traditional cooking fat easier to understand, easier to trust and more inviting to choose, while reducing visual and material excess.",
@@ -84,7 +84,7 @@ window.PROJECTS = [
       "src": "media/ghee/ghee-packaging-board-16x9.png",
       "alt": "Ghee packaging system board showing carton views, opening sequence and material details",
       "label": "Product branding / Packaging",
-      "summary": "One ingredient. A clearer shelf language."
+      "summary": "Packaging and brand design"
     }
   },
   {
