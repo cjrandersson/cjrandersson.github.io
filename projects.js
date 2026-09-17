@@ -3,7 +3,7 @@
 window.PROJECTS = [
   {
     "slug": "ghee-packaging",
-    "title": "Tactile food packaging design and branding mixing Japanese aesthetic and minimalism - and Swedish pictograms and functionalism",
+    "title": "Tactile food packaging design and branding",
     "category": "product",
     "year": "2026",
     "meta": "(Product design, branding, packaging)",
@@ -24,7 +24,7 @@ window.PROJECTS = [
     "aspectRatio": "16 / 9",
     "size": "wide",
     "featured": true,
-    "description": "Packaging and brand design",
+    "description": "mixing Japanese aesthetic and minimalism with Swedish pictograms and functionalism",
     "details": {
       "what": "Product branding, packaging architecture and visual direction for Guldsmör, expanded through companion studies for kimchi, kefir, fermented tea and raw milk.",
       "why": "To make honest, minimally processed food easier to understand, easier to trust and more inviting to choose, while reducing visual and material excess.",
