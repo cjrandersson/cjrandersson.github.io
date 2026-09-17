@@ -141,7 +141,7 @@ window.PROJECTS = [
     "definitionClosing": "... or what you as a creative want it to be",
     "description": "Interface, interaction and hardware concept for a six-channel sampler workstation.",
     "details": {"what": "A six-channel sampler, generative sequencer, sound mangler and looper.", "why": "To make controlled randomness playable as one synchronized instrument.", "thoughts": "Six autonomous pods behave independently while sharing one clock.", "software": ["Max/MSP", "Max for Live", "Ableton Live"]},
-    "cover": {"src": "media/flode/flode-hardware-render.png", "alt": "flöde~ hardware concept with six coloured waveform channels and tactile controls", "label": "Sound / Instrument design", "summary": "Six channels. One shared clock. Room for the unexpected."}
+    "cover": {"src": "media/flode/flode-hardware-render.png", "alt": "flöde~ hardware concept with six coloured waveform channels and tactile controls", "label": "Sound / Instrument design", "summary": "6-Channel Sound Sculpting: Manipulate multiple samples at once with complete control, like molding audio in real time with the system keeping every track locked in perfect sync. Built-in generative algorithms take the wheel to make intelligent creative decisions on the fly."}
   },
   {
     "slug": "tunnelbanekollen",
