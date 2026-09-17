@@ -11,7 +11,7 @@ window.PROJECTS = [
     "media": [
       "media/ghee/ghee-packaging-board-16x9.png",
       "media/ghee/solsmor-glass-variants.png",
-      "media/ghee/ghee-carton-tub.png",
+      "media/ghee/solsmor-jar-2-variants.png",
       "media/ghee/ghee-glass-study-front-back.png",
       "media/ghee/ghee-glass-jar-tall.png",
       "media/ghee/ghee-packaging-board.png",
@@ -38,11 +38,11 @@ window.PROJECTS = [
         "media": "media/ghee/solsmor-glass-variants.png"
       },
       {
-        "eyebrow": "Visual language",
-        "title": "Japan meets the Nordic grocery shelf.",
-        "body": "The visual direction sits between Japanese packaging discipline and Scandinavian functional clarity. Information is compact and deliberate, while the colours, pictograms and tactile surfaces borrow warmth from 1960s and 70s food packaging. The result is minimal without becoming sterile.",
-        "bullets": ["Japanese restraint and information density", "Scandinavian functionalism and material honesty", "Mid-century colour and simple geometric illustration", "Typography used as the main graphic object"],
-        "media": "media/ghee/ghee-carton-tub.png"
+        "eyebrow": "Why Ghee / Ghi?",
+        "title": "Ancient fat. Modern Nordic kitchen.",
+        "body": "Ghee, or ghi, is clarified butter with deep roots in South Asian food culture and centuries of culinary and ceremonial history. By slowly removing water and milk solids, butter becomes a concentrated cooking fat with a rich, nutty flavour, excellent heat stability and remarkable versatility. It can fry, roast, bake, baste, finish a sauce or melt into something as simple as potatoes, porridge or bread. Most lactose and milk proteins are removed in the clarification process, which is one reason some people who avoid ordinary butter find ghee easier to use, although it remains a concentrated, saturated cooking fat rather than a miracle food. That tension is part of its appeal: practical and elemental, yet surrounded by history, ritual and a little mystery. Solsmör is built around a simple conviction — ghee has every reason to become a more familiar part of everyday Scandinavian cooking, not as an exotic speciality but as another honest staple beside butter and oil.",
+        "bullets": ["High-heat cooking with a rich, nutty flavour", "Most water, lactose and milk solids removed through clarification", "Centuries of culinary and cultural history", "Fry, roast, bake, baste, spread or finish — one ingredient, many jobs"],
+        "media": "media/ghee/solsmor-jar-2-variants.png"
       },
       {
         "eyebrow": "Glass study / I",
