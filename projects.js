@@ -126,8 +126,8 @@ window.PROJECTS = [
     "year": "2026",
     "meta": "(Max/Msp, m4l, VST, Standalone)",
     "thumbnail": "media/flode/flode-six-channel-logo-large.png",
-    "media": ["media/flode/flode-six-channel-logo-large.png", "media/flode/flode-pod-design.png", "media/flode/flode-orange-interface.png", "media/flode/flode-hardware-render.png"],
-    "alt": "Flöde six-channel sampler and generative sequencer interface",
+    "media": ["media/flode/flode-interface-dark-six-pod.png", "media/flode/flode-interface-light-six-pod.png", "media/flode/flode-interface-jungulator-detail.png", "media/flode/flode-hardware-render.png", "media/flode/flode-six-channel-logo-large.png", "media/flode/flode-pod-design.png", "media/flode/flode-orange-interface.png"],
+    "alt": "flöde~ six-pod sampler workstation and Jungulator-inspired generative interface design",
     "aspectRatio": "3 / 2",
     "size": "wide",
     "intro": {
