@@ -43,18 +43,29 @@
   background: var(--surface);
 }
 
-/* Image lightbox: intrinsic-size image, constrained only by the viewport. */
+/* Full-viewport shell guarantees true centering, including mobile Safari. */
 .image-lightbox {
-  width: auto;
-  max-width: 96vw;
-  height: auto;
-  max-height: 96dvh;
-  margin: auto;
-  padding: 0;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding:
+    max(18px, env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    max(18px, env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
   border: 0;
-  overflow: visible;
+  overflow: hidden;
   background: transparent;
   color: var(--ink);
+}
+
+.image-lightbox[open] {
+  display: grid;
+  place-items: center;
 }
 
 .image-lightbox::backdrop {
@@ -67,21 +78,21 @@
   display: grid;
   place-items: center;
   width: fit-content;
-  max-width: 92vw;
+  max-width: min(92vw, 1500px);
   height: fit-content;
-  max-height: 90dvh;
-  padding: clamp(8px, 1vw, 14px);
-  background: rgba(16, 17, 18, .94);
-  border: 1px solid rgba(241, 240, 235, .13);
-  box-shadow: 0 34px 110px rgba(0, 0, 0, .48);
+  max-height: 88dvh;
+  padding: 5px;
+  background: rgba(16, 17, 18, .38);
+  border: 1px solid rgba(241, 240, 235, .08);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .38);
 }
 
 .image-lightbox__image {
   display: block;
   width: auto;
-  max-width: calc(92vw - 28px);
+  max-width: calc(92vw - 10px);
   height: auto;
-  max-height: calc(90dvh - 28px);
+  max-height: calc(88dvh - 10px);
   object-fit: contain;
   background: var(--surface);
 }
@@ -89,50 +100,83 @@
 .image-lightbox__close {
   position: absolute;
   z-index: 2;
-  top: 12px;
-  right: 12px;
-  width: 38px;
-  height: 38px;
+  top: 9px;
+  right: 9px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   padding: 0;
-  border: 1px solid rgba(241, 240, 235, .16);
+  border: 1px solid rgba(241, 240, 235, .13);
   border-radius: 50%;
-  background: rgba(9, 10, 11, .78);
-  color: var(--ink);
+  outline: none;
+  background: rgba(9, 10, 11, .72);
+  color: rgba(241, 240, 235, .92);
   cursor: pointer;
   backdrop-filter: blur(8px);
+  -webkit-tap-highlight-color: transparent;
   transition: background .18s ease, border-color .18s ease, transform .18s ease;
 }
 
-.image-lightbox__close:hover,
+.image-lightbox__close:hover {
+  background: rgba(25, 26, 27, .9);
+  border-color: rgba(241, 240, 235, .24);
+  transform: scale(1.03);
+}
+
 .image-lightbox__close:focus-visible {
-  background: rgba(26, 27, 28, .94);
-  border-color: rgba(241, 240, 235, .32);
-  transform: scale(1.04);
+  outline: 1px solid rgba(241, 240, 235, .36);
+  outline-offset: 2px;
+  background: rgba(20, 21, 22, .88);
+  border-color: rgba(241, 240, 235, .20);
 }
 
 .image-lightbox__close .material-symbols-outlined {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @media (max-width: 520px) {
   .viewer .project-hero-media a,
   .viewer .project-story-media a,
   .viewer .project-media-wall a {
-    padding: 4px;
-    box-shadow: 0 12px 34px rgba(0, 0, 0, .14);
+    padding: 3px;
+    border-color: rgba(241, 240, 235, .07);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+  }
+
+  .image-lightbox {
+    padding:
+      max(14px, env(safe-area-inset-top))
+      max(12px, env(safe-area-inset-right))
+      max(14px, env(safe-area-inset-bottom))
+      max(12px, env(safe-area-inset-left));
   }
 
   .image-lightbox__panel {
     max-width: 94vw;
-    max-height: 88dvh;
-    padding: 7px;
+    max-height: 82dvh;
+    padding: 3px;
+    background: rgba(16, 17, 18, .22);
+    border-color: rgba(241, 240, 235, .065);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .32);
   }
 
   .image-lightbox__image {
-    max-width: calc(94vw - 14px);
-    max-height: calc(88dvh - 14px);
+    max-width: calc(94vw - 6px);
+    max-height: calc(82dvh - 6px);
+  }
+
+  .image-lightbox__close {
+    top: 7px;
+    right: 7px;
+    width: 30px;
+    height: 30px;
+    border-color: rgba(241, 240, 235, .11);
+    background: rgba(9, 10, 11, .68);
+  }
+
+  .image-lightbox__close .material-symbols-outlined {
+    font-size: 17px;
   }
 }
 
