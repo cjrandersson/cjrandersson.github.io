@@ -3,7 +3,7 @@
 window.PROJECTS = [
   {
     "slug": "ghee-packaging",
-    "title": "Tactile food packaging design and branding",
+    "title": "Food packaging shaped by material, form and function",
     "category": "product",
     "year": "2026",
     "meta": "(Product design, branding, packaging)",
@@ -116,7 +116,7 @@ window.PROJECTS = [
       "src": "media/ghee/ghee-packaging-board-16x9.png",
       "alt": "Ghee packaging system board showing carton views, opening sequence and material details",
       "label": "Product branding / Packaging",
-      "summary": "A tactile food identity where Japanese restraint and playful asymmetry meet Swedish functionalism, direct pictograms and everyday grocery clarity. Built around honest materials, visible product and a reduced information hierarchy rather than decorative excess."
+      "summary": "A food identity where Japanese restraint and playful asymmetry meet Swedish functionalism, direct pictograms and everyday grocery clarity. Built around honest materials, visible product and a reduced information hierarchy rather than decorative excess."
     }
   },
   {
