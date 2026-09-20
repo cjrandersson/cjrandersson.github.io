@@ -26,7 +26,7 @@ window.PROJECTS = [
     "aspectRatio": "16 / 9",
     "size": "wide",
     "featured": true,
-    "description": "mixing Japanese aesthetic and minimalism with Swedish pictograms and functionalism",
+    "description": "A tactile identity system for minimally processed food, bringing the quiet restraint, asymmetry and material awareness of Japanese packaging into dialogue with Swedish functionalism, direct pictograms and everyday grocery clarity. Across cartons, jars and bottles, the work explores how less ink, fewer materials and a stronger information hierarchy can make food feel more honest, recognisable and inviting.",
     "details": {
       "what": "Product branding, packaging architecture and visual direction for Guldsmör, expanded through companion studies for kimchi, kefir, fermented tea and raw milk.",
       "why": "To make honest, minimally processed food easier to understand, easier to trust and more inviting to choose, while reducing visual and material excess.",
@@ -116,7 +116,7 @@ window.PROJECTS = [
       "src": "media/ghee/ghee-packaging-board-16x9.png",
       "alt": "Ghee packaging system board showing carton views, opening sequence and material details",
       "label": "Product branding / Packaging",
-      "summary": "Packaging and brand design"
+      "summary": "A tactile food identity where Japanese restraint and playful asymmetry meet Swedish functionalism, direct pictograms and everyday grocery clarity. Built around honest materials, visible product and a reduced information hierarchy rather than decorative excess."
     }
   },
   {
