@@ -26,7 +26,8 @@ function mediaFor(project) {
 
 function imageMarkup(project, src, index = 0, eager = false) {
   const suffix = mediaFor(project).length > 1 ? ` — view ${index + 1}` : '';
-  return `<img src="${escapeHtml(src)}" alt="${escapeHtml(project.alt || project.title)}${suffix}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
+  const alt = project.mediaAlt?.[src] || `${project.alt || project.title}${suffix}`;
+  return `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
 }
 
 function renderGallery() {
@@ -52,6 +53,34 @@ function renderGallery() {
   count.textContent = `${visibleProjects.length} projects`;
 }
 
+function themeFeatureMarkup(project) {
+  const feature = project.themeFeature;
+  if (!feature) return '';
+
+  return `<section class="flode-theme-feature" aria-labelledby="flode-theme-title">
+    <div class="project-story-media flode-theme-visual">
+      <a href="${escapeHtml(feature.media)}" target="_blank" rel="noreferrer" aria-label="Open light interface in original resolution">
+        <img src="${escapeHtml(feature.media)}" alt="${escapeHtml(feature.alt)}" width="1670" height="941" loading="lazy" decoding="async">
+      </a>
+    </div>
+    <div class="flode-theme-copy">
+      <div>
+        <p class="project-eyebrow">${escapeHtml(feature.eyebrow)}</p>
+        <h3 id="flode-theme-title">${escapeHtml(feature.title)}</h3>
+      </div>
+      <div class="flode-theme-body">
+        ${feature.paragraphs.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+      </div>
+    </div>
+    <dl class="flode-theme-notes">
+      ${feature.notes.map(note => `<div><dt>${escapeHtml(note.label)}</dt><dd>${escapeHtml(note.body)}</dd></div>`).join('')}
+    </dl>
+    <div class="flode-theme-palette" aria-hidden="true">
+      ${['neutral', 'charcoal', 'orange', 'red', 'violet', 'blue', 'cyan', 'yellow'].map(colour => `<span class="flode-swatch--${colour}"></span>`).join('')}
+    </div>
+  </section>`;
+}
+
 function introStoryMarkup(project, media) {
   const intro = project.intro;
   if (!intro) return '';
@@ -68,7 +97,7 @@ function introStoryMarkup(project, media) {
       <p>${escapeHtml(intro.body || '')}</p>
       ${Array.isArray(intro.between) ? `<ul>${intro.between.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
     </div>
-    ${secondImage ? `<div class="project-story-media"><a href="${escapeHtml(secondImage)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, secondImage, 1)}</a></div>` : ''}
+    ${secondImage ? `<div class="project-story-media${intro.mediaCompact ? ' flode-pod-detail' : ''}"><a href="${escapeHtml(secondImage)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, secondImage, 1)}</a>${intro.mediaCaption ? `<p class="flode-pod-caption">${escapeHtml(intro.mediaCaption)}</p>` : ''}</div>` : ''}
   </section>
   ${definitions.length ? `<section class="project-story-section">
     <div class="project-story-copy">
@@ -145,6 +174,7 @@ function renderProject(project) {
   document.querySelector('#viewer-hero-media').innerHTML = original
     ? `<a href="${escapeHtml(original)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, original, 0, true)}</a>`
     : '';
+  document.querySelector('#viewer-theme-feature').innerHTML = themeFeatureMarkup(project);
   document.querySelector('#viewer-story').innerHTML = seriesStoryMarkup(project, media);
 
   if (!viewer.open) viewer.showModal();
@@ -226,7 +256,7 @@ viewer.addEventListener('cancel', event => {
 viewer.addEventListener('close', () => document.body.classList.remove('viewer-open'));
 window.addEventListener('hashchange', syncFromHash);
 document.addEventListener('keydown', event => {
-  if (!viewer.open) return;
+  if (!viewer.open || document.querySelector('.image-lightbox[open]')) return;
   if (event.key === 'ArrowLeft') navigateProject(-1);
   if (event.key === 'ArrowRight') navigateProject(1);
 });
@@ -234,4 +264,3 @@ document.addEventListener('keydown', event => {
 document.querySelector('#year').textContent = new Date().getFullYear();
 renderGallery();
 syncFromHash();
-

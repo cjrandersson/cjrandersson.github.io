@@ -1,0 +1,110 @@
+/* Flöde story additions. The portfolio's base styles remain the reference. */
+.flode-theme-feature {
+  width: min(calc(100% - (2 * var(--page))), 1180px);
+  margin: 0 auto;
+  padding: clamp(36px, 5vw, 68px) 0 clamp(80px, 10vw, 136px);
+  border-top: 1px solid var(--line);
+}
+
+.flode-theme-feature .flode-theme-visual {
+  width: 100%;
+  margin-bottom: clamp(40px, 5vw, 68px);
+}
+
+.flode-theme-feature .flode-theme-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.flode-theme-copy {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(36px, 7vw, 100px);
+  align-items: start;
+}
+
+.flode-theme-copy h3 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(38px, 4.5vw, 64px);
+  font-weight: 430;
+  line-height: .98;
+  letter-spacing: -.05em;
+  overflow-wrap: anywhere;
+}
+
+.flode-theme-body p {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: clamp(16px, 1.4vw, 18px);
+  line-height: 1.65;
+}
+
+.flode-theme-body p:last-child { margin-bottom: 0; }
+
+.flode-theme-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin: clamp(40px, 5vw, 64px) 0 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.flode-theme-notes dt {
+  margin-bottom: 12px;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.flode-theme-notes dd {
+  max-width: 32ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.flode-theme-palette {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  height: 10px;
+  margin-top: 22px;
+}
+
+.flode-swatch--neutral { background: #d2d1cc; }
+.flode-swatch--charcoal { background: #202122; }
+.flode-swatch--orange { background: #f58020; }
+.flode-swatch--red { background: #ee4963; }
+.flode-swatch--violet { background: #9e6dd3; }
+.flode-swatch--blue { background: #579de5; }
+.flode-swatch--cyan { background: #4ac9c3; }
+.flode-swatch--yellow { background: #b9a243; }
+
+.flode-pod-detail {
+  width: min(100%, 470px);
+  justify-self: center;
+}
+
+.flode-pod-caption {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (max-width: 820px) {
+  .flode-theme-copy { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (max-width: 520px) {
+  .flode-theme-feature { padding-top: 28px; }
+  .flode-theme-notes { grid-template-columns: 1fr; gap: 24px; }
+  .flode-theme-notes dd { max-width: none; }
+  .flode-theme-palette { height: 8px; }
+}

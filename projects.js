@@ -126,12 +126,37 @@ window.PROJECTS = [
     "year": "2026",
     "meta": "(Max/Msp, m4l, VST, Standalone)",
     "thumbnail": "media/flode/flode-six-channel-logo-large.png",
-    "media": ["media/flode/flode-interface-dark-six-pod.png", "media/flode/flode-interface-light-six-pod.png", "media/flode/flode-interface-jungulator-detail.png", "media/flode/flode-hardware-render.png", "media/flode/flode-six-channel-logo-large.png", "media/flode/flode-pod-design.png"],
+    "media": ["media/flode/flode-interface-dark-six-pod.png", "media/flode/flode-pod-design.png", "media/flode/flode-interface-jungulator-detail.png", "media/flode/flode-hardware-render.png", "media/flode/flode-six-channel-logo-large.png"],
+    "mediaAlt": {
+      "media/flode/flode-interface-dark-six-pod.png": "Dark flöde~ Jungulator-inspired interface with a single pod and master controls",
+      "media/flode/flode-pod-design.png": "Close view of a flöde~ pod with waveform, slicing and generative controls",
+      "media/flode/flode-interface-jungulator-detail.png": "flöde~ Jungulator interface with notes on its playback and slicing controls",
+      "media/flode/flode-hardware-render.png": "Physical flöde~ workstation concept with six coloured channels",
+      "media/flode/flode-six-channel-logo-large.png": "Dark flöde~ interface with six coloured sample channels"
+    },
+    "themeFeature": {
+      "media": "media/flode/flode-interface-light-1670.jpg",
+      "alt": "Light flöde~ interface with six coloured pods, silver-grey controls and the complete master section",
+      "eyebrow": "Theme study / Light & Dark",
+      "title": "Two themes. One instrument.",
+      "paragraphs": [
+        "The light palette draws on the samplers, sequencers and studio workstations of the 1990s: warm grey control surfaces, dark waveform displays and orange accents that make active controls easy to find. The aim is to bring the clarity and tactile character of hardware into a software instrument.",
+        "Each pod has its own accent colour, helping the eye follow six independent sound sources. The neutral surface gives the controls room to breathe; colour carries information about channel identity, playback and modulation. Large knobs, direct labels and clearly grouped controls support quick decisions while playing.",
+        "Light and Dark explore a deliberate change in atmosphere. The brighter theme feels like a piece of studio equipment; the darker direction settles into low-light sessions and live performance. The goal is a user-selectable theme system with a consistent control language, so changing the mood of the workspace keeps the instrument familiar."
+      ],
+      "notes": [
+        {"label": "Light", "body": "Warm grey surfaces, black waveform displays and orange control accents."},
+        {"label": "Dark", "body": "Charcoal surfaces, luminous waveforms and a quieter frame around the sound."},
+        {"label": "Shared language", "body": "Recognisable pods, clear labels and colour that carries a consistent meaning."}
+      ]
+    },
     "alt": "flöde~ six-pod sampler workstation and Jungulator-inspired generative interface design",
     "aspectRatio": "3 / 2",
     "size": "wide",
     "intro": {
       "name": "flöde~",
+      "mediaCompact": true,
+      "mediaCaption": "One pod in focus: waveform, slicing and generative controls form a small instrument of their own, connected to the shared master clock.",
       "lead": "a living modular instrument for sound manipulation built in Max/MSP and m4l (Ableton) but also a standalone version for both Windows and Mac OS systems.",
       "question": "In short, what is it and what does it do?",
       "between": ["a 6-channel sampler", "a generative sequencer", "a sound mangler", "a loop machine", "... and an improvisational electronic instrument"],
