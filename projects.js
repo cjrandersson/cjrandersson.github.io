@@ -124,9 +124,15 @@ window.PROJECTS = [
     "title": "flöde~",
     "category": "uxui",
     "year": "2026",
-    "meta": "(Max/Msp, m4l, VST, Standalone)",
+    "meta": "(Max/MSP, JavaScript for Max; Max for Live / standalone targets)",
     "thumbnail": "media/flode/flode-six-channel-logo-large.png",
-    "media": ["media/flode/flode-interface-dark-six-pod.png", "media/flode/flode-pod-design.png", "media/flode/flode-interface-jungulator-detail.png", "media/flode/flode-hardware-render.png", "media/flode/flode-six-channel-logo-large.png"],
+    "media": [
+      "media/flode/flode-interface-dark-six-pod.png",
+      "media/flode/flode-pod-design.png",
+      "media/flode/flode-interface-jungulator-detail.png",
+      "media/flode/flode-hardware-render.png",
+      "media/flode/flode-six-channel-logo-large.png"
+    ],
     "mediaAlt": {
       "media/flode/flode-interface-dark-six-pod.png": "Dark flöde~ Jungulator-inspired interface with a single pod and master controls",
       "media/flode/flode-pod-design.png": "Close view of a flöde~ pod with waveform, slicing and generative controls",
@@ -140,15 +146,31 @@ window.PROJECTS = [
       "eyebrow": "Theme study / Light & Dark",
       "title": "Two themes. One instrument.",
       "paragraphs": [
-        "The light palette draws on the samplers, sequencers and studio workstations of the 1990s: warm grey control surfaces, dark waveform displays and orange accents that make active controls easy to find. The aim is to bring the clarity and tactile character of hardware into a software instrument.",
-        "Each pod has its own accent colour, helping the eye follow six independent sound sources. The neutral surface gives the controls room to breathe; colour carries information about channel identity, playback and modulation. Large knobs, direct labels and clearly grouped controls support quick decisions while playing.",
-        "Light and Dark explore a deliberate change in atmosphere. The brighter theme feels like a piece of studio equipment; the darker direction settles into low-light sessions and live performance. The goal is a user-selectable theme system with a consistent control language, so changing the mood of the workspace keeps the instrument familiar."
+        "The light palette draws on the samplers, sequencers and studio workstations of the 1990s: grey control surfaces, dark waveform displays and warm orange accents. The aim is to bring the clarity and tactile character of hardware into a software instrument.",
+        "Light and Dark explore contrasting working environments. The brighter theme recalls studio hardware; the darker theme suits low-light sessions. A user-selectable theme is the design goal, with familiar groups and consistent colour cues across both views.",
+        "These images explore appearance and hierarchy. The agreed production direction keeps waveforms and Jungulator controls prominent, uses sliders for playback and probability, and reserves knobs mainly for pan and FX. The final control layout will follow that instrument-first approach."
       ],
       "notes": [
-        {"label": "Light", "body": "Warm grey surfaces, black waveform displays and orange control accents."},
-        {"label": "Dark", "body": "Charcoal surfaces, luminous waveforms and a quieter frame around the sound."},
-        {"label": "Shared language", "body": "Recognisable pods, clear labels and colour that carries a consistent meaning."}
-      ]
+        {
+          "label": "Light",
+          "body": "Warm grey surfaces, black waveform displays and orange control accents."
+        },
+        {
+          "label": "Dark",
+          "body": "Charcoal surfaces, luminous waveforms and a quieter frame around the sound."
+        },
+        {
+          "label": "Shared language",
+          "body": "Recognisable pods, clear labels and colour that carries a consistent meaning."
+        }
+      ],
+      "comparison": {
+        "media": "media/flode/flode-pod-light-dark-study.jpg",
+        "alt": "Light and dark interface studies of Pod A, with waveform, Jungulator controls and master panels",
+        "width": 1536,
+        "height": 864,
+        "caption": "Pod A in Light and Dark: a comparison of colour, contrast and control grouping."
+      }
     },
     "alt": "flöde~ six-pod sampler workstation and Jungulator-inspired generative interface design",
     "aspectRatio": "3 / 2",
@@ -156,17 +178,59 @@ window.PROJECTS = [
     "intro": {
       "name": "flöde~",
       "mediaCompact": true,
-      "mediaCaption": "One pod in focus: waveform, slicing and generative controls form a small instrument of their own, connected to the shared master clock.",
-      "lead": "a living modular instrument for sound manipulation built in Max/MSP and m4l (Ableton) but also a standalone version for both Windows and Mac OS systems.",
-      "question": "In short, what is it and what does it do?",
-      "between": ["a 6-channel sampler", "a generative sequencer", "a sound mangler", "a loop machine", "... and an improvisational electronic instrument"],
-      "body": "Each pod loads, plays and changes sound through speed, panning, volume, slicing, probability and controlled randomness, among other things. The pods can work independently – almost like small organisms – but are held together by a common tempo and synchronization."
+      "mediaCaption": "Pod A study: waveform, Jungulator controls, playback and Pod FX.",
+      "lead": "flöde~ is an evolving Max/MSP instrument inspired by I Am The Mighty Jungulator: a sampler, generative sequencer, audio mangler and looper.",
+      "question": "Sound in motion.",
+      "body": "The six-pod design combines independent sample manipulation with shared rhythm. The aim is to keep Jungulator’s unpredictable, musical character while making waveform, slicing and performance controls easier to play.",
+      "detail": {
+        "media": "media/flode/flode-master-light-dark-study.jpg",
+        "alt": "Light and dark studies of the BPM transport, five-slot Master FX Chain and Master output panel",
+        "width": 1306,
+        "height": 1205,
+        "title": "One clock. A shared output.",
+        "caption": "Master controls in the planned MVP, shown in Light and Dark.",
+        "notes": [
+          {
+            "label": "BPM / Transport",
+            "body": "Shared tempo, transport and host/MIDI sync, with Sync or Free per pod. A separate resizable BPM window is part of the plan."
+          },
+          {
+            "label": "Master FX Chain",
+            "body": "Reorderable reverb, echo, delay, drive and limiter, with per-effect mix and bypass."
+          },
+          {
+            "label": "Master",
+            "body": "The output panel groups routing, volume, pan, stereo width and level meters for the combined signal."
+          }
+        ]
+      }
     },
-    "definitions": ["Modular generation — six autonomous pods reshape and interweave samples in real time.", "6-channel sampling — load, loop and transform six sound sources in parallel.", "Generative sequencing — evolve patterns through probability and controlled randomness.", "Real-time audio mangling — reshape speed, pitch, slicing, panning and volume.", "Loop-machine performance — capture and repeat material without breaking flow.", "Rhythmic precision — lock every pod to a shared master clock and BPM.", "Evolving soundscapes — create unpredictable textures that remain musically connected.", "Open-ended instrument — use it however your creative practice demands."],
-    "definitionClosing": "... or what you as a creative want it to be",
-    "description": "Interface, interaction and hardware concept for a six-channel sampler workstation.",
-    "details": {"what": "A six-channel sampler, generative sequencer, sound mangler and looper.", "why": "To make controlled randomness playable as one synchronized instrument.", "thoughts": "Six autonomous pods behave independently while sharing one clock.", "software": ["Max/MSP", "Max for Live", "Ableton Live"]},
-    "cover": {"src": "media/flode/flode-hardware-render.png", "alt": "flöde~ hardware concept with six coloured waveform channels and tactile controls", "label": "Sound / Instrument design", "summary": "6-Channel Sound Sculpting: Manipulate multiple samples at once with complete control, like molding audio in real time with the system keeping every track locked in perfect sync. Built-in generative algorithms take the wheel to make intelligent creative decisions on the fly."}
+    "definitions": [
+      "Six sampler pods A–F — independent sample playback in one window, built from a validated Pod A.",
+      "Jungulator at the core — retain its original controls and sample-mangling character.",
+      "Controlled variation — RND for slice/position probability, RND2 for velocity and playback-speed variation; Jung, Weighted, Walk, Memory and Chaos modes.",
+      "Shared rhythm — master BPM, host/MIDI clock, quantisation and per-pod Sync/Free, with mute, solo, record, Panic and choke groups.",
+      "Sound shaping — waveform and slicing tools, per-pod FX, then a reorderable master chain and output controls."
+    ],
+    "definitionClosing": "Development starts with the Pod A playback engine and sampler workflow. Slicing, generative behaviour, global sync, six-pod operation and FX are staged build targets. Max for Live and standalone are intended formats; the images show interface and hardware studies, not a finished release.",
+    "description": "A Max/MSP instrument in development, carrying the sample-mangling character of I Am The Mighty Jungulator into a six-pod design.",
+    "details": {
+      "what": "Instrument concept, interaction design and an evolving Max/MSP prototype.",
+      "why": "To preserve Jungulator’s rhythmic unpredictability while making its controls clearer and more playable.",
+      "thoughts": "Pod A first; six pods, shared timing and FX form the agreed MVP direction.",
+      "software": [
+        "Max/MSP",
+        "JavaScript for Max",
+        "p5.js (UI prototype)"
+      ]
+    },
+    "cover": {
+      "src": "media/flode/flode-hardware-render.png",
+      "alt": "flöde~ hardware concept with six coloured waveform channels and tactile controls",
+      "label": "Sound / Instrument design",
+      "summary": "Six sampler pods, one shared rhythm: an instrument in development that carries Jungulator’s sample-mangling character into a clearer, more playable interface."
+    },
+    "definitionsEyebrow": "MVP direction"
   },
   {
     "slug": "tunnelbanekollen",

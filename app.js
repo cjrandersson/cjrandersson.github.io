@@ -53,6 +53,20 @@ function renderGallery() {
   count.textContent = `${visibleProjects.length} projects`;
 }
 
+function detailFigureMarkup(detail, className) {
+  if (!detail) return '';
+  return `<figure class="project-story-media ${className}">
+    <a href="${escapeHtml(detail.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">
+      <img src="${escapeHtml(detail.media)}" alt="${escapeHtml(detail.alt)}" width="${escapeHtml(detail.width)}" height="${escapeHtml(detail.height)}" loading="lazy" decoding="async">
+    </a>
+    <figcaption>
+      ${detail.title ? `<h4>${escapeHtml(detail.title)}</h4>` : ''}
+      ${detail.caption ? `<p>${escapeHtml(detail.caption)}</p>` : ''}
+      ${Array.isArray(detail.notes) ? `<dl class="flode-detail-notes">${detail.notes.map(note => `<div><dt>${escapeHtml(note.label)}</dt><dd>${escapeHtml(note.body)}</dd></div>`).join('')}</dl>` : ''}
+    </figcaption>
+  </figure>`;
+}
+
 function themeFeatureMarkup(project) {
   const feature = project.themeFeature;
   if (!feature) return '';
@@ -67,6 +81,7 @@ function themeFeatureMarkup(project) {
       <div>
         <p class="project-eyebrow">${escapeHtml(feature.eyebrow)}</p>
         <h3 id="flode-theme-title">${escapeHtml(feature.title)}</h3>
+        ${detailFigureMarkup(feature.comparison, 'flode-theme-comparison')}
       </div>
       <div class="flode-theme-body">
         ${feature.paragraphs.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}
@@ -89,7 +104,7 @@ function introStoryMarkup(project, media) {
   const secondImage = media[1];
   const thirdImage = media[2];
 
-  return `<section class="project-story-section">
+  return `<section class="project-story-section${intro.detail ? ' flode-intro-section' : ''}">
     <div class="project-story-copy">
       <p class="project-eyebrow">In short</p>
       <h3>${escapeHtml(intro.question || project.title)}</h3>
@@ -97,11 +112,11 @@ function introStoryMarkup(project, media) {
       <p>${escapeHtml(intro.body || '')}</p>
       ${Array.isArray(intro.between) ? `<ul>${intro.between.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
     </div>
-    ${secondImage ? `<div class="project-story-media${intro.mediaCompact ? ' flode-pod-detail' : ''}"><a href="${escapeHtml(secondImage)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, secondImage, 1)}</a>${intro.mediaCaption ? `<p class="flode-pod-caption">${escapeHtml(intro.mediaCaption)}</p>` : ''}</div>` : ''}
+    ${secondImage ? `<div class="project-story-media${intro.mediaCompact ? ' flode-pod-detail' : ''}"><a href="${escapeHtml(secondImage)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, secondImage, 1)}</a>${intro.mediaCaption ? `<p class="flode-pod-caption">${escapeHtml(intro.mediaCaption)}</p>` : ''}${detailFigureMarkup(intro.detail, 'flode-master-detail')}</div>` : ''}
   </section>
   ${definitions.length ? `<section class="project-story-section">
     <div class="project-story-copy">
-      <p class="project-eyebrow">The many definitions</p>
+      <p class="project-eyebrow">${escapeHtml(project.definitionsEyebrow || 'The many definitions')}</p>
       <h3>One system, many uses.</h3>
       <ul>${definitions.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
       ${project.definitionClosing ? `<p>${escapeHtml(project.definitionClosing)}</p>` : ''}
