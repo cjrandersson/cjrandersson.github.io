@@ -129,9 +129,9 @@ window.PROJECTS = [
     "media": [
       "media/flode/flode-interface-dark-six-pod.png",
       "media/flode/flode-pod-design.png",
-      "media/flode/flode-interface-jungulator-detail.png",
+      "media/flode/flode-six-channel-logo-large.png",
       "media/flode/flode-hardware-render.png",
-      "media/flode/flode-six-channel-logo-large.png"
+      "media/flode/flode-interface-jungulator-detail.png"
     ],
     "mediaAlt": {
       "media/flode/flode-interface-dark-six-pod.png": "Dark flöde~ Jungulator-inspired interface with a single pod and master controls",
@@ -141,8 +141,8 @@ window.PROJECTS = [
       "media/flode/flode-six-channel-logo-large.png": "Dark flöde~ interface with six coloured sample channels"
     },
     "themeFeature": {
-      "media": "media/flode/flode-interface-light-1670.jpg",
-      "alt": "Light flöde~ interface with six coloured pods, silver-grey controls and the complete master section",
+      "media": "media/flode/flode-interface-light-refined.png",
+      "alt": "Refined light flöde~ six-pod interface with pale panels, precise controls and the complete master strip",
       "eyebrow": "Theme study / Light & Dark",
       "title": "Two themes. One instrument.",
       "paragraphs": [
@@ -170,7 +170,9 @@ window.PROJECTS = [
         "width": 1536,
         "height": 864,
         "caption": "Pod A in Light and Dark: a comparison of colour, contrast and control grouping."
-      }
+      },
+      "width": 1672,
+      "height": 941
     },
     "alt": "flöde~ six-pod sampler workstation and Jungulator-inspired generative interface design",
     "aspectRatio": "3 / 2",

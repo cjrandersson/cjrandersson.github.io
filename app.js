@@ -76,7 +76,7 @@ function themeFeatureMarkup(project) {
   return `<section class="flode-theme-feature" aria-labelledby="flode-theme-title">
     <div class="project-story-media flode-theme-visual">
       <a href="${escapeHtml(feature.media)}" target="_blank" rel="noreferrer" aria-label="Open light interface in original resolution">
-        <img src="${escapeHtml(feature.media)}" alt="${escapeHtml(feature.alt)}" width="1670" height="941" loading="eager" decoding="async">
+        <img src="${escapeHtml(feature.media)}" alt="${escapeHtml(feature.alt)}" width="${escapeHtml(feature.width || 1670)}" height="${escapeHtml(feature.height || 941)}" loading="eager" decoding="async">
       </a>
     </div>
     <div class="flode-theme-copy">
