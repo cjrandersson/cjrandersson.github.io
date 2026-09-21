@@ -230,7 +230,30 @@ window.PROJECTS = [
       "label": "Sound / Instrument design",
       "summary": "Six sampler pods, one shared rhythm: an instrument in development that carries Jungulator’s sample-mangling character into a clearer, more playable interface."
     },
-    "definitionsEyebrow": "MVP direction"
+    "definitionsEyebrow": "MVP direction",
+    "eagerMedia": true,
+    "mediaDimensions": {
+      "media/flode/flode-interface-dark-six-pod.png": [
+        1536,
+        1024
+      ],
+      "media/flode/flode-pod-design.png": [
+        1536,
+        1024
+      ],
+      "media/flode/flode-interface-jungulator-detail.png": [
+        1536,
+        1024
+      ],
+      "media/flode/flode-hardware-render.png": [
+        1672,
+        941
+      ],
+      "media/flode/flode-six-channel-logo-large.png": [
+        1536,
+        1024
+      ]
+    }
   },
   {
     "slug": "tunnelbanekollen",

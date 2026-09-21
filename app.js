@@ -27,7 +27,9 @@ function mediaFor(project) {
 function imageMarkup(project, src, index = 0, eager = false) {
   const suffix = mediaFor(project).length > 1 ? ` — view ${index + 1}` : '';
   const alt = project.mediaAlt?.[src] || `${project.alt || project.title}${suffix}`;
-  return `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">`;
+  const dimensions = project.mediaDimensions?.[src];
+  const size = dimensions ? ` width="${escapeHtml(dimensions[0])}" height="${escapeHtml(dimensions[1])}"` : '';
+  return `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}"${size} loading="${eager || project.eagerMedia ? 'eager' : 'lazy'}" decoding="async">`;
 }
 
 function renderGallery() {
@@ -57,7 +59,7 @@ function detailFigureMarkup(detail, className) {
   if (!detail) return '';
   return `<figure class="project-story-media ${className}">
     <a href="${escapeHtml(detail.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">
-      <img src="${escapeHtml(detail.media)}" alt="${escapeHtml(detail.alt)}" width="${escapeHtml(detail.width)}" height="${escapeHtml(detail.height)}" loading="lazy" decoding="async">
+      <img src="${escapeHtml(detail.media)}" alt="${escapeHtml(detail.alt)}" width="${escapeHtml(detail.width)}" height="${escapeHtml(detail.height)}" loading="eager" decoding="async">
     </a>
     <figcaption>
       ${detail.title ? `<h4>${escapeHtml(detail.title)}</h4>` : ''}
@@ -74,7 +76,7 @@ function themeFeatureMarkup(project) {
   return `<section class="flode-theme-feature" aria-labelledby="flode-theme-title">
     <div class="project-story-media flode-theme-visual">
       <a href="${escapeHtml(feature.media)}" target="_blank" rel="noreferrer" aria-label="Open light interface in original resolution">
-        <img src="${escapeHtml(feature.media)}" alt="${escapeHtml(feature.alt)}" width="1670" height="941" loading="lazy" decoding="async">
+        <img src="${escapeHtml(feature.media)}" alt="${escapeHtml(feature.alt)}" width="1670" height="941" loading="eager" decoding="async">
       </a>
     </div>
     <div class="flode-theme-copy">

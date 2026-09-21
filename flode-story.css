@@ -1,4 +1,11 @@
 /* Flöde story additions. The portfolio's base styles remain the reference. */
+.project-media-wall img[width][height] {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .flode-theme-feature {
   width: min(calc(100% - (2 * var(--page))), 1180px);
   margin: 0 auto;
