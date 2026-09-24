@@ -127,20 +127,90 @@ function introStoryMarkup(project, media) {
   </section>` : ''}`;
 }
 
+function sectionMetaMarkup(section) {
+  if (!Array.isArray(section.meta) || !section.meta.length) return '';
+  return `<div class="project-media-meta">${section.meta.map(item => `<span>${escapeHtml(item)}</span>`).join('')}</div>`;
+}
+
+function sectionLinkMarkup(section) {
+  const link = section.link;
+  if (!link?.href || !link?.label) return '';
+  const external = !String(link.href).startsWith('#');
+  return `<a class="project-inline-link" href="${escapeHtml(link.href)}"${external ? ' target="_blank" rel="noreferrer"' : ''}>${escapeHtml(link.label)}<span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span></a>`;
+}
+
+function audioMediaMarkup(section) {
+  const placeholderLabel = section.placeholderLabel || 'Audio file pending final curation';
+  const visual = `<div class="project-audio-visual" aria-hidden="true">
+    <span>${escapeHtml(section.eyebrow || 'Selected sound')}</span>
+    <strong>${escapeHtml(section.title || 'Audio')}</strong>
+  </div>`;
+  const player = section.audio
+    ? `<audio class="project-audio-player" controls preload="metadata" src="${escapeHtml(section.audio)}">Your browser does not support HTML5 audio.</audio>
+       <p class="project-audio-status" hidden>Audio file unavailable.</p>`
+    : `<p class="project-audio-status">${escapeHtml(placeholderLabel)}</p>`;
+
+  return `<div class="project-story-media project-story-media--audio">
+    ${section.artwork ? `<img src="${escapeHtml(section.artwork)}" alt="${escapeHtml(section.alt || section.title || 'Audio artwork')}" loading="lazy" decoding="async">` : visual}
+    ${player}
+    ${sectionMetaMarkup(section)}
+    ${sectionLinkMarkup(section)}
+  </div>`;
+}
+
+function videoMediaMarkup(section) {
+  if (!section.video) return '';
+  const poster = section.poster ? ` poster="${escapeHtml(section.poster)}"` : '';
+  return `<div class="project-story-media project-story-media--video">
+    <video controls preload="metadata"${poster}>
+      <source src="${escapeHtml(section.video)}">
+      Your browser does not support HTML5 video.
+    </video>
+    ${sectionMetaMarkup(section)}
+    ${sectionLinkMarkup(section)}
+  </div>`;
+}
+
+function processMarkup(section) {
+  if (!Array.isArray(section.steps) || !section.steps.length) return '';
+  return `<div class="project-story-media project-process-flow" aria-label="Process">
+    ${section.steps.map((step, index) => `<div class="project-process-step"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(step)}</strong></div>`).join('')}
+    ${sectionMetaMarkup(section)}
+    ${sectionLinkMarkup(section)}
+  </div>`;
+}
+
+function sectionMediaMarkup(project, section) {
+  if (section.mediaType === 'audio') return audioMediaMarkup(section);
+  if (section.mediaType === 'video') return videoMediaMarkup(section);
+  if (Array.isArray(section.steps) && section.steps.length) return processMarkup(section);
+  if (!section.media) return '';
+
+  const cropClass = section.mediaCrop
+    ? ` project-story-media--crop crop-${escapeHtml(section.mediaCrop)}`
+    : '';
+
+  return `<div class="project-story-media${cropClass}">
+    <a href="${escapeHtml(section.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, section.media)}</a>
+    ${sectionMetaMarkup(section)}
+    ${sectionLinkMarkup(section)}
+  </div>`;
+}
+
 function structuredStoryMarkup(project) {
   return project.storySections.map(section => {
-    const cropClass = section.mediaCrop
-      ? ` project-story-media--crop crop-${escapeHtml(section.mediaCrop)}`
-      : '';
+    const mediaMarkup = sectionMediaMarkup(project, section);
+    const copyOnlyClass = mediaMarkup ? '' : ' project-story-section--copy-only';
 
-    return `<section class="project-story-section">
+    return `<section class="project-story-section${copyOnlyClass}">
       <div class="project-story-copy">
         <p class="project-eyebrow">${escapeHtml(section.eyebrow || '')}</p>
         <h3>${escapeHtml(section.title || '')}</h3>
         <p>${escapeHtml(section.body || '')}</p>
         ${Array.isArray(section.bullets) && section.bullets.length ? `<ul>${section.bullets.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : ''}
+        ${!mediaMarkup ? `${sectionMetaMarkup(section)}${sectionLinkMarkup(section)}` : ''}
       </div>
-      ${section.media ? `<div class="project-story-media${cropClass}"><a href="${escapeHtml(section.media)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, section.media)}</a></div>` : ''}
+      ${mediaMarkup}
     </section>`;
   }).join('');
 }
@@ -158,6 +228,28 @@ function seriesStoryMarkup(project, media) {
   if (media.length <= 1) return '';
 
   return `<div class="project-media-wall">${media.slice(1).map((src, index) => `<a href="${escapeHtml(src)}" target="_blank" rel="noreferrer" aria-label="Open image in original resolution">${imageMarkup(project, src, index + 1)}</a>`).join('')}</div>`;
+}
+
+function initialiseProjectMedia() {
+  const audioPlayers = [...viewer.querySelectorAll('.project-audio-player')];
+
+  audioPlayers.forEach(audio => {
+    audio.addEventListener('play', () => {
+      audioPlayers.forEach(other => {
+        if (other !== audio && !other.paused) other.pause();
+      });
+    });
+
+    audio.addEventListener('error', () => {
+      const wrapper = audio.closest('.project-story-media--audio');
+      const status = wrapper?.querySelector('.project-audio-status');
+      audio.hidden = true;
+      if (status) {
+        status.hidden = false;
+        status.textContent = 'Audio file unavailable.';
+      }
+    }, { once: true });
+  });
 }
 
 function renderProject(project) {
@@ -193,6 +285,7 @@ function renderProject(project) {
     : '';
   document.querySelector('#viewer-theme-feature').innerHTML = themeFeatureMarkup(project);
   document.querySelector('#viewer-story').innerHTML = seriesStoryMarkup(project, media);
+  initialiseProjectMedia();
 
   if (!viewer.open) viewer.showModal();
   viewer.scrollTop = 0;
