@@ -258,6 +258,114 @@ window.PROJECTS = [
     }
   },
   {
+    "slug": "sound-design",
+    "title": "Sound Design / Experimental Music",
+    "category": "sound",
+    "year": "2017–2026",
+    "meta": "(Sound design, sampling, music production, experimental composition)",
+    "thumbnail": "media/sound-design/sound-as-material.svg",
+    "media": ["media/sound-design/sound-as-material.svg"],
+    "alt": "Sound as material editorial waveform artwork for Sound Design and Experimental Music",
+    "aspectRatio": "16 / 10",
+    "size": "wide",
+    "featured": true,
+    "description": "Music, sound design and experiments built from sampling, field recordings, live processing, rhythm, texture and controlled accidents.",
+    "details": {
+      "what": "Sound design, music production, sampling, composition and live experimentation across electronic music, field recordings and custom sound systems.",
+      "why": "To treat recorded sound as material: something to cut apart, stretch, repeat, destabilise and rebuild into new structures.",
+      "thoughts": "Rhythm, repetition, imperfection and controlled unpredictability recur throughout the work, from compact sketches to longer live systems and finished compositions.",
+      "software": ["Ableton Live", "Max/MSP", "Max for Live", "Field recording", "Guitar", "FX pedals"]
+    },
+    "storySections": [
+      {
+        "eyebrow": "Selected sound / 01",
+        "title": "Yadda Yadda'",
+        "body": "A longer-form rhythmic piece built around broken beats, sampling and restless electronic movement. It sits close to the centre of the catalogue: composition and sound manipulation pulling in the same direction.",
+        "mediaType": "audio",
+        "audio": null,
+        "placeholderLabel": "Audio file pending final curation",
+        "meta": ["2021", "sampling · breaks · live sequencing"]
+      },
+      {
+        "eyebrow": "Selected sound / 02",
+        "title": "Le Plombier",
+        "body": "A more cinematic branch of the work, where atmosphere, pacing and instrumental colour take priority over rhythmic density. Sound is treated less as a loop and more as a scene.",
+        "mediaType": "audio",
+        "audio": null,
+        "placeholderLabel": "Audio file pending final curation",
+        "meta": ["2022", "ambient · soundtrack · saxophone"]
+      },
+      {
+        "eyebrow": "Selected sound / 03",
+        "title": "Manifestation Of Ectoplasm",
+        "body": "Noise, tape-like degradation and drone pushed toward texture rather than conventional arrangement. A useful example of the catalogue at its most tactile and spatial.",
+        "mediaType": "audio",
+        "audio": null,
+        "placeholderLabel": "Audio file pending final curation",
+        "meta": ["2022", "noise · tape · drone · live"]
+      },
+      {
+        "eyebrow": "Selected sound / 04",
+        "title": "rogaland fylke_rec1_draft",
+        "body": "An experimental composition where programmed rhythm and unstable detail sit side by side. The draft-state title is part of the method: finished enough to communicate, still open enough to mutate.",
+        "mediaType": "audio",
+        "audio": null,
+        "placeholderLabel": "Audio file pending final curation",
+        "meta": ["2023", "rhythm · live · experimental composition"]
+      },
+      {
+        "eyebrow": "Selected sound / 05",
+        "title": "slapdash acid HQ[jam]",
+        "body": "A live acid study built around immediacy rather than polish. Sequencing, repetition and performance decisions remain audible instead of being edited out after the fact.",
+        "mediaType": "audio",
+        "audio": null,
+        "placeholderLabel": "Audio file pending final curation",
+        "meta": ["2022", "303 · live jam · rave"]
+      },
+      {
+        "eyebrow": "Selected sound / 06",
+        "title": "Old iPhone 10 Jazz Flip 01",
+        "body": "An old phone recording of a jazz trio becomes raw material for a new beat. The value is in the transformation: source recording, selection, resampling and a different rhythmic context.",
+        "mediaType": "audio",
+        "audio": null,
+        "placeholderLabel": "Audio file pending final curation",
+        "meta": ["2026", "field recording → sampling → resampling"]
+      },
+      {
+        "eyebrow": "Process",
+        "title": "Source becomes structure.",
+        "body": "The recurring workflow is simple on paper and unpredictable in practice. A recording is treated as material rather than a fixed performance, then pushed through a chain of selection, manipulation and recomposition.",
+        "steps": ["source", "sampling", "manipulation", "composition"],
+        "meta": ["repeatable process · different outcomes"]
+      },
+      {
+        "eyebrow": "Controlled accidents",
+        "title": "The setup is allowed to answer back.",
+        "body": "Live takes, Max/MSP patches, old laptops, phones, pedals and unstable processing are not only production tools. They introduce decisions and failures that would be difficult to design deliberately.",
+        "bullets": ["rip morfar_live-jam — Ableton + Max/MSP", "peeking thru blinds — ThinkPad, drones and FX pedals", "zoo world_livejam1-long — phone, laptop and pedals", "Generative and live systems are edited by listening, not by removing every irregularity"]
+      },
+      {
+        "eyebrow": "Selected releases",
+        "title": "Some experiments leave the hard drive.",
+        "body": "The wider archive includes sketches, live jams and distributed releases. External platforms remain secondary here: this project is organised around process and listening rather than follower counts or release chronology.",
+        "link": {"href": "https://soundcloud.com/dr-boland", "label": "Listen on SoundCloud"}
+      },
+      {
+        "eyebrow": "Related project",
+        "title": "Sometimes the tool becomes part of the composition.",
+        "body": "flöde~ grows from the same interest in sampling, rhythmic instability and playable randomness. One project documents the instrument; this one documents the material and methods around the sound.",
+        "media": "media/flode/flode-hardware-render.png",
+        "link": {"href": "#project/flode", "label": "Explore flöde~"}
+      }
+    ],
+    "cover": {
+      "src": "media/sound-design/sound-as-material.svg",
+      "alt": "Sound as material waveform artwork",
+      "label": "Sound design / Music production",
+      "summary": "Sampling, rhythm, texture and controlled accidents: sound treated as material rather than a fixed recording."
+    }
+  },
+  {
     "slug": "tunnelbanekollen",
     "title": "Tunnelbanekollen",
     "category": "uxui",
