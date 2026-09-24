@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Sound as material</title>
+  <desc id="desc">Minimal dark editorial artwork with waveform-like vertical lines and typography for the Sound Design and Experimental Music project.</desc>
+  <rect width="1600" height="1000" fill="#101112"/>
+  <g stroke="#8a8a87" stroke-width="2" opacity="0.55">
+    <path d="M90 510V490"/><path d="M118 535V465"/><path d="M146 575V425"/><path d="M174 620V380"/>
+    <path d="M202 560V440"/><path d="M230 695V305"/><path d="M258 640V360"/><path d="M286 760V240"/>
+    <path d="M314 680V320"/><path d="M342 590V410"/><path d="M370 720V280"/><path d="M398 650V350"/>
+    <path d="M426 550V450"/><path d="M454 610V390"/><path d="M482 810V190"/><path d="M510 700V300"/>
+    <path d="M538 635V365"/><path d="M566 745V255"/><path d="M594 690V310"/><path d="M622 570V430"/>
+    <path d="M650 660V340"/><path d="M678 785V215"/><path d="M706 715V285"/><path d="M734 620V380"/>
+    <path d="M762 560V440"/><path d="M790 735V265"/><path d="M818 850V150"/><path d="M846 720V280"/>
+    <path d="M874 645V355"/><path d="M902 780V220"/><path d="M930 680V320"/><path d="M958 600V400"/>
+    <path d="M986 700V300"/><path d="M1014 635V365"/><path d="M1042 820V180"/><path d="M1070 690V310"/>
+    <path d="M1098 610V390"/><path d="M1126 755V245"/><path d="M1154 670V330"/><path d="M1182 575V425"/>
+    <path d="M1210 630V370"/><path d="M1238 705V295"/><path d="M1266 620V380"/><path d="M1294 555V445"/>
+    <path d="M1322 590V410"/><path d="M1350 660V340"/><path d="M1378 585V415"/><path d="M1406 545V455"/>
+    <path d="M1434 525V475"/><path d="M1462 515V485"/><path d="M1490 508V492"/>
+  </g>
+  <line x1="90" y1="500" x2="1510" y2="500" stroke="#aeb9a9" stroke-width="1" opacity="0.7"/>
+  <text x="90" y="108" fill="#8a8a87" font-family="Inter, Arial, sans-serif" font-size="24" letter-spacing="5">SOUND DESIGN / EXPERIMENTAL MUSIC</text>
+  <text x="90" y="885" fill="#f1f0eb" font-family="Inter, Arial, sans-serif" font-size="112" font-weight="430" letter-spacing="-7">Sound as material.</text>
+  <text x="1490" y="108" text-anchor="end" fill="#aeb9a9" font-family="Inter, Arial, sans-serif" font-size="22">2017—2026</text>
+</svg>
