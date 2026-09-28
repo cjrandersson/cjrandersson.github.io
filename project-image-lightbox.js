@@ -38,14 +38,35 @@
     copy.innerHTML = `
       <p class="project-eyebrow">Selected sound / 02</p>
       <h3>Colorado Plateau</h3>
-      <p><strong>Synopsis</strong></p>
-      <p>An unnamed man traverses the vast, sun-scorched landscapes of the American Southwest—moving through open deserts, narrow canyons, and abandoned roads—while carrying a mysterious object that does not belong to him. With a nameless presence trailing him, the immense open space gradually transforms into a claustrophobic psychological prison, told entirely through static compositions, long takes, and virtually no dialogue.</p>
-      <p><strong>Sound Design &amp; Soundtrack</strong></p>
-      <p>With dialogue absent, sound carries the film's inner narrative. The score combines low-frequency drones, warm synthesizer beds, and improvised performances.</p>
-      <ul>
-        <li><strong>Worn Aesthetic:</strong> Deliberately retains tape-like degradation, clipping, and electrical interference rather than cleaning them away, giving the audio a raw, half-erased memory quality.</li>
-        <li><strong>Organic Integration:</strong> Seamlessly weaves environmental textures—wind across sandstone, footsteps on loose gravel, and distant mechanical hums—directly into the musical score, turning the static landscape into a watchful, unstable, and living presence.</li>
-      </ul>`;
+
+      <p><strong>Project Overview</strong></p>
+      <p><em>Colorado Plateau</em> är ett fiktivt arthouse-koncept och en psykologisk thriller byggd kring <strong>landskap, ljud och perception</strong>.</p>
+      <p>En namnlös man färdas genom den amerikanska sydvästerns öken med ett föremål som inte tillhör honom. Något tycks följa efter, men om hotet är verkligt, psykologiskt eller en del av själva landskapet avslöjas aldrig.</p>
+      <p>Projektet undersöker hur enorma öppna ytor kan göras klaustrofobiska och hur frånvaro, repetition och ljud kan skapa spänning utan traditionell exposition.</p>
+
+      <p><strong>Visual Language &amp; Cinematography</strong></p>
+      <p>Bildspråket bygger på <strong>extrema wide-lens-perspektiv, statiska kompositioner och långa obrutna tagningar</strong>. Människan reduceras till ett litet element i ett monumentalt landskap av röda klippformationer, uttorkade dalar och avlägsna horisonter.</p>
+      <p>Kameran observerar snarare än förklarar. Negativt utrymme, värmedis och långsam repetition gör att öknen gradvis förändras från öppen och monumental till desorienterande och hotfull.</p>
+
+      <p><strong>Narrative &amp; Atmosphere</strong></p>
+      <p>Berättelsen hålls medvetet fragmentarisk.</p>
+      <p>Det stulna föremålet förklaras aldrig. Förföljaren visas aldrig tydligt. Istället byggs hotet genom små förändringar: ett avlägset ljud, spår i sanden, en väg som känns bekant eller något som tycks ha flyttats under natten.</p>
+      <p>Ju längre färden fortsätter, desto svårare blir det att avgöra vad som är geografiskt verkligt och vad som hör till mannens egen perception.</p>
+
+      <p><strong>Soundtrack &amp; Sound Design</strong></p>
+      <p>Ljudet fungerar som filmens <strong>osynliga narratör</strong>.</p>
+      <p>Soundtracket kombinerar degraderade fältinspelningar, mobiltelefoninspelningar, improviserad gitarr, distortion, delay, varma synthtexturer och lågfrekventa drönare. Brus, clipping och elektriska artefakter lämnas medvetet kvar för att skapa en sliten och fysisk ljudbild.</p>
+      <p>Miljöljud behandlas samtidigt som musikaliskt material. Vind, grus, metalliska vibrationer och avlägsna mekaniska ljud loopas, sträcks och bearbetas tills gränsen mellan <strong>diegetiskt ljud och score</strong> börjar lösas upp.</p>
+      <p>Ett ljud kan uppfattas som musik i ena stunden och som något som faktiskt befinner sig ute i öknen i nästa.</p>
+
+      <p><strong>Visual Identity</strong></p>
+      <p>Den grafiska identiteten följer samma princip som filmen: <strong>fragment, landskap och otydliga signaler</strong>.</p>
+      <p>Grynig ökenfotografi kombineras med röda symboler och abstrakta markörer i en begränsad palett av sand, blekt cyan, bränd orange, svart och signalrött. Uttrycket hämtar drag från screentryck, äldre trycksaker och psykedelisk affischdesign utan att bli ren retroestetik.</p>
+
+      <p><strong>Creative Direction</strong></p>
+      <p><strong>Show less. Let the viewer complete the image.</strong></p>
+      <p>Hotet visas aldrig fullt ut. Föremålet förklaras aldrig. Musiken berättar inte hur publiken ska känna.</p>
+      <p>Istället bygger <em>Colorado Plateau</em> sitt psykologiska rum genom små visuella och auditiva avvikelser, någonstans mellan <strong>slow cinema, road movie, psykologisk skräck och audiovisuell installation</strong>.</p>`;
 
     copy.dataset.coloradoCopyUpdated = 'true';
   }
