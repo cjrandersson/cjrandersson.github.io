@@ -137,7 +137,7 @@ window.PROJECTS = [
       "media/flode/flode-interface-dark-six-pod.png": "Dark flöde~ Jungulator-inspired interface with a single pod and master controls",
       "media/flode/flode-pod-design.png": "Close view of a flöde~ pod with waveform, slicing and generative controls",
       "media/flode/flode-interface-jungulator-detail.png": "flöde~ Jungulator interface with notes on its playback and slicing controls",
-      "media/flode/flode-hardware-render.png": "Physical flöde~ workstation concept with six coloured channels",
+      "media/flode/flode-hardware-render.png": "Physical flöde~ workstation concept with six coloured sample channels",
       "media/flode/flode-six-channel-logo-large.png": "Dark flöde~ interface with six coloured sample channels"
     },
     "themeFeature": {
@@ -289,15 +289,16 @@ window.PROJECTS = [
       {
         "eyebrow": "Selected sound / 02",
         "title": "Colorado Plateau",
-        "body": "An original soundtrack concept for a fictional road film set across the vast high-desert landscapes of the Colorado Plateau. The score is designed as part of the film’s geography: sparse, weathered and slowly changing rather than continuously dramatic.",
+        "body": "A fictional arthouse psychological thriller set across the vast, sun-scorched landscapes of the American Southwest. Almost entirely without dialogue, the film follows an unnamed man moving through open desert, narrow canyons and abandoned roads while carrying an object that does not belong to him. Something appears to be following him, but whether the threat is human, imagined or simply the landscape itself is never made clear. Static anamorphic compositions, extreme wides and long uninterrupted takes gradually turn the enormous landscape into something claustrophobic, using distance, heat and isolation as psychological pressure.",
         "bullets": [
-          "Film — After the death of his estranged father, a young cartographer drives across the Colorado Plateau to deliver a box of field tapes to a remote research station. The route through mesas, dry riverbeds and near-abandoned towns becomes a quiet journey through memory, family and a landscape changing faster than the maps can record it.",
-          "Soundtrack — Processed guitar, detuned synthesis, tape hiss, field-recorded wind, distant radio fragments and low drones form a wide, restrained score. Small melodic motifs return like landmarks, stretched, buried or altered as the journey progresses, while occasional broken percussion introduces movement without disturbing the film’s sense of scale and isolation."
+          "Soundtrack & sound design — With dialogue largely absent, sound carries much of the film’s inner narrative. The score combines degraded field recordings, primitive phone recordings, processed guitar, analogue distortion and delay, improvised performances, warm synthesizer beds and low-frequency drones.",
+          "Texture — Noise, clipping, electrical interference and tape-like degradation are deliberately retained rather than cleaned away, giving the soundtrack a worn, physical quality somewhere between damaged field documentation and a half-erased memory.",
+          "Space — Environmental sound is woven directly into the music: wind moving across sandstone, footsteps on loose gravel, distant mechanical hums and fragments of unidentifiable noise drift between diegetic sound and score. The result is sparse and slow-moving, designed less to accompany the landscape than to make it feel watchful, unstable and alive."
         ],
         "mediaType": "audio",
         "audio": null,
         "placeholderLabel": "Audio file pending final curation",
-        "meta": ["2026", "fictional film score · ambient · field recording · processed guitar"]
+        "meta": ["2026", "fictional film score · sound design · ambient · field recording · processed guitar · lo-fi"]
       },
       {
         "eyebrow": "Selected sound / 03",
