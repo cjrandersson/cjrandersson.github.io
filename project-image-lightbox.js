@@ -3,6 +3,7 @@
   if (!viewerPage) return;
 
   const coloradoPosterSrc = 'media/sound-design/colorado-plateau-poster.svg';
+  let coloradoPosterDataPromise = null;
 
   const lightbox = document.createElement('dialog');
   lightbox.className = 'image-lightbox';
@@ -50,32 +51,60 @@
     copy.dataset.coloradoCopyUpdated = 'true';
   }
 
-  function addColoradoPlateauPoster() {
+  function getColoradoPosterDataUrl() {
+    if (coloradoPosterDataPromise) return coloradoPosterDataPromise;
+
+    coloradoPosterDataPromise = fetch(coloradoPosterSrc, { cache: 'no-store' })
+      .then(response => {
+        if (!response.ok) throw new Error(`Poster request failed: ${response.status}`);
+        return response.text();
+      })
+      .then(svgText => {
+        const match = svgText.match(/(?:href|xlink:href)=["'](data:image\/(?:webp|png|jpeg|jpg);base64,[^"']+)["']/i);
+        if (!match) throw new Error('Embedded poster image could not be extracted.');
+        return match[1];
+      });
+
+    return coloradoPosterDataPromise;
+  }
+
+  async function addColoradoPlateauPoster() {
     const coloradoSection = findColoradoSection();
     if (!coloradoSection) return;
 
     const media = coloradoSection.querySelector('.project-story-media--audio');
-    if (!media || media.querySelector(`img[src="${coloradoPosterSrc}"]`)) return;
+    if (!media || media.querySelector('.colorado-plateau-poster') || media.dataset.coloradoPosterLoading === 'true') return;
 
-    const fallbackVisual = media.querySelector('.project-audio-visual');
-    if (fallbackVisual) fallbackVisual.remove();
+    media.dataset.coloradoPosterLoading = 'true';
 
-    const link = document.createElement('a');
-    link.href = coloradoPosterSrc;
-    link.className = 'colorado-plateau-poster';
-    link.setAttribute('aria-label', 'Open Colorado Plateau poster artwork');
+    try {
+      const posterDataUrl = await getColoradoPosterDataUrl();
+      if (!media.isConnected || media.querySelector('.colorado-plateau-poster')) return;
 
-    const image = document.createElement('img');
-    image.src = coloradoPosterSrc;
-    image.alt = 'Colorado Plateau poster artwork';
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    image.style.width = '100%';
-    image.style.height = 'auto';
-    image.style.display = 'block';
+      const link = document.createElement('a');
+      link.href = posterDataUrl;
+      link.className = 'colorado-plateau-poster';
+      link.setAttribute('aria-label', 'Open Colorado Plateau poster artwork');
 
-    link.appendChild(image);
-    media.insertBefore(link, media.firstChild);
+      const image = document.createElement('img');
+      image.src = posterDataUrl;
+      image.alt = 'Colorado Plateau poster artwork';
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.style.width = '100%';
+      image.style.height = 'auto';
+      image.style.display = 'block';
+
+      link.appendChild(image);
+
+      const fallbackVisual = media.querySelector('.project-audio-visual');
+      if (fallbackVisual) fallbackVisual.remove();
+      media.insertBefore(link, media.firstChild);
+    } catch (error) {
+      console.warn('Colorado Plateau poster could not be prepared for this browser.', error);
+    } finally {
+      delete media.dataset.coloradoPosterLoading;
+    }
   }
 
   function normaliseProjectImageLinks() {
@@ -93,7 +122,7 @@
 
   function enhanceProjectImages() {
     updateColoradoPlateauCopy();
-    addColoradoPlateauPoster();
+    void addColoradoPlateauPoster();
     normaliseProjectImageLinks();
   }
 
