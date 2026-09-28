@@ -2,6 +2,8 @@
   const viewerPage = document.querySelector('#viewer-page');
   if (!viewerPage) return;
 
+  const coloradoPosterSrc = 'media/sound-design/colorado-plateau-poster.svg';
+
   const lightbox = document.createElement('dialog');
   lightbox.className = 'image-lightbox';
   lightbox.setAttribute('aria-label', 'Image preview');
@@ -18,6 +20,39 @@
   const previewImage = lightbox.querySelector('.image-lightbox__image');
   const closeButton = lightbox.querySelector('.image-lightbox__close');
 
+  function addColoradoPlateauPoster() {
+    const coloradoSection = [...viewerPage.querySelectorAll('.project-story-section')].find(section => {
+      const eyebrow = section.querySelector('.project-eyebrow')?.textContent?.trim();
+      const title = section.querySelector('h3')?.textContent?.trim();
+      return eyebrow === 'Selected sound / 02' && title === 'Colorado Plateau';
+    });
+
+    if (!coloradoSection) return;
+
+    const media = coloradoSection.querySelector('.project-story-media--audio');
+    if (!media || media.querySelector(`img[src="${coloradoPosterSrc}"]`)) return;
+
+    const fallbackVisual = media.querySelector('.project-audio-visual');
+    if (fallbackVisual) fallbackVisual.remove();
+
+    const link = document.createElement('a');
+    link.href = coloradoPosterSrc;
+    link.className = 'colorado-plateau-poster';
+    link.setAttribute('aria-label', 'Open Colorado Plateau poster artwork');
+
+    const image = document.createElement('img');
+    image.src = coloradoPosterSrc;
+    image.alt = 'Colorado Plateau poster artwork';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.style.width = '100%';
+    image.style.height = 'auto';
+    image.style.display = 'block';
+
+    link.appendChild(image);
+    media.insertBefore(link, media.firstChild);
+  }
+
   function normaliseProjectImageLinks() {
     viewerPage.querySelectorAll('a').forEach(link => {
       const image = link.querySelector('img');
@@ -29,6 +64,11 @@
       link.setAttribute('aria-haspopup', 'dialog');
       link.setAttribute('aria-label', image.alt ? `Preview: ${image.alt}` : 'Preview image');
     });
+  }
+
+  function enhanceProjectImages() {
+    addColoradoPlateauPoster();
+    normaliseProjectImageLinks();
   }
 
   function openLightbox(link, image) {
@@ -46,9 +86,9 @@
     if (lightbox.open) lightbox.close();
   }
 
-  const observer = new MutationObserver(normaliseProjectImageLinks);
+  const observer = new MutationObserver(enhanceProjectImages);
   observer.observe(viewerPage, { childList: true, subtree: true });
-  normaliseProjectImageLinks();
+  enhanceProjectImages();
 
   viewerPage.addEventListener('click', event => {
     const link = event.target.closest('a.project-image-link');
