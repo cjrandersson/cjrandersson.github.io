@@ -20,13 +20,38 @@
   const previewImage = lightbox.querySelector('.image-lightbox__image');
   const closeButton = lightbox.querySelector('.image-lightbox__close');
 
-  function addColoradoPlateauPoster() {
-    const coloradoSection = [...viewerPage.querySelectorAll('.project-story-section')].find(section => {
+  function findColoradoSection() {
+    return [...viewerPage.querySelectorAll('.project-story-section')].find(section => {
       const eyebrow = section.querySelector('.project-eyebrow')?.textContent?.trim();
       const title = section.querySelector('h3')?.textContent?.trim();
       return eyebrow === 'Selected sound / 02' && title === 'Colorado Plateau';
     });
+  }
 
+  function updateColoradoPlateauCopy() {
+    const coloradoSection = findColoradoSection();
+    if (!coloradoSection) return;
+
+    const copy = coloradoSection.querySelector('.project-story-copy');
+    if (!copy || copy.dataset.coloradoCopyUpdated === 'true') return;
+
+    copy.innerHTML = `
+      <p class="project-eyebrow">Selected sound / 02</p>
+      <h3>Colorado Plateau</h3>
+      <p><strong>Synopsis</strong></p>
+      <p>An unnamed man traverses the vast, sun-scorched landscapes of the American Southwest—moving through open deserts, narrow canyons, and abandoned roads—while carrying a mysterious object that does not belong to him. With a nameless presence trailing him, the immense open space gradually transforms into a claustrophobic psychological prison, told entirely through static compositions, long takes, and virtually no dialogue.</p>
+      <p><strong>Sound Design &amp; Soundtrack</strong></p>
+      <p>With dialogue absent, sound carries the film's inner narrative. The score combines low-frequency drones, warm synthesizer beds, and improvised performances.</p>
+      <ul>
+        <li><strong>Worn Aesthetic:</strong> Deliberately retains tape-like degradation, clipping, and electrical interference rather than cleaning them away, giving the audio a raw, half-erased memory quality.</li>
+        <li><strong>Organic Integration:</strong> Seamlessly weaves environmental textures—wind across sandstone, footsteps on loose gravel, and distant mechanical hums—directly into the musical score, turning the static landscape into a watchful, unstable, and living presence.</li>
+      </ul>`;
+
+    copy.dataset.coloradoCopyUpdated = 'true';
+  }
+
+  function addColoradoPlateauPoster() {
+    const coloradoSection = findColoradoSection();
     if (!coloradoSection) return;
 
     const media = coloradoSection.querySelector('.project-story-media--audio');
@@ -67,6 +92,7 @@
   }
 
   function enhanceProjectImages() {
+    updateColoradoPlateauCopy();
     addColoradoPlateauPoster();
     normaliseProjectImageLinks();
   }
