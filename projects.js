@@ -288,12 +288,16 @@ window.PROJECTS = [
       },
       {
         "eyebrow": "Selected sound / 02",
-        "title": "Le Plombier",
-        "body": "A more cinematic branch of the work, where atmosphere, pacing and instrumental colour take priority over rhythmic density. Sound is treated less as a loop and more as a scene.",
+        "title": "Colorado Plateau",
+        "body": "An original soundtrack concept for a fictional road film set across the vast high-desert landscapes of the Colorado Plateau. The score is designed as part of the film’s geography: sparse, weathered and slowly changing rather than continuously dramatic.",
+        "bullets": [
+          "Film — After the death of his estranged father, a young cartographer drives across the Colorado Plateau to deliver a box of field tapes to a remote research station. The route through mesas, dry riverbeds and near-abandoned towns becomes a quiet journey through memory, family and a landscape changing faster than the maps can record it.",
+          "Soundtrack — Processed guitar, detuned synthesis, tape hiss, field-recorded wind, distant radio fragments and low drones form a wide, restrained score. Small melodic motifs return like landmarks, stretched, buried or altered as the journey progresses, while occasional broken percussion introduces movement without disturbing the film’s sense of scale and isolation."
+        ],
         "mediaType": "audio",
         "audio": null,
         "placeholderLabel": "Audio file pending final curation",
-        "meta": ["2022", "ambient · soundtrack · saxophone"]
+        "meta": ["2026", "fictional film score · ambient · field recording · processed guitar"]
       },
       {
         "eyebrow": "Selected sound / 03",
