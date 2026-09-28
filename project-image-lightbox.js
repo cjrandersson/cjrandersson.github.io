@@ -2,7 +2,7 @@
   const viewerPage = document.querySelector('#viewer-page');
   if (!viewerPage) return;
 
-  const coloradoPosterSrc = 'media/sound-design/colorado-plateau-poster.jpg';
+  const coloradoPosterSrc = 'media/sound-design/colorado-plateau-poster-hq.webp';
 
   const lightbox = document.createElement('dialog');
   lightbox.className = 'image-lightbox';
@@ -60,6 +60,9 @@
     const fallbackVisual = media.querySelector('.project-audio-visual');
     if (fallbackVisual) fallbackVisual.remove();
 
+    const existingPoster = media.querySelector('.colorado-plateau-poster');
+    if (existingPoster) existingPoster.remove();
+
     const link = document.createElement('a');
     link.href = coloradoPosterSrc;
     link.className = 'colorado-plateau-poster';
@@ -68,6 +71,8 @@
     const image = document.createElement('img');
     image.src = coloradoPosterSrc;
     image.alt = 'Colorado Plateau poster artwork';
+    image.width = 2732;
+    image.height = 4268;
     image.loading = 'eager';
     image.decoding = 'async';
     image.style.width = '100%';
