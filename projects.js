@@ -194,67 +194,47 @@ window.PROJECTS = [
         "notes": [
           {
             "label": "BPM / Transport",
-            "body": "Shared tempo, transport and host/MIDI sync, with Sync or Free per pod. A separate resizable BPM window is part of the plan."
+            "body": "Shared tempo, transport and host-sync area."
           },
           {
-            "label": "Master FX Chain",
-            "body": "Reorderable reverb, echo, delay, drive and limiter, with per-effect mix and bypass."
+            "label": "Master FX",
+            "body": "Five user-selected slots before the final output stage."
           },
           {
             "label": "Master",
-            "body": "The output panel groups routing, volume, pan, stereo width and level meters for the combined signal."
+            "body": "Output level and final stereo meter."
           }
         ]
       }
     },
+    "definitionsEyebrow": "The instrument",
     "definitions": [
-      "Six sampler pods A–F — independent sample playback in one window, built from a validated Pod A.",
-      "Jungulator at the core — retain its original controls and sample-mangling character.",
-      "Controlled variation — RND for slice/position probability, RND2 for velocity and playback-speed variation; Jung, Weighted, Walk, Memory and Chaos modes.",
-      "Shared rhythm — master BPM, host/MIDI clock, quantisation and per-pod Sync/Free, with mute, solo, record, Panic and choke groups.",
-      "Sound shaping — waveform and slicing tools, per-pod FX, then a reorderable master chain and output controls."
+      "Six pods — independent samples with shared timing.",
+      "JUNG — bounded generative interventions around known master-time decision points.",
+      "Slice — transient-aware sample segmentation.",
+      "Random / Jitter — controlled variation rather than unbounded chaos.",
+      "Master FX — a compact shared processing chain after the pods."
     ],
-    "definitionClosing": "Development starts with the Pod A playback engine and sampler workflow. Slicing, generative behaviour, global sync, six-pod operation and FX are staged build targets. Max for Live and standalone are intended formats; the images show interface and hardware studies, not a finished release.",
-    "description": "A Max/MSP instrument in development, carrying the sample-mangling character of I Am The Mighty Jungulator into a six-pod design.",
+    "definitionClosing": "A playable system where instability is musical, but the architecture knows where home is.",
+    "description": "A six-pod Max/MSP sampler and generative instrument built around playable randomness, rhythmic instability and fast sound manipulation.",
     "details": {
-      "what": "Instrument concept, interaction design and an evolving Max/MSP prototype.",
-      "why": "To preserve Jungulator’s rhythmic unpredictability while making its controls clearer and more playable.",
-      "thoughts": "Pod A first; six pods, shared timing and FX form the agreed MVP direction.",
-      "software": [
-        "Max/MSP",
-        "JavaScript for Max",
-        "p5.js (UI prototype)"
-      ]
+      "what": "Product concept, interaction design, Max/MSP architecture and a working Alpha 0.1 foundation.",
+      "why": "To preserve the musical unpredictability of the original Jungulator while making the system easier to read, play and extend.",
+      "thoughts": "The interface borrows the restraint of modern software instruments while keeping the tactile logic of samplers and grooveboxes.",
+      "software": ["Max/MSP", "JavaScript for Max", "Max for Live", "Ableton Live"]
     },
     "cover": {
-      "src": "media/flode/flode-hardware-render.png",
-      "alt": "flöde~ hardware concept with six coloured waveform channels and tactile controls",
-      "label": "Sound / Instrument design",
-      "summary": "Six sampler pods, one shared rhythm: an instrument in development that carries Jungulator’s sample-mangling character into a clearer, more playable interface."
+      "src": "media/flode/flode-interface-dark-six-pod.png",
+      "alt": "flöde~ six-pod interface",
+      "label": "Max/MSP / Instrument design",
+      "summary": "A playable sampler system built around six pods, shared time and controlled instability."
     },
-    "definitionsEyebrow": "MVP direction",
-    "eagerMedia": true,
     "mediaDimensions": {
-      "media/flode/flode-interface-dark-six-pod.png": [
-        1536,
-        1024
-      ],
-      "media/flode/flode-pod-design.png": [
-        1536,
-        1024
-      ],
-      "media/flode/flode-interface-jungulator-detail.png": [
-        1536,
-        1024
-      ],
-      "media/flode/flode-hardware-render.png": [
-        1672,
-        941
-      ],
-      "media/flode/flode-six-channel-logo-large.png": [
-        1536,
-        1024
-      ]
+      "media/flode/flode-interface-dark-six-pod.png": [1672, 941],
+      "media/flode/flode-pod-design.png": [1536, 1024],
+      "media/flode/flode-interface-jungulator-detail.png": [1536, 1024],
+      "media/flode/flode-hardware-render.png": [1672, 941],
+      "media/flode/flode-six-channel-logo-large.png": [1536, 1024]
     }
   },
   {
@@ -297,7 +277,7 @@ window.PROJECTS = [
         ],
         "mediaType": "audio",
         "audio": null,
-        "placeholderLabel": "Audio file pending final curation",
+        "soundcloudEmbed": "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dr-boland/sets/colorado-plateau-ost/s-lzoU6P2izcl&color=%23f5c518&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
         "meta": ["2026", "fictional film score · sound design · ambient · field recording · processed guitar · lo-fi"]
       },
       {
