@@ -740,7 +740,6 @@ footer p { margin: 0; }
   .project-card-summary { max-width: 36ch; }
   .project-card-link { margin-top: 22px; }
   .project-hero { grid-template-columns: 1fr; padding-top: 64px; }
-  .project-marquee { margin-top: 42px; font-size: clamp(92px, 25vw, 150px); }
   .project-hero h2 { font-size: clamp(66px, 18vw, 118px); }
   .project-hero-media { order: -1; }
   .project-story-section { min-height: 0; grid-template-columns: 1fr; gap: 44px; }
