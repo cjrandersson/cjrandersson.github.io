@@ -145,13 +145,17 @@ function audioMediaMarkup(section) {
     <span>${escapeHtml(section.eyebrow || 'Selected sound')}</span>
     <strong>${escapeHtml(section.title || 'Audio')}</strong>
   </div>`;
-  const player = section.audio
-    ? `<audio class="project-audio-player" controls preload="metadata" src="${escapeHtml(section.audio)}">Your browser does not support HTML5 audio.</audio>
-       <p class="project-audio-status" hidden>Audio file unavailable.</p>`
-    : `<p class="project-audio-status">${escapeHtml(placeholderLabel)}</p>`;
+  const player = section.soundcloudEmbed
+    ? `<div class="soundcloud-player-wrapper">
+         <iframe width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay" title="${escapeHtml(section.title || 'SoundCloud playlist')} soundtrack" src="${escapeHtml(section.soundcloudEmbed)}"></iframe>
+       </div>`
+    : section.audio
+      ? `<audio class="project-audio-player" controls preload="metadata" src="${escapeHtml(section.audio)}">Your browser does not support HTML5 audio.</audio>
+         <p class="project-audio-status" hidden>Audio file unavailable.</p>`
+      : `<p class="project-audio-status">${escapeHtml(placeholderLabel)}</p>`;
 
-  return `<div class="project-story-media project-story-media--audio">
-    ${section.artwork ? `<img src="${escapeHtml(section.artwork)}" alt="${escapeHtml(section.alt || section.title || 'Audio artwork')}" loading="lazy" decoding="async">` : visual}
+  return `<div class="project-story-media project-story-media--audio${section.soundcloudEmbed ? ' project-story-media--soundcloud' : ''}">
+    ${section.soundcloudEmbed ? '' : section.artwork ? `<img src="${escapeHtml(section.artwork)}" alt="${escapeHtml(section.alt || section.title || 'Audio artwork')}" loading="lazy" decoding="async">` : visual}
     ${player}
     ${sectionMetaMarkup(section)}
     ${sectionLinkMarkup(section)}
