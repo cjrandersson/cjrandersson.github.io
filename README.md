@@ -27,6 +27,8 @@ The website is a portable static package. Its HTML, CSS, JavaScript, fonts and m
 
 Project copy and poster live in the Colorado section of `projects.js`; `app.js` renders them without SoundCloud callbacks modifying the content. Colours and responsive layout are scoped in `colorado-soundtrack.css`.
 
-The SoundCloud playlist iframe is the source of truth for track titles, order and playback. Editing the same playlist in SoundCloud is reflected when the portfolio is opened/reloaded, subject to SoundCloud caching. No manual track-name copy or GitHub deployment is needed. An already-open player is not a real-time subscription; reload after editing. Keep the playlist publicly embeddable. If its URL changes, update `playlistUrl` and `soundcloudEmbed` together. The external link remains available if the embed is blocked.
+The SoundCloud playlist is the source of truth for track titles, durations, order and playback. `colorado-soundtrack.js` connects the dark custom controls to SoundCloud's documented Widget API. It waits for complete metadata (with bounded retries), rather than inventing names for partially loaded tracks. If metadata or the API cannot load within 20 seconds, the native playlist remains the fallback. No API keys or hardcoded track names are used.
 
-The old custom `getSounds()` list was removed because partially populated track objects produced invented “Track 3–6” labels. Do not recreate a static duplicate track list.
+Editing the same playlist in SoundCloud is reflected on the next portfolio page load, subject to SoundCloud caching. An already-open player is not a real-time subscription: reload after editing. Keep the playlist publicly embeddable. If its URL changes, update `playlistUrl` and `soundcloudEmbed` together.
+
+Controls: play/pause, track selection, keyboard-accessible seeking, mute/unmute. Closing or leaving the project pauses playback and removes event listeners. SoundCloud changes cannot overwrite the project description or poster.

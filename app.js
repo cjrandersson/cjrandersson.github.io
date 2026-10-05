@@ -216,7 +216,18 @@ function coloradoStoryMarkup(section) {
           <img src="${escapeHtml(section.artwork)}" alt="Colorado Plateau poster artwork" width="2732" height="4268" loading="lazy" decoding="async">
         </a>
       </figure>
-      <div class="colorado-soundtrack">
+      <div class="colorado-soundtrack" data-colorado-player>
+        <div class="cp-player" hidden role="region" aria-label="Colorado Plateau soundtrack player">
+          <div class="cp-controls">
+            <img class="cp-cover" src="${escapeHtml(section.artwork)}" alt="" width="48" height="64">
+            <button class="cp-play" type="button" aria-label="Play" disabled><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></button>
+            <input class="cp-seek" type="range" min="0" max="1000" value="0" aria-label="Playback position" disabled>
+            <span class="cp-time">00:00 / 00:00</span>
+            <button class="cp-mute" type="button" aria-label="Mute" aria-pressed="false" disabled><span class="material-symbols-outlined" aria-hidden="true">volume_up</span></button>
+          </div>
+          <p class="cp-status" role="status">Loading soundtrack…</p>
+          <ol class="cp-tracks" aria-label="SoundCloud playlist"></ol>
+        </div>
         <div class="soundcloud-player-wrapper">
           <iframe width="100%" height="450" scrolling="no" frameborder="0" allow="autoplay" title="Colorado Plateau — SoundCloud playlist" src="${escapeHtml(section.soundcloudEmbed)}"></iframe>
         </div>
