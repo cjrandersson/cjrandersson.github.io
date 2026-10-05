@@ -220,10 +220,14 @@ function coloradoStoryMarkup(section) {
         <div class="cp-player" hidden role="region" aria-label="Colorado Plateau soundtrack player">
           <div class="cp-controls">
             <img class="cp-cover" src="${escapeHtml(section.artwork)}" alt="" width="48" height="64">
+            <div class="cp-transport" role="group" aria-label="Playback controls">
+            <button class="cp-previous cp-skip" type="button" aria-label="Previous track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h3v16H5zm15 0v16L9 12z"/></svg></button>
             <button class="cp-play" type="button" aria-label="Play" disabled><span class="material-symbols-outlined" aria-hidden="true">play_arrow</span></button>
+            <button class="cp-next cp-skip" type="button" aria-label="Next track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4h3v16h-3zM4 4l11 8-11 8z"/></svg></button>
+            </div>
             <input class="cp-seek" type="range" min="0" max="1000" value="0" aria-label="Playback position" disabled>
             <span class="cp-time">00:00 / 00:00</span>
-            <button class="cp-mute" type="button" aria-label="Mute" aria-pressed="false" disabled><span class="material-symbols-outlined" aria-hidden="true">volume_up</span></button>
+            <label class="cp-volume-control"><span class="cp-volume-icon material-symbols-outlined" aria-hidden="true">volume_up</span><input class="cp-volume" type="range" min="0" max="100" step="1" value="100" aria-label="Volume" aria-valuetext="100%" disabled></label>
           </div>
           <p class="cp-status" role="status">Loading soundtrack…</p>
           <ol class="cp-tracks" aria-label="SoundCloud playlist"></ol>

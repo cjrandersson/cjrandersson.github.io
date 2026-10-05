@@ -21,12 +21,15 @@
     const custom = root.querySelector('.cp-player');
     const frame = root.querySelector('iframe');
     const play = root.querySelector('.cp-play');
-    const mute = root.querySelector('.cp-mute');
+    const volume = root.querySelector('.cp-volume');
+    const volumeIcon = root.querySelector('.cp-volume-icon');
+    const previous = root.querySelector('.cp-previous');
+    const next = root.querySelector('.cp-next');
     const seek = root.querySelector('.cp-seek');
     const clock = root.querySelector('.cp-time');
     const status = root.querySelector('.cp-status');
     const list = root.querySelector('.cp-tracks');
-    let widget, alive = true, ready = false, duration = 0, playing = false, muted = false, retry, reads = 0, resolving = false, failed = false;
+    let widget, alive = true, ready = false, duration = 0, playing = false, trackCount = 0, retry, reads = 0, resolving = false, failed = false;
     const resolvers = new Set();
     const events = [];
     // Keep the full-size native playlist rendered so SoundCloud can hydrate all tracks.
@@ -130,7 +133,10 @@
             li.append(button); list.append(li);
           });
           status.hidden = true;
-          play.disabled = mute.disabled = seek.disabled = false;
+          play.disabled = volume.disabled = seek.disabled = false;
+          trackCount = sounds.length;
+          previous.disabled = next.disabled = trackCount < 2;
+          widget.setVolume(Number(volume.value));
           duration = sounds[0].duration;
           updatePosition(0);
           updateTrack();
@@ -146,11 +152,22 @@
       on(Widget.Events.SEEK, event => { if (alive) updatePosition(event.currentPosition); });
       on(Widget.Events.ERROR, fallback);
       play.addEventListener('click', () => { if (playing) widget.pause(); else widget.play(); });
-      mute.addEventListener('click', () => {
-        muted = !muted; widget.setVolume(muted ? 0 : 100);
-        mute.setAttribute('aria-pressed', String(muted));
-        mute.setAttribute('aria-label', muted ? 'Unmute' : 'Mute');
-        mute.querySelector('span').textContent = muted ? 'volume_off' : 'volume_up';
+      const skipTrack = direction => {
+        if (!ready || trackCount < 2) return;
+        widget.getCurrentSoundIndex(index => {
+          if (!alive) return;
+          widget.skip((index + direction + trackCount) % trackCount);
+          widget.play();
+          updateTrack();
+        });
+      };
+      previous.addEventListener('click', () => skipTrack(-1));
+      next.addEventListener('click', () => skipTrack(1));
+      volume.addEventListener('input', () => {
+        const value = Number(volume.value);
+        widget.setVolume(value);
+        volume.setAttribute('aria-valuetext', value + '%');
+        volumeIcon.textContent = value === 0 ? 'volume_off' : value < 50 ? 'volume_down' : 'volume_up';
       });
       seek.addEventListener('input', () => { clock.textContent = `${time(Number(seek.value) / 1000 * duration)} / ${time(duration)}`; });
       seek.addEventListener('change', () => widget.seekTo(Number(seek.value) / 1000 * duration));
