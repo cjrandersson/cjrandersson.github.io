@@ -208,6 +208,13 @@ function coloradoStoryMarkup(section) {
       <p class="project-eyebrow">${escapeHtml(section.eyebrow)}</p>
       <h3 id="colorado-title">${escapeHtml(section.title)}</h3>
       <p class="colorado-intro">${escapeHtml(section.body)}</p>
+      <table class="colorado-credits" aria-label="Film score credits and release dates">
+        <thead><tr><th colspan="2">Film score by CJ Robin Andersson</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Released:</th><td><time datetime="2022-08-30">August 30, 2022</time></td></tr>
+          <tr><th scope="row">Recorded:</th><td>2021-2022</td></tr>
+        </tbody>
+      </table>
       ${section.descriptionSections.map(part => `<h4>${escapeHtml(part.title)}</h4><p>${escapeHtml(part.body)}</p>`).join('')}
     </div>
     <div class="colorado-media-column">
