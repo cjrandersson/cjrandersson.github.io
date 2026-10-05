@@ -209,20 +209,22 @@ function coloradoStoryMarkup(section) {
       <h3 id="colorado-title">${escapeHtml(section.title)}</h3>
       <p class="colorado-intro">${escapeHtml(section.body)}</p>
       ${section.descriptionSections.map(part => `<h4>${escapeHtml(part.title)}</h4><p>${escapeHtml(part.body)}</p>`).join('')}
+    </div>
+    <div class="colorado-media-column">
+      <figure class="project-story-media colorado-poster">
+        <a href="${escapeHtml(section.artwork)}" aria-label="Open Colorado Plateau poster artwork">
+          <img src="${escapeHtml(section.artwork)}" alt="Colorado Plateau poster artwork" width="2732" height="4268" loading="lazy" decoding="async">
+        </a>
+      </figure>
       <div class="colorado-soundtrack">
-        <p>Colorado Plateau (Original Motion Picture Soundtrack) is the film score composed by Carl Johan Robin Andersson for a fictive arthouse / psychological thriller.</p>
         <div class="soundcloud-player-wrapper">
           <iframe width="100%" height="450" scrolling="no" frameborder="0" allow="autoplay" title="Colorado Plateau — SoundCloud playlist" src="${escapeHtml(section.soundcloudEmbed)}"></iframe>
         </div>
+        <p>Colorado Plateau (Original Motion Picture Soundtrack) is the film score composed by Carl Johan Robin Andersson for a fictive arthouse / psychological thriller.</p>
         <a class="project-inline-link" href="${escapeHtml(section.playlistUrl)}" target="_blank" rel="noreferrer">Listen on SoundCloud</a>
         ${sectionMetaMarkup(section)}
       </div>
     </div>
-    <figure class="project-story-media colorado-poster">
-      <a href="${escapeHtml(section.artwork)}" aria-label="Open Colorado Plateau poster artwork">
-        <img src="${escapeHtml(section.artwork)}" alt="Colorado Plateau poster artwork" width="2732" height="4268" loading="lazy" decoding="async">
-      </a>
-    </figure>
   </section>`;
 }
 

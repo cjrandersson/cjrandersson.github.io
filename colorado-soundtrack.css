@@ -45,7 +45,13 @@
   height: auto;
   object-fit: contain;
 }
-.colorado-soundtrack-section .colorado-soundtrack { margin-top: 32px; }
+.colorado-soundtrack-section .colorado-media-column { min-width: 0; }
+.colorado-soundtrack-section .colorado-soundtrack { margin-top: 20px; }
+.colorado-soundtrack-section .colorado-soundtrack > p {
+  color: #f1f0eb;
+  font-size: 15px;
+  line-height: 1.65;
+}
 .colorado-soundtrack-section .soundcloud-player-wrapper {
   width: 100%;
   margin: 20px 0;
@@ -62,5 +68,5 @@
 .colorado-soundtrack-section .project-media-meta { flex-wrap: wrap; gap: 8px 16px; }
 @media (max-width: 820px) {
   .project-story-section.colorado-soundtrack-section { grid-template-columns: minmax(0, 1fr); }
-  .colorado-soundtrack-section .colorado-poster { max-width: 560px; }
+  .colorado-soundtrack-section .colorado-media-column { width: 100%; }
 }
