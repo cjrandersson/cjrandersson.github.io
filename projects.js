@@ -258,6 +258,34 @@ window.PROJECTS = [
     },
     "storySections": [
       {
+        "eyebrow": "Original motion picture soundtrack",
+        "title": "Colorado Plateau",
+        "layout": "colorado",
+        "body": "Ett arthouse-koncept och en psykologisk thriller i skärningspunkten mellan slow cinema, ödslighet och experimentell ljudkonst.",
+        "descriptionSections": [
+          {
+            "title": "Handling & Synopsis",
+            "body": "En namnlös man färdas genom den amerikanska sydvästerns monumentala ödemark med ett oförklarligt stulet föremål i sin packning. Ständigt förföljd av en okänd närvaro tvingas han genom ett landskap där gränsen mellan yttre verklighet och inre paranoia gradvis löses upp. Genom minimal exposition och ett dröjande tempo undersöker projektet hur oändliga, öppna ytor kan göras djupt klaustrofobiska."
+          },
+          {
+            "title": "Cinematografi & Visuellt Språk",
+            "body": "Ett minimalistiskt och observerande bildspråk byggt på anamorfa wide-lens-perspektiv, statiska kompositioner och utdragna, obrutna tagningar. Människan reduceras till ett litet element i ett storslaget landskap där värmedis och långsam repetition förvandlar öknen från öppen till desorienterande och hotfull."
+          },
+          {
+            "title": "Soundtrack & Sound Design",
+            "body": "Ljudet fungerar som filmens osynliga narratör. Soundtracket bygger på en analog lo-fi-process med slitna gitarrpedaler, degraderade fältinspelningar, distorsion, varma synthmattor och lågfrekventa drönare. Brus och elektriska artefakter har lämnats kvar för att skapa en taktil, sliten textur. Miljöljud (vind, grus, vibrationer) vävs sömlöst samman med musiken – gränsen mellan vad som är diegetiskt ljud och vad som är filmens score löses helt upp."
+          }
+        ],
+        "artwork": "media/sound-design/colorado-plateau-poster-hq.webp",
+        "playlistUrl": "https://soundcloud.com/dr-boland/sets/colorado-plateau-original-soundtrack",
+        "soundcloudEmbed": "https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fdr-boland%2Fsets%2Fcolorado-plateau-original-soundtrack&color=%23f5c518&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&show_artwork=false&visual=false",
+        "meta": [
+          "Original motion picture soundtrack",
+          "Noise · Experimental · Electronic · Ambient"
+        ]
+      },
+
+      {
         "eyebrow": "Selected sound / 01",
         "title": "Yadda Yadda'",
         "body": "A longer-form rhythmic piece built around broken beats, sampling and restless electronic movement. It sits close to the centre of the catalogue: composition and sound manipulation pulling in the same direction.",
@@ -266,20 +294,7 @@ window.PROJECTS = [
         "placeholderLabel": "Audio file pending final curation",
         "meta": ["2021", "sampling · breaks · live sequencing"]
       },
-      {
-        "eyebrow": "Selected sound / 02",
-        "title": "Colorado Plateau",
-        "body": "A fictional arthouse psychological thriller set across the vast, sun-scorched landscapes of the American Southwest. Almost entirely without dialogue, the film follows an unnamed man moving through open desert, narrow canyons and abandoned roads while carrying an object that does not belong to him. Something appears to be following him, but whether the threat is human, imagined or simply the landscape itself is never made clear. Static anamorphic compositions, extreme wides and long uninterrupted takes gradually turn the enormous landscape into something claustrophobic, using distance, heat and isolation as psychological pressure.",
-        "bullets": [
-          "Soundtrack & sound design — With dialogue largely absent, sound carries much of the film’s inner narrative. The score combines degraded field recordings, primitive phone recordings, processed guitar, analogue distortion and delay, improvised performances, warm synthesizer beds and low-frequency drones.",
-          "Texture — Noise, clipping, electrical interference and tape-like degradation are deliberately retained rather than cleaned away, giving the soundtrack a worn, physical quality somewhere between damaged field documentation and a half-erased memory.",
-          "Space — Environmental sound is woven directly into the music: wind moving across sandstone, footsteps on loose gravel, distant mechanical hums and fragments of unidentifiable noise drift between diegetic sound and score. The result is sparse and slow-moving, designed less to accompany the landscape than to make it feel watchful, unstable and alive."
-        ],
-        "mediaType": "audio",
-        "audio": null,
-        "soundcloudEmbed": "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/dr-boland/sets/colorado-plateau-ost/s-lzoU6P2izcl&color=%23f5c518&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false",
-        "meta": ["2026", "fictional film score · sound design · ambient · field recording · processed guitar · lo-fi"]
-      },
+
       {
         "eyebrow": "Selected sound / 03",
         "title": "Manifestation Of Ectoplasm",

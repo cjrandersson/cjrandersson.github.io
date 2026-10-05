@@ -2,20 +2,6 @@
   const viewerPage = document.querySelector('#viewer-page');
   if (!viewerPage) return;
 
-  if (!document.querySelector('link[href="colorado-soundtrack.css"]')) {
-    const stylesheet = document.createElement('link');
-    stylesheet.rel = 'stylesheet';
-    stylesheet.href = 'colorado-soundtrack.css?v=20261002-01';
-    document.head.appendChild(stylesheet);
-  }
-
-  if (!document.querySelector('script[src^="colorado-soundtrack.js"]')) {
-    const soundtrackScript = document.createElement('script');
-    soundtrackScript.src = 'colorado-soundtrack.js?v=20261002-01';
-    soundtrackScript.defer = true;
-    document.body.appendChild(soundtrackScript);
-  }
-
   const lightbox = document.createElement('dialog');
   lightbox.className = 'image-lightbox';
   lightbox.setAttribute('aria-label', 'Image preview');
