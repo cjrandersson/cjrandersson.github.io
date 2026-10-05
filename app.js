@@ -413,6 +413,7 @@ viewer.addEventListener('close', () => document.body.classList.remove('viewer-op
 window.addEventListener('hashchange', syncFromHash);
 document.addEventListener('keydown', event => {
   if (!viewer.open || document.querySelector('.image-lightbox[open]')) return;
+  if (event.target.closest('input, textarea, select, [contenteditable="true"], [role="slider"]')) return;
   if (event.key === 'ArrowLeft') navigateProject(-1);
   if (event.key === 'ArrowRight') navigateProject(1);
 });
